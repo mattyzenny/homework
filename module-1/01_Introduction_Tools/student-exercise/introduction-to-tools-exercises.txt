@@ -15,7 +15,7 @@ actual command from other text in Unix documentation.
     refer to?
 ----
 
-<Denotes User's Home directory>
+<Denotes User's Home directory, takes you back to Home directory.>
 
 ----
 3.  A good habit to develop, especially while you're developing your skills on
@@ -181,9 +181,9 @@ $ <enter command to display present working directory>
 ----
 
 $ <enter command to list all files and directories including dot-files and dot-directories>
-<   drwxr-xr-x  3 mzendejas  staff   96 Jan 13 16:29 .
-    drwxr-xr-x  4 mzendejas  staff  128 Jan 13 21:08 ..
-    -rwxr-xr-x  1 mzendejas  staff  141 Jan 13 16:29 Helloworld.java
+<   drwxr-xr-x  4 mzendejas  staff   128 Jan 13 22:58 .
+  drwxr-xr-x  4 mzendejas  staff   128 Jan 13 21:08 ..
+  -rwxr-xr-x  1 mzendejas  staff   141 Jan 13 16:29 Helloworld.java
 >
 
 
