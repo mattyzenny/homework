@@ -41,9 +41,7 @@ changes directory, and the "pwd" command reflects this.
 //$ ls -la//
 <   drwxr-xr-x  7 mzendejas  staff   224 Jan 13 16:56 .
     drwxr-xr-x  7 mzendejas  staff   224 Jan 13 16:46 ..
-    -rw-r--r--@ 1 mzendejas  staff  6148 Jan 13 21:10 .DS_Store
     drwxr-xr-x  3 mzendejas  staff    96 Jan 13 16:29 database
-    -rw-r--r--  1 mzendejas  staff     0 Jan 13 16:55 introduction-to-tools-exercises.txt
     -rwxr-xr-x  1 mzendejas  staff  1091 Jan 13 16:29 pom.xml
     drwxr-xr-x  5 mzendejas  staff   160 Jan 13 16:56 src>
 
@@ -62,10 +60,9 @@ changes directory, and the "pwd" command reflects this.
     directory listing in Exercise 4?
 ----
  //ls -a// 
-<   .					introduction-to-tools-exercises.txt
-    ..					pom.xml
-    .DS_Store			src
-    database
+<   
+  .		.DS_Store		src
+  ..		database	pom.xml
 >
 
 
