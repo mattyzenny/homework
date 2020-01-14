@@ -130,13 +130,15 @@ e.org/maven-v4_0_0.xsd">
 Did you remember to save "introduction-to-tools-exercise.txt"?
 
 $ git status
-<   deleted:    ../../../../README.md
-	modified:   ../introduction-to-tools-exercises.txt
+<   modified:   ../introduction-to-tools-exercises.txt
+	deleted:    introduction-to-tools-exercises.txt
+	modified:   ../../../02_Variables_Data_Types/lecture-final/java/pom.xml
     >
 
 $ git add -A
 <	modified:   ../introduction-to-tools-exercises.txt
-	new file:   introduction-to-tools-exercises.txt
+	deleted:    introduction-to-tools-exercises.txt
+	modified:   ../../../02_Variables_Data_Types/lecture-final/java/pom.xml
     >
 
 $ git commit -m "Good stopping point"
