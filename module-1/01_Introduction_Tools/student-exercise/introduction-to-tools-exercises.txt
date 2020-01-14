@@ -3,7 +3,7 @@
     directory to the exercise directory.
 ----
 
-$ cd ~/Development/YOURNAME-java-green-material/module-1/01_Introduction_Tools/student-exercise/java/java-helloworld
+$ cd ~/Development/matthewzendejas-java-green-material/module-1/01_Introduction_Tools/student-exercise/java-helloworld
 
 Note, do not enter the beginning "$" character. It represents the prompt for
 the command line. This convention is commonly used to visually separate the
@@ -15,7 +15,7 @@ actual command from other text in Unix documentation.
     refer to?
 ----
 
-<type your response here>
+<Denotes User's Home directory>
 
 ----
 3.  A good habit to develop, especially while you're developing your skills on
@@ -23,8 +23,8 @@ actual command from other text in Unix documentation.
     This can be easily accomplished with the "pwd" command.
 ----
 
-$ pwd
-<type or copy-paste the result here>
+//$ pwd//
+</Users/mzendejas/development/matthewzendejas-java-green-material/module-1/01_Introduction_Tools/student-exercise/java-helloworld>
 
 The present working directory displayed should match the directory you changed
 to in Exercise 1.  Note, the two may not match at the very beginning if you
@@ -38,24 +38,35 @@ changes directory, and the "pwd" command reflects this.
     directory. Include all dot-files and dot-directories.  Recall the "all" and
     "long format" flags for the "ls" command.
 ----
-
-$ ls -la
-<type or copy-paste the result here>
+//$ ls -la//
+<   drwxr-xr-x  7 mzendejas  staff   224 Jan 13 16:56 .
+    drwxr-xr-x  7 mzendejas  staff   224 Jan 13 16:46 ..
+    -rw-r--r--@ 1 mzendejas  staff  6148 Jan 13 21:10 .DS_Store
+    drwxr-xr-x  3 mzendejas  staff    96 Jan 13 16:29 database
+    -rw-r--r--  1 mzendejas  staff     0 Jan 13 16:55 introduction-to-tools-exercises.txt
+    -rwxr-xr-x  1 mzendejas  staff  1091 Jan 13 16:29 pom.xml
+    drwxr-xr-x  5 mzendejas  staff   160 Jan 13 16:56 src>
 
 
 ----
 5.  What do the "." and ".." directories displayed in the directory listing in
     Exercise 4 represent?
-----
-
-<type your answer here>
+---- 
+<Directory representation, "." represents current directory, ".." represents parent directory
+"." represents /Users/mzendejas/development/matthewzendejas-java-green-material/module-1/01_introduction_tools/student-exercise/java-helloworld
+".." represents /Users/mzendejas/development/matthewzendejas-java-green-material/module-1/01_introduction_tools/student-exercise
+>
 
 ----
 6.  What are the names of the files, including any dot-files, displayed in the
     directory listing in Exercise 4?
 ----
-
-<type or copy-paste your answer here>
+ //ls -a// 
+<   .					introduction-to-tools-exercises.txt
+    ..					pom.xml
+    .DS_Store			src
+    database
+>
 
 
 ----
@@ -63,7 +74,11 @@ $ ls -la
     the directory listing in Exercise 4?
 ----
 
-<type or copy-paste your answer here>
+<   drwxr-xr-x  7 mzendejas  staff   224 Jan 13 16:56 .
+    drwxr-xr-x  7 mzendejas  staff   224 Jan 13 16:46 ..
+    drwxr-xr-x  3 mzendejas  staff    96 Jan 13 16:29 database
+    drwxr-xr-x  5 mzendejas  staff   160 Jan 13 16:56 src
+    >
 
 
 ----
@@ -95,7 +110,16 @@ $ less database/pagila.sql
 
 You are encouraged to make "less" part of your standard command line toolkit.
 
-<type or copy-paste the first five lines of either file here>
+<<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/
+2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apach
+e.org/maven-v4_0_0.xsd">
+        <modelVersion>4.0.0</modelVersion>
+        <groupId>com.techelevator</groupId>
+        <artifactId>helloworld</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <packaging>jar</packaging>
+>
 
 ----
 9.  This is good time to create a Git snapshot of your progress.  Usually,
