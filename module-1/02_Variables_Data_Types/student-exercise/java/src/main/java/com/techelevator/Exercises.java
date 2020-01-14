@@ -42,76 +42,113 @@ public class Exercises {
         /*
         4. There are 5 flowers and 3 bees. How many less bees than flowers?
         */
-
+		int flowers = 5;
+		int bees = 3;
+		int extraFlowers = flowers - bees ;
+		
         /*
         5. 1 lonely pigeon was eating breadcrumbs. Another pigeon came to eat
         breadcrumbs, too. How many pigeons are eating breadcrumbs now?
         */
-
+		int lonelyPigeon = 1;
+		int extraPigeon = 1;
+		int totalPigeonsEating = lonelyPigeon + extraPigeon;
         /*
         6. 3 owls were sitting on the fence. 2 more owls joined them. How many
         owls are on the fence now?
         */
-
+		int firstSetOfOwls = 3;
+		int secondSetOfOwls = 2;
+		int totalOwls = firstSetOfOwls + secondSetOfOwls;
         /*
         7. 2 beavers were working on their home. 1 went for a swim. How many
         beavers are still working on their home?
         */
-
+		int totalBeaversWorking = 2;
+		int beaversSwimming = 1;
+		int beaversStillWorking = totalBeaversWorking - beaversSwimming;
         /*
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
         many toucans in all?
         */
-
+		int toucansSitting = 1;
+		int toucansJoining = 1;
+		int totalToucans = toucansSitting + toucansJoining;
         /*
         9. There are 4 squirrels in a tree with 2 nuts. How many more squirrels
         are there than nuts?
         */
-
+		int totalSquirrels = 4;
+		int totalNuts = 2;
+		int nutlessSquirrles = totalSquirrels - totalNuts;
         /*
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
         */
-
+		int quarter = 25;
+		int dime = 10;
+		int nickels = 10;
+		int totalMoney = quarter + dime + nickels;
+		
+		
+		
         /*
         11. Mrs. Hilt's favorite first grade classes are baking muffins. Mrs. Brier's
         class bakes 18 muffins, Mrs. MacAdams's class bakes 20 muffins, and
         Mrs. Flannery's class bakes 17 muffins. How many muffins does first
         grade bake in all?
         */
-
+		int brierMuffins = 18;
+		int macAdamMuffins = 20;
+		int flanneryMuffins = 17;
+		int totalMuffins = brierMuffins + macAdamMuffins + flanneryMuffins;
+		
         /*
         12. Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How
         much did she spend in all for the two toys?
         */
-
+		int yoyoCost = 24;
+		int whistleCost = 14;
+		int totalExpedetures = yoyoCost + whistleCost;
         /*
         13. Mrs. Hilt made 5 Rice Krispie Treats. She used 8 large marshmallows
         and 10 mini marshmallows.How many marshmallows did she use
         altogether?
         */
-
+		int marshmallowLarge = 8;
+		int marshmallowMini = 10;
+		int marshmallowTotal = marshmallowMini + marshmallowLarge;
         /*
         14. At Mrs. Hilt's house, there was 29 inches of snow, and Brecknock
         Elementary School received 17 inches of snow. How much more snow
         did Mrs. Hilt's house have?
         */
-
+		int snowAtHiltHouse = 29;
+		int snowAtElementarySchool = 17;
+		int moreSnowAtHiltHouse = snowAtHiltHouse - snowAtElementarySchool;
+		
         /*
         15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2 on a pencil
         case. How much money does she have left?
         */
-
+		int originalTotal = 10;
+		int costOfToyTruck = 3;
+		int costOfPencil = 2;
+		int totalCost = costOfToyTruck + costOfPencil;
+		int newTotal = originalTotal - totalCost;
+		
         /*
         16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
         marbles does he have now?
         */
-
+		int marbleCollection = 16;
+		int lostMarbles = 7;
+		int remainingMarbles = marbleCollection - lostMarbles;
         /*
         17. Megan has 19 seashells. How many more seashells does she need to
         find to have 25 seashells in her collection?
         */
-
+		
         /*
         18. Brad has 17 balloons. 8 balloons are red and the rest are green. How
         many green balloons does Brad have?
