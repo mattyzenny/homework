@@ -133,13 +133,20 @@ e.org/maven-v4_0_0.xsd">
 Did you remember to save "introduction-to-tools-exercise.txt"?
 
 $ git status
-<type or copy-paste the result here>
+<   deleted:    ../../../../README.md
+	modified:   ../introduction-to-tools-exercises.txt
+    >
 
 $ git add -A
-<type or copy-paste the result here>
+<	modified:   ../introduction-to-tools-exercises.txt
+	new file:   introduction-to-tools-exercises.txt
+    >
 
 $ git commit -m "Good stopping point"
-<type or copy-paste the result here>
+<   [master a3a0d82] Good stopping point :)
+    2 files changed, 38 insertions(+), 14 deletions(-)
+    create mode 100644 module-1/01_Introduction_Tools/student-exercise/java-helloworld/introduction-to-tools-exercises.txt
+>
 
 Note, you do not need to push this commit up to BitBucket at this time. The
 typical Git workflow is to make many small commits to your local repo while
@@ -155,8 +162,9 @@ along, and then at the end.
 ----
 
 $ cd src/main/java/com/techelevator
-$ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+$ <enter command to display present working directory> 
+<   /Users/mzendejas/development/matthewzendejas-java-green-material/module-1/01_introduction_tools/student-exercise/java-helloworld/src/main/java/com/techelevator
+ >
 
 
 ----
@@ -164,7 +172,7 @@ $ <enter command to display present working directory>
     path?
 ----
 
-<type your answer here>
+<relative>
 
 
 ----
@@ -173,7 +181,10 @@ $ <enter command to display present working directory>
 ----
 
 $ <enter command to list all files and directories including dot-files and dot-directories>
-<type or copy-paste the result here>
+<   drwxr-xr-x  3 mzendejas  staff   96 Jan 13 16:29 .
+    drwxr-xr-x  4 mzendejas  staff  128 Jan 13 21:08 ..
+    -rwxr-xr-x  1 mzendejas  staff  141 Jan 13 16:29 Helloworld.java
+>
 
 
 ----
@@ -188,7 +199,11 @@ The "cp" parameters are the name of the source file followed by the name of the
 destination file.
 
 $ <enter command to list all files and directories in order to confirm the creation of the backup file>
-<type or copy-paste the result here>
+<   drwxr-xr-x  4 mzendejas  staff  128 Jan 13 22:08 .
+    drwxr-xr-x  4 mzendejas  staff  128 Jan 13 21:08 ..
+    -rwxr-xr-x  1 mzendejas  staff  141 Jan 13 16:29 Helloworld.java
+    -rwxr-xr-x  1 mzendejas  staff  141 Jan 13 22:08 Helloworld.java.backup
+>
 
 
 ----
@@ -202,7 +217,11 @@ The "mv" parameters are the existing name of the file followed by the new name
 of the file.
 
 $ <enter command to list all files and directories in order to confirm the renaming of the file>
-<type or copy-paste the result here>
+<   drwxr-xr-x  4 mzendejas  staff  128 Jan 13 22:10 .
+    drwxr-xr-x  4 mzendejas  staff  128 Jan 13 21:08 ..
+    -rwxr-xr-x  1 mzendejas  staff  141 Jan 13 16:29 Helloworld.java
+    -rwxr-xr-x  1 mzendejas  staff  141 Jan 13 22:08 Helloworld.java.copy
+>
 
 
 ----
