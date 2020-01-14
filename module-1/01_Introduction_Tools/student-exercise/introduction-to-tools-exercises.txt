@@ -130,22 +130,16 @@ e.org/maven-v4_0_0.xsd">
 Did you remember to save "introduction-to-tools-exercise.txt"?
 
 $ git status
-<   modified:   ../introduction-to-tools-exercises.txt
-	deleted:    introduction-to-tools-exercises.txt
-	modified:   ../../../02_Variables_Data_Types/lecture-final/java/pom.xml
+<   	modified:   ../introduction-to-tools-exercises.txt
     >
 
 $ git add -A
-<	modified:   ../introduction-to-tools-exercises.txt
-	deleted:    introduction-to-tools-exercises.txt
-	modified:   ../../../02_Variables_Data_Types/lecture-final/java/pom.xml
+<		modified:   ../introduction-to-tools-exercises.txt
     >
 
 $ git commit -m "Good stopping point"
-<   [master a3a0d82] Good stopping point :)
-    2 files changed, 38 insertions(+), 14 deletions(-)
-    create mode 100644 module-1/01_Introduction_Tools/student-exercise/java-helloworld/introduction-to-tools-exercises.txt
->
+<   [master 4e1f860] good stopping point
+ 1 file changed, 5 insertions(+), 3 deletions(-)>
 
 Note, you do not need to push this commit up to BitBucket at this time. The
 typical Git workflow is to make many small commits to your local repo while
@@ -198,10 +192,10 @@ The "cp" parameters are the name of the source file followed by the name of the
 destination file.
 
 $ <enter command to list all files and directories in order to confirm the creation of the backup file>
-<   drwxr-xr-x  4 mzendejas  staff  128 Jan 13 22:08 .
-    drwxr-xr-x  4 mzendejas  staff  128 Jan 13 21:08 ..
-    -rwxr-xr-x  1 mzendejas  staff  141 Jan 13 16:29 Helloworld.java
-    -rwxr-xr-x  1 mzendejas  staff  141 Jan 13 22:08 Helloworld.java.backup
+<   drwxr-xr-x  5 mzendejas  staff   160 Jan 14 16:40 .
+drwxr-xr-x  4 mzendejas  staff   128 Jan 13 21:08 ..
+-rwxr-xr-x  1 mzendejas  staff   141 Jan 13 16:29 Helloworld.java
+-rwxr-xr-x  1 mzendejas  staff   141 Jan 14 16:40 Helloworld.java.backup
 >
 
 
@@ -216,10 +210,10 @@ The "mv" parameters are the existing name of the file followed by the new name
 of the file.
 
 $ <enter command to list all files and directories in order to confirm the renaming of the file>
-<   drwxr-xr-x  4 mzendejas  staff  128 Jan 13 22:10 .
-    drwxr-xr-x  4 mzendejas  staff  128 Jan 13 21:08 ..
-    -rwxr-xr-x  1 mzendejas  staff  141 Jan 13 16:29 Helloworld.java
-    -rwxr-xr-x  1 mzendejas  staff  141 Jan 13 22:08 Helloworld.java.copy
+<   drwxr-xr-x  5 mzendejas  staff   160 Jan 14 16:41 .
+drwxr-xr-x  4 mzendejas  staff   128 Jan 13 21:08 ..
+-rwxr-xr-x  1 mzendejas  staff   141 Jan 13 16:29 Helloworld.java
+-rwxr-xr-x  1 mzendejas  staff   141 Jan 14 16:40 Helloworld.java.copy
 >
 
 
@@ -248,15 +242,21 @@ Untracked files:
 	Helloworld.java.copy>
 
 $ <enter the Git command to "stage" all changes>
-<	modified:   ../../../../../../introduction-to-tools-exercises.txt
+<	On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
 	new file:   Helloworld.java.copy
+
 >
 
 $ <enter the Git command to save all "staged" changes>
-<[master 689d826] Finished product
- 2 files changed, 37 insertions(+), 9 deletions(-)
- create mode 100755 module-1/01_Introduction_Tools/student-exercise/java-helloworld/src/main/java/com/techelevator/Helloworld.java.copy
- >
+<[master 1eee480] new and improved
+ 1 file changed, 9 insertions(+)
+ create mode 100755 module-1/01_Introduction_Tools/student-exercise/java-helloworld/src/main/java/com/techelevator/Helloworld.java.copy>
 
 $ git push origin master
 <Counting objects: 20, done.
