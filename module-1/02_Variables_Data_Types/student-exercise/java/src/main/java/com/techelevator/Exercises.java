@@ -222,9 +222,9 @@ public class Exercises {
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
-		int hiltMoneyTotal = 50;
-		int pencilPrice = 7;
-		int totalPencils = hiltMoneyTotal / pencilPrice;
+		float hiltMoneyTotal = .50f;
+		float pencilPrice = .07f;
+		 float totalPencils = hiltMoneyTotal / pencilPrice;
 		
         /*
         28. Mrs. Hilt saw 33 butterflies. Some of the butterflies were red and others
@@ -286,7 +286,7 @@ public class Exercises {
         */
 		int totalLegos = 380;
 		int lostLegos = 57;
-		in remainingLegos = totalLegos - lostLegos;
+		int remainingLegos = totalLegos - lostLegos;
 		
         /*
         36. Arthur baked 35 muffins. How many more muffins does Arthur have to
@@ -333,61 +333,89 @@ public class Exercises {
         neighbors. If each neighbor received and equal number of croissants,
         how many will be left with Marian?
         */
-
+		int croissants = 59;
+		int neighbors = 8;
+		int crossantsLeftOver = croissants % neighbors;
+		
         /*
         42. Marian also baked oatmeal cookies for her classmates. If she can
         place 12 cookies on a tray at a time, how many trays will she need to
         prepare 276 oatmeal cookies at a time?
         */
-
+		int totalCookies = 276;
+		int bakingpan = totalCookies / 12;
+		int totalyPans = bakingpan;
         /*
         43. Marian’s friends were coming over that afternoon so she made 480
         bite-sized pretzels. If one serving is equal to 12 pretzels, how many
         servings of bite-sized pretzels was Marian able to prepare?
         */
-
+		int servingSize = 12;
+		int totalPretzels = 480;
+		int totalServings = totalPretzels / servingSize;
+		
         /*
         44. Lastly, she baked 53 lemon cupcakes for the children living in the city
         orphanage. If two lemon cupcakes were left at home, how many
         boxes with 3 lemon cupcakes each were given away?
         */
-
+		int bakedLemonCupcakes = 53;
+		int forgottenLemonCupcakes = 2;
+		int lemonCupcakesAvailable = bakedLemonCupcakes - forgottenLemonCupcakes;
+		int boxWithLemonCupcakes = lemonCupcakesAvailable / 3;
+		
         /*
         45. Susie's mom prepared 74 carrot sticks for breakfast. If the carrots
         were served equally to 12 people, how many carrot sticks were left
         uneaten?
         */
-
+		int carrotsPrepared = 74;
+		int totalPeople = 12;
+		int carrotsLeftUneaten = carrotsPrepared % totalPeople;
+		
         /*
         46. Susie and her sister gathered all 98 of their teddy bears and placed
         them on the shelves in their bedroom. If every shelf can carry a
         maximum of 7 teddy bears, how many shelves will be filled?
         */
-
+		int totalTeddyBear = 98;
+		int shelfCapacity = 7;
+		int usedShelves = totalTeddyBear / shelfCapacity;
+		
         /*
         47. Susie’s mother collected all family pictures and wanted to place all of
         them in an album. If an album can contain 20 pictures, how many
         albums will she need if there are 480 pictures?
         */
-
+		int albumCapacity = 20;
+		int totalPhotos = 480;
+		int album = totalPhotos / albumCapacity;
+		
         /*
         48. Joe, Susie’s brother, collected all 94 trading cards scattered in his
         room and placed them in boxes. If a full box can hold a maximum of 8
         cards, how many boxes were filled and how many cards are there in
         the unfilled box?
         */
-
+		int tradingCards = 94;
+		int boxCapacity = 8;
+		int boxesFilled = tradingCards / boxCapacity;
+		int cardsLeftOver = tradingCards % boxCapacity;
         /*
         49. Susie’s father repaired the bookshelves in the reading room. If he has
         210 books to be distributed equally on the 10 shelves he repaired,
         how many books will each shelf contain?
         */
-
+		int amountOfBooks = 210;
+		int totalShelves = 10;
+		int booksOnShelves = amountOfBooks / totalShelves;
         /*
         50. Cristina baked 17 croissants. If she planned to serve this equally to
         her seven guests, how many will each have?
         */
-
+		int totalGuests = 7;
+		int totalCroissants = 17;
+		int croissantsReceived = totalCroissants / totalGuests;
         /*
             CHALLENGE PROBLEMS
         */
