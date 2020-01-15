@@ -71,7 +71,7 @@ public class Exercises {
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
         many toucans in all?
         */
-		int toucansSitting = 1;
+		int toucansSitting = 2;
 		int toucansJoining = 1;
 		int totalToucans = toucansSitting + toucansJoining;
         /*
@@ -85,10 +85,10 @@ public class Exercises {
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
         */
-		int quarter = 25;
-		int dime = 10;
-		int nickels = 10;
-		int totalMoney = quarter + dime + nickels;
+		float quarter = (float).25;
+		float dime = (float).10;
+		float nickels = (float).10;
+		float totalMoney = quarter + dime + nickels;
 		
 		
 		
@@ -107,9 +107,9 @@ public class Exercises {
         12. Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How
         much did she spend in all for the two toys?
         */
-		int yoyoCost = 24;
-		int whistleCost = 14;
-		int totalExpedetures = yoyoCost + whistleCost;
+		float yoyoCost = .24f;
+		float whistleCost = .14f;
+		float totalExpendetures = yoyoCost + whistleCost;
         /*
         13. Mrs. Hilt made 5 Rice Krispie Treats. She used 8 large marshmallows
         and 10 mini marshmallows.How many marshmallows did she use
@@ -131,11 +131,11 @@ public class Exercises {
         15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2 on a pencil
         case. How much money does she have left?
         */
-		int originalTotal = 10;
-		int costOfToyTruck = 3;
-		int costOfPencil = 2;
-		int totalCost = costOfToyTruck + costOfPencil;
-		int newTotal = originalTotal - totalCost;
+		float originalTotal = 10;
+		float costOfToyTruck = 3;
+		float costOfPencil = 2;
+		float totalCost = costOfToyTruck + costOfPencil;
+		float newTotal = originalTotal - totalCost;
 		
         /*
         16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
@@ -170,8 +170,8 @@ public class Exercises {
         20. A bee has 6 legs. How many legs do 8 bees have?
         */
 		int legs = 6;
-		int numberOfBee = 8;
-		int TotalBeeLegs = legs * numberOfBee; 
+		int numberOfBees = 8;
+		int TotalBeeLegs = legs * numberOfBees; 
         /*
         21. Mrs. Hilt bought an ice cream cone for 99 cents. How much would 2 ice
         cream cones cost?
@@ -208,7 +208,8 @@ public class Exercises {
         */
 		int saturdayAfternoonShovel = 45;
 		int saturdayMorningShovel = 90;
-		int totalTimeToShovel = saturdayMorningShovel + saturdayAfternoonShovel;
+		float totalTimeToShovel = (saturdayMorningShovel + saturdayAfternoonShovel) / 60f;
+		System.out.println(totalTimeToShovel);
         /*
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
@@ -222,9 +223,10 @@ public class Exercises {
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
-		float hiltMoneyTotal = .50f;
-		float pencilPrice = .07f;
-		 float totalPencils = hiltMoneyTotal / pencilPrice;
+		int hiltMoneyTotal = 50;
+		int pencilPrice = 7;
+		int totalPencils = (int) hiltMoneyTotal / (int) pencilPrice;
+		System.out.println(totalPencils);
 		
         /*
         28. Mrs. Hilt saw 33 butterflies. Some of the butterflies were red and others
@@ -242,6 +244,13 @@ public class Exercises {
 		float kate = (float)1.00;
 		float price = (float).54;
 		float returnPrice = kate - price;
+		
+		
+		//LOOK OVER #29!!!///
+		
+		
+		
+		
         /*
         30. Mark has 13 trees in his backyard. If he plants 12 more, how many trees
         will he have?
