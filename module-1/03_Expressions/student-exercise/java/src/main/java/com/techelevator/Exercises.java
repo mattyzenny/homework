@@ -10,8 +10,12 @@ public class Exercises {
 	 sleepIn(false, true) → true
 	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
-		return false;
-	}
+		if ((weekday == true) && (vacation != true)) {
+			return false;
+		}
+		else return true;
+}
+	
 
 	/*
 	 2. We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling.
@@ -27,7 +31,7 @@ public class Exercises {
 			return true;
 		}
 				
-		return false;
+		else return false;
 	}
 
 	/*
@@ -61,7 +65,11 @@ public class Exercises {
 	 diff21(-10) → 31
 	 */
 	public int diff21(int n) {
-		return 0;
+		if (n > 21) {
+			return 21- n * 2;
+		}
+		else 
+			return 21 - n;
 	}
 
 	/*
@@ -73,7 +81,11 @@ public class Exercises {
 	 parrotTrouble(false, 6) → false
 	 */
 	public boolean parrotTrouble(boolean talking, int hour) {
-		return false;
+		if ((talking == true) && (hour < 7 & hour > 20)) {
+			return true;
+		}
+		else
+			return false;
 	}
 
 	/*
@@ -83,7 +95,12 @@ public class Exercises {
 	 makes10(1, 9) → true
 	 */
 	public boolean makes10(int a, int b) {
-		return false;
+		int sum = a + b;
+		if ((sum == 10) || (a ==10) || (b == 10)) {
+			return true;
+		}
+		else
+			return false;
 	}
 
 	/*
@@ -94,7 +111,14 @@ public class Exercises {
 	 posNeg(-4, -5, true) → true
 	 */
 	public boolean posNeg(int a, int b, boolean negative) {
-		return false;
+		if ((negative == true) && (a < 0) && (b < 0)) {
+			return true;
+		}
+		else if ((a < 0) && (b > 0) || (a > 0) && (b < 0)) {
+			return true;
+		}
+		else
+			return false;
 	}
 
 	/*
@@ -105,7 +129,11 @@ public class Exercises {
 	 or35(8) → false
 	 */
 	public boolean or35(int n) {
-		return false;
+		if ((n % 3 == 0) || (n % 5 == 0)) {
+			return true;
+		}
+		else
+			return false;
 	}
 
 	/*
@@ -115,6 +143,9 @@ public class Exercises {
 	 icyHot(2, 120) → false
 	 */
 	public boolean icyHot(int temp1, int temp2) {
+		if ((temp1 < 0) && (temp2 > 100) || (temp1 > 100) && (temp2 < 0)) {
+			return true;
+		}
 		return false;
 	}
 
@@ -125,7 +156,11 @@ public class Exercises {
 	 in1020(8, 99) → false
 	 */
 	public boolean in1020(int a, int b) {
-		return false;
+		if ((a >= 10 && a <= 20) || (b >=10 && b <= 20)) {
+			return true;
+		}
+		else
+			return false;
 	}
 
 	/*
@@ -136,7 +171,11 @@ public class Exercises {
 	 hasTeen(20, 10, 13) → true
 	 */
 	public boolean hasTeen(int a, int b, int c) {
-		return false;
+		if ((a >= 13 && a <= 19) || (b >= 13 && b <= 19) || (c >= 13 && c <= 19)){
+			return true;
+		}
+		else
+			return false;
 	}
 
 	/*
@@ -147,7 +186,15 @@ public class Exercises {
 	 loneTeen(13, 13) → false
 	 */
 	public boolean loneTeen(int a, int b) {
-		return false;
+		if ((a >= 13 && a <= 19) && (b < 13 || b > 19)) {
+			return true;
+		}
+		else if ((b >= 13 && b <= 19) && (a < 13 || a > 19)) {
+			return true;
+		}
+		else
+			return false;
+		
 	}
 
 	/*
@@ -386,7 +433,12 @@ public class Exercises {
 	 inOrder(1, 1, 2, true) → true
 	 */
 	public boolean inOrder(int a, int b, int c, boolean bOk) {
-		return false;
+		if ((b > a) && (c > b) || (bOk == true) && (c > b)) {
+			return true;
+		}
+		else 
+			return false;
+		
 	}
 
 	/*
@@ -398,7 +450,11 @@ public class Exercises {
 	 inOrderEqual(5, 5, 7, true) → true
 	 */
 	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
-		return false;
+		if ((a <= b) && (b <= c) || (equalOk == true)){
+			return true;
+		}
+		else 
+			return false;
 	}
 
 	/*
@@ -409,9 +465,19 @@ public class Exercises {
 	 loneSum(3, 3, 3) → 0
 	 */
 	public int loneSum(int a, int b, int c) {
-		return 0;
+		if (a == b) {
+			return c;
+		}
+		else if (a == c) {
+			return b;
+		}
+		else if (b == c) {
+			return a;
+		}
+		else return (a + b + c);
+		
 	}
-
+	
 	/*
 	 35. Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does not
 	 count towards the sum and values to its immediate right do not count. So for example, if b is 13, then both
@@ -423,7 +489,16 @@ public class Exercises {
 	 luckySum(13, 13, 3) → 0
 	 */
 	public int luckySum(int a, int b, int c) {
-		return 0;
+		if ((a != 13) && (b != 13) && (c != 13)) {
+			return a + b + c ;
+			}
+			else if (b == 13) {
+				return a;
+				}
+			else if (c == 13) {
+				return a + b;
+						}
+			else 
+				return c;		
 	}
-
 }
