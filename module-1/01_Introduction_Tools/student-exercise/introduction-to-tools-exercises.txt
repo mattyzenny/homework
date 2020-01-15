@@ -321,7 +321,7 @@ $ <enter command to display present working directory>
     "Hello, this is the beginning of the application's documentation."
 ----
 
-$ code readme.txt
+$ code readme.txt 
 
 Don't forget to save the file in Visual Studio Code!
 
