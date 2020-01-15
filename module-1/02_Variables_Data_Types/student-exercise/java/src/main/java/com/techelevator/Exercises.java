@@ -245,12 +245,6 @@ public class Exercises {
 		float price = (float).54;
 		float returnPrice = kate - price;
 		
-		
-		//LOOK OVER #29!!!///
-		
-		
-		
-		
         /*
         30. Mark has 13 trees in his backyard. If he plants 12 more, how many trees
         will he have?
@@ -353,7 +347,7 @@ public class Exercises {
         */
 		int totalCookies = 276;
 		int bakingpan = totalCookies / 12;
-		int totalyPans = bakingpan;
+		int totalPans = bakingpan;
         /*
         43. Marian’s friends were coming over that afternoon so she made 480
         bite-sized pretzels. If one serving is equal to 12 pretzels, how many
@@ -368,6 +362,7 @@ public class Exercises {
         orphanage. If two lemon cupcakes were left at home, how many
         boxes with 3 lemon cupcakes each were given away?
         */
+		
 		int bakedLemonCupcakes = 53;
 		int forgottenLemonCupcakes = 2;
 		int lemonCupcakesAvailable = bakedLemonCupcakes - forgottenLemonCupcakes;
