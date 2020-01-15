@@ -213,48 +213,71 @@ public class Exercises {
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
         */
-
+		float totalHotDogs = 6;
+		float hotDogPrice = (float).50;
+		float moneySpentOnHotDogs = hotDogPrice * totalHotDogs;
+		
+		
         /*
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
-
+		int hiltMoneyTotal = 50;
+		int pencilPrice = 7;
+		int totalPencils = hiltMoneyTotal / pencilPrice;
+		
         /*
         28. Mrs. Hilt saw 33 butterflies. Some of the butterflies were red and others
         were orange. If 20 of the butterflies were orange, how many of them
         were red?
         */
-
+		int butterflyTotal = 33;
+		int orangeButterfly = 20;
+		int redButterfly = butterflyTotal - orangeButterfly;
+	
         /*
         29. Kate gave the clerk $1.00. Her candy cost 54 cents. How much change
         should Kate get back?
         */
-
+		float kate = (float)1.00;
+		float price = (float).54;
+		float returnPrice = kate - price;
         /*
         30. Mark has 13 trees in his backyard. If he plants 12 more, how many trees
         will he have?
         */
-
+		int backYardTrees = 13;
+		int plantedTrees = 12;
+		int totalTrees = plantedTrees + backYardTrees;
+		
         /*
         31. Joy will see her grandma in two days. How many hours until she sees
         her?
         */
-
+		int days = 2;
+		int hours = days * 24;
+		int joyReunion = hours;
+		
         /*
         32. Kim has 4 cousins. She wants to give each one 5 pieces of gum. How
         much gum will she need?
         */
-
+		int gumPerPerson = 5;
+		int cousins = 4;
+		int gumNeeded = cousins * gumPerPerson;
+		
         /*
         33. Dan has $3.00. He bought a candy bar for $1.00. How much money is
         left?
         */
-
+		float danWallet = (float)3.00;
+		float candyBarPrice = (float)1.00;
+		float moneyRemaining = danWallet - candyBarPrice;
         /*
         34. 5 boats are in the lake. Each boat has 3 people. How many people are
         on boats in the lake?
         */
-
+		
         /*
         35. Ellen had 380 legos, but she lost 57 of them. How many legos does she
         have now?
