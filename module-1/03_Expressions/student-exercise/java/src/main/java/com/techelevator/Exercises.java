@@ -66,10 +66,10 @@ public class Exercises {
 	 */
 	public int diff21(int n) {
 		if (n > 21) {
-			return 21- n * 2;
+			return (21 - n) * 2;
 		}
 		else 
-			return 21 - n;
+			return (21 - n);
 	}
 
 	/*
@@ -81,7 +81,7 @@ public class Exercises {
 	 parrotTrouble(false, 6) → false
 	 */
 	public boolean parrotTrouble(boolean talking, int hour) {
-		if ((talking == true) && (hour < 7 & hour > 20)) {
+		if ((talking == true) && (hour < 7 || hour > 20)) {
 			return true;
 		}
 		else
@@ -111,13 +111,12 @@ public class Exercises {
 	 posNeg(-4, -5, true) → true
 	 */
 	public boolean posNeg(int a, int b, boolean negative) {
-		if ((negative == true) && (a < 0) && (b < 0)) {
+		if (negative == true && a < 0 && b < 0) {
 			return true;
 		}
-		else if ((a < 0) && (b > 0) || (a > 0) && (b < 0)) {
+		else if (((a < 0 && b > 0) || (a > 0 && b < 0)) && (negative != true)) {
 			return true;
 		}
-		else
 			return false;
 	}
 
@@ -205,13 +204,16 @@ public class Exercises {
 	 */
 	public int intMax(int a, int b, int c) {
 		
-		int largest = 0;
-		
-		
-		
-		
-		return largest;
+		if (a > b && a > c) {
+			return a;
+		}
+			else if (b > a && b > c) {
+				return b;
+			}
+			else
+				return c;
 	}
+	
 
 	/*
 	 14. Given 2 int values, return true if they are both in the range 30..40 inclusive, or they are both
@@ -221,7 +223,11 @@ public class Exercises {
 	 in3050(40, 50) → true
 	 */
 	public boolean in3050(int a, int b) {
-		return false;
+		if (((a >= 30 && a <= 40) && (b >= 30 && b <=40)) || ((a >= 40 && a <= 50) && (b >= 40 && b <=50))) {
+			return true;
+		}
+			else
+				return false;
 	}
 
 	/*
@@ -232,7 +238,14 @@ public class Exercises {
 	 max1020(11, 9) → 11
 	 */
 	public int max1020(int a, int b) {
-		return 0;
+		if ((a >= 10) && (a <= 20) && (a > b)) {
+			return a;
+		}
+		else if ((b >= 10) && (b <= 20) && (b > a)) {
+			return b;
+		}
+		else 
+			return 0;
 	}
 
 	/*
@@ -245,8 +258,13 @@ public class Exercises {
 	 cigarParty(70, true) → true
 	 */
 	public boolean cigarParty(int cigars, boolean isWeekend) {
-		return false;
-	}
+		if (cigars < 40 || cigars > 60 && (isWeekend != true)) {
+			return false;
+		}	
+		else
+				return true;
+		}
+	
 
 	/*
 	 17. You and your date are trying to get a table at a restaurant. The parameter "you" is the stylishness
@@ -366,7 +384,11 @@ public class Exercises {
 	 less20(20) → false
 	 */
 	public boolean less20(int n) {
-		return false;
+		if ((n + 1) % 20 == 0 || (n + 2) % 20 == 0) {
+			return true;
+		}
+		else
+			return false;
 	}
 
 	/*
@@ -377,7 +399,11 @@ public class Exercises {
 	 nearTen(19) → true
 	 */
 	public boolean nearTen(int num) {
-		return false;
+		 if (num % 10 < 3 || num % 10 >=8) {
+			 return true;
+		 }
+		 else 
+			 return false;
 	}
 
 	/*
@@ -388,7 +414,14 @@ public class Exercises {
 	 teenSum(13, 2) → 19
 	 */
 	public int teenSum(int a, int b) {
-		return 0;
+		int sum = a + b;
+		
+		if ((a >= 13 && a <= 19) || (b >= 13 && b <= 19)) {
+			return (int)19;
+		}
+			else 
+				return sum;
+		
 	}
 
 	/*
@@ -399,8 +432,13 @@ public class Exercises {
 	 answerCell(true, false, false) → false
 	 */
 	public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
-		return false;
-	}
+		if ((isMorning == true) && (isMom == true) || (isAsleep == false)) {
+			return true;
+		}
+			else
+				return false;
+		}
+	
 
 	/*
 	 30. We are having a party with amounts of tea and candy. Return the int outcome of the party encoded as
@@ -412,7 +450,17 @@ public class Exercises {
 	 teaParty(20, 6) → 2
 	 */
 	public int teaParty(int tea, int candy) {
-		return 0;
+		int good = 1;
+		int bad = 0;
+		int great = 2;
+			if ((tea < 5) || (candy < 5)) {
+			return bad;
+		}
+		else if ((tea >= candy * 2) || (candy >= tea *2)) {
+			return great;
+		}
+		else
+			return good;
 	}
 
 	/*
@@ -422,7 +470,11 @@ public class Exercises {
 	 twoAsOne(3, 2, 2) → false
 	 */
 	public boolean twoAsOne(int a, int b, int c) {
-		return false;
+		if ((a + b == c) || (a + c == b) || (b + c == a)) {
+			return true;
+		}
+		else
+			return false;
 	}
 
 	/*
