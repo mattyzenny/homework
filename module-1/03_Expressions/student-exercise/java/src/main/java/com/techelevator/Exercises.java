@@ -213,7 +213,6 @@ public class Exercises {
 			else
 				return c;
 	}
-	
 
 	/*
 	 14. Given 2 int values, return true if they are both in the range 30..40 inclusive, or they are both
@@ -396,7 +395,11 @@ public class Exercises {
 	 specialEleven(24) → false
 	 */
 	public boolean specialEleven(int n) {
-		return false;
+		if ((n % 11 == 0) || (n % 11 == 1)) {
+			return true;
+		}
+		else
+			return false;
 	}
 
 	/*
@@ -407,6 +410,10 @@ public class Exercises {
 	 more20(22) → true
 	 */
 	public boolean more20(int n) {
+		if ((n % 20 == 1) || (n % 20 == 2)) {
+			return true;
+		}
+		else
 		return false;
 	}
 
@@ -418,7 +425,11 @@ public class Exercises {
 	 old35(15) → false
 	 */
 	public boolean old35(int n) {
-		return false;
+		if ((n % 3 == 0) ^ (n % 5 == 0)) {
+			return true;
+		}
+		else 
+			return false;
 	}
 
 	/*
@@ -481,7 +492,7 @@ public class Exercises {
 		if ((isMorning == true) && (isMom == true)) {
 			return true;
 		}
-		else if (isAsleep != true) {
+		else if (isAsleep) {
 			return false;
 		}
 		else 
