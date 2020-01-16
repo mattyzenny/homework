@@ -10,7 +10,11 @@ public class Exercises {
 	 firstLast6([13, 6, 1, 2, 3]) → false
 	 */
 	public boolean firstLast6(int[] nums) {
-		return false;
+				if (nums[0] == 6 || nums[nums.length -1] == 6) {
+					return true;
+				}
+					else
+						return false;
 	}
 
 	/*
@@ -29,8 +33,13 @@ public class Exercises {
 	 makePi() → [3, 1, 4]
 	 */
 	public int[] makePi() {
-		return new int[] {};
+		
+		int[] piArray = new int [] {3,1,4};
+		
+		
+		return piArray;
 	}
+	
 
 	/*
 	 4. Given 2 arrays of ints, a and b, return true if they have the same first element or they have 
@@ -50,8 +59,17 @@ public class Exercises {
 	 sum3([7, 0, 0]) → 7
 	 */
 	public int sum3(int[] nums) {
-		return 0;
+		int sum = 0;
+		sum = nums [0] + nums [1] + nums [2];
+		return sum;
 	}
+	
+//	//public int sum3(int[] nums) {
+//	int sum = 0;
+//	for (int i=0; i<nums.length; i++) {
+//		sum+= nums[i];
+////	}
+//	return sum;
 
 	/*
 	 6. Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2, 3} 
@@ -105,7 +123,12 @@ public class Exercises {
 	 middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
 	 */
 	public int[] middleWay(int[] a, int[] b) {
-		return new int[] {};
+		
+		
+		int [] results = new int[2];
+		results [0] =a[1];
+		results [1] = b[1];
+		return results;
 	}
 
 	/*
@@ -137,6 +160,8 @@ public class Exercises {
 	 has22([1, 2, 1, 2]) → false
 	 has22([2, 1, 2]) → false
 	 */
+	//loop through all arrays, and if [x] is next to [y], if [x] is by [y] return true; else//
+	
 	public boolean has22(int[] nums) {
 		return false;
 	}

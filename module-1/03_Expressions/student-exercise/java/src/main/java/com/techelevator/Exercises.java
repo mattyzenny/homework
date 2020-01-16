@@ -66,7 +66,7 @@ public class Exercises {
 	 */
 	public int diff21(int n) {
 		if (n > 21) {
-			return (21 - n) * 2;
+			return (n - 21) * 2;
 		}
 		else 
 			return (21 - n);
@@ -204,10 +204,10 @@ public class Exercises {
 	 */
 	public int intMax(int a, int b, int c) {
 		
-		if (a > b && a > c) {
-			return a;
+		if ((a >= b) && (a >= c)) {
+				return a;
 		}
-			else if (b > a && b > c) {
+			else if ((b >= a) && (b >= c)) {
 				return b;
 			}
 			else
@@ -237,15 +237,23 @@ public class Exercises {
 	 max1020(11, 9) → 11
 	 */
 	public int max1020(int a, int b) {
-		if ((a >= 10) && (a <= 20) && (a > b)) {
-			return a;
+		if ((a < 10 || a > 20) && (b < 10 || b > 20)) {
+			return 0;
 		}
-		else if ((b >= 10) && (b <= 20) && (b > a)) {
+		else if (a < 10 || a > 20) {
 			return b;
 		}
+		else if (b < 10 || b > 20) {
+			return a;
+		}
+		else if (a > b) {
+			return a;
+		}
 		else 
-			return 0;
+			return b;
 	}
+	
+
 
 	/*
 	 16. When squirrels get together for a party, they like to have cigars. A squirrel party is successful
@@ -489,17 +497,20 @@ public class Exercises {
 	 answerCell(true, false, false) → false
 	 */
 	public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
-		if ((isMorning == true) && (isMom == true)) {
-			return true;
-		}
-		else if (isAsleep) {
+		if (isAsleep) {
 			return false;
 		}
-		else 
+		else if ((isMom) && (!isAsleep)) {
 			return true;
-		
 		}
-
+		else if (((isMom) && (isMorning)) || (!isMorning && !isMom && !isAsleep)) {
+			return true;
+		}
+		else 
+			return false;
+	}
+		
+		
 	/*
 	 30. We are having a party with amounts of tea and candy. Return the int outcome of the party encoded as
 	 0=bad, 1=good, or 2=great. A party is good (1) if both tea and candy are at least 5. However, if
@@ -562,7 +573,10 @@ public class Exercises {
 	 inOrderEqual(5, 5, 7, true) → true
 	 */
 	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
-		if ((a <= b) && (b <= c) || (equalOk == true)){
+		if ((a <= b) && (b <= c) && (equalOk == true)){
+			return true;
+		}
+		else if (a < b && b < c) {
 			return true;
 		}
 		else 
@@ -577,18 +591,22 @@ public class Exercises {
 	 loneSum(3, 3, 3) → 0
 	 */
 	public int loneSum(int a, int b, int c) {
-		if (a == b) {
+		int sum = a + b + c;
+		if (a == b && a != c) {
 			return c;
 		}
-		else if (a == c) {
+		else if (a == c && a != b) {
 			return b;
 		}
-		else if (b == c) {
+		else if (b == c && a != b) {
 			return a;
 		}
-		else return (a + b + c);
-		
+		else if (a == b && b == c && a == c) { 
+			return 0;
 	}
+		else return sum;
+	}
+	
 	
 	/*
 	 35. Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does not
@@ -601,16 +619,24 @@ public class Exercises {
 	 luckySum(13, 13, 3) → 0
 	 */
 	public int luckySum(int a, int b, int c) {
-		if ((a != 13) && (b != 13) && (c != 13)) {
-			return a + b + c ;
-			}
-			else if (b == 13) {
-				return a;
-				}
-			else if (c == 13) {
-				return a + b;
-						}
-			else 
-				return c;		
+		int sum = a + b + c;
+		if (a == 13 && b == 13) {
+			return 0;
+		}
+		else if (b == 13 && c == 13) {
+			return 0;
+		}
+		else if (c == 13 && a == 13) {
+			return 0;
+		}
+		else if (a == 13) {
+			return c;
+		}
+		else if (b == 13) {
+			return a;
+		}
+		else if (c == 13)
+			return (b + a);
+		else return sum;
 	}
 }
