@@ -278,7 +278,17 @@ public class Exercises {
 	 dateFashion(5, 5) → 1
 	 */
 	public int dateFashion(int you, int date) {
-		return 0;
+		int noTable = 0;
+		int maybeTable = 1;
+		int didGetTable = 2;
+		if ((you >=8 && date > 2) || (date >= 8 && you > 2)) {
+			return didGetTable;
+		}
+			else if ((you <=2) || (date <= 2)) {
+				return noTable;
+		}
+		else
+			return maybeTable;
 	}
 
 	/*
@@ -290,6 +300,10 @@ public class Exercises {
 	 squirrelPlay(95, true) → true
 	 */
 	public boolean squirrelPlay(int temp, boolean isSummer) {
+		if ((isSummer && temp >= 60 && temp <=100) || (!isSummer && temp >= 60 && temp <=90)) {
+			return true;
+		}
+		else
 		return false;
 	}
 
@@ -303,7 +317,17 @@ public class Exercises {
 	 caughtSpeeding(65, true) → 0
 	 */
 	public int caughtSpeeding(int speed, boolean isBirthday) {
-		return 0;
+		int noTicket = 0;
+		int smallTicket = 1;
+		int bigTicket = 2;
+		if ((!isBirthday && speed <= 60) || (isBirthday && speed <= 65)) {
+			return noTicket;
+		}
+		else if ((!isBirthday && speed > 60 && speed <= 80) || (isBirthday && speed > 65 && speed <= 85)) {
+			return smallTicket;
+		}
+		else 
+			return bigTicket;
 	}
 
 	/*
@@ -314,7 +338,12 @@ public class Exercises {
 	 sortaSum(10, 11) → 21
 	 */
 	public int sortaSum(int a, int b) {
-		return 0;
+		int sum = a + b;
+		if (a + b >19 || a + b <10) {
+			return sum;
+		}
+		else
+			return 20;
 	}
 
 	/*
@@ -327,7 +356,17 @@ public class Exercises {
 	 alarmClock(0, false) → "10:00"
 	 */
 	public String alarmClock(int day, boolean vacation) {
-		return "";
+		if ((day > 0 && day < 6) && (vacation != true)) {
+			return "7:00";
+		}
+			else if ((day > 0 && day < 6) && (vacation == true)) {
+				return "10:00";
+			}
+			else if (((day == 0) || (day == 6)) && (vacation == true)) {
+				return "off";
+		}
+			else
+				return "10:00";
 	}
 
 	/*
@@ -338,7 +377,14 @@ public class Exercises {
 	 in1To10(11, true) → true
 	 */
 	public boolean in1To10(int n, boolean outsideMode) {
-		return false;
+		if ((outsideMode) && ((n <= 1) || (n >=10))) {
+			return true;
+		}
+		else if ((n >=1 && n <= 10) && (!outsideMode)) {
+			return true;
+		}
+		else
+			return false;
 	}
 
 	/*
@@ -432,13 +478,16 @@ public class Exercises {
 	 answerCell(true, false, false) → false
 	 */
 	public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
-		if ((isMorning == true) && (isMom == true) || (isAsleep == false)) {
+		if ((isMorning == true) && (isMom == true)) {
 			return true;
 		}
-			else
-				return false;
+		else if (isAsleep != true) {
+			return false;
 		}
-	
+		else 
+			return true;
+		
+		}
 
 	/*
 	 30. We are having a party with amounts of tea and candy. Return the int outcome of the party encoded as
