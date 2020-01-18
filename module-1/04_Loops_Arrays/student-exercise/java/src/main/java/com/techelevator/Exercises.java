@@ -92,7 +92,6 @@ public class Exercises {
 		
 		return newArray; 
 		}
-
 	
 
 	/*
@@ -186,9 +185,21 @@ public class Exercises {
 	 countEvens([1, 3, 5]) → 0
 	 */
 	public int countEvens(int[] nums) {
-		return 0;
+		int evenSum = 0;
+		for(int i = 0; i < nums.length; i++) {
+			
+			if(nums[i] % 2 == 0) 
+			 evenSum++;
+		}
+		return evenSum;
 	}
+	
+	
 
+	
+
+
+	
 	/*
 	 12. Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 
 	 13 is very unlucky, so it does not count and numbers that come immediately after a 13 also do 
@@ -198,8 +209,20 @@ public class Exercises {
 	 sum13([1, 2, 2, 1, 13]) → 6
 	 */
 	public int sum13(int[] nums) {
-		return 0;
-	}
+		int sum = 0;
+		for (int i = 0; i<nums.length; i++)
+		{
+	if (nums[i] == 13) 
+		return sum++;
+	
+	else if (nums[i] != 13) 
+		
+		sum += nums[i];
+		}
+	return sum;
+		
+}
+
 
 	/*
 	 13. Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.
