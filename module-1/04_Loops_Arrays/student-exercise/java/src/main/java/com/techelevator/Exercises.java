@@ -10,12 +10,17 @@ public class Exercises {
 	 firstLast6([13, 6, 1, 2, 3]) → false
 	 */
 	public boolean firstLast6(int[] nums) {
-				if (nums[0] == 6 || nums[nums.length -1] == 6) {
-					return true;
-				}
-					else
-						return false;
+		if (nums[0] == 6 || nums[nums.length-1] == 6) {
+			return true;
+		}
+		else return false;
 	}
+//				if (nums[0] == 6 || nums[nums.length -1] == 6) {
+//					return true;
+//				}
+//					else
+//						return false;
+//	}
 
 	/*
 	 2. Given an array of ints, return true if the array is length 1 or more, and the first element and
@@ -25,24 +30,35 @@ public class Exercises {
 	 sameFirstLast([1, 2, 1]) → true
 	 */
 	public boolean sameFirstLast(int[] nums) {
-			if(nums[0] == nums[nums.length-1]) {
-		return true;
-	}
-			else {
-				return false;
-			}
-	}
+		if (nums[0] == nums[nums.length-1]) {
+			return true;
+		}
+		else 
+			return false;
+		}
+
+	
+//			if(nums[0] == nums[nums.length-1]) {
+//		return true;
+//	}
+//			else {
+//				return false;
+//			}
+//	}
 	/*
 	 3. Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
 	 makePi() → [3, 1, 4]
 	 */
 	public int[] makePi() {
-		
-		int[] piArray = new int [] {3,1,4};
-		
-		
+//		
+		int[] piArray = new int [] {3, 1, 4};
 		return piArray;
 	}
+//		int[] piArray = new int [] {3,1,4};
+//		
+//		
+//		return piArray;
+//	}
 	
 
 	/*
@@ -53,13 +69,23 @@ public class Exercises {
 	 commonEnd([1, 2, 3], [1, 3]) → true
 	 */
 	public boolean commonEnd(int[] a, int[] b) {
+		
+		
 		if (a[0] == b[0] || a[a.length-1] == b[b.length-1]) {
-		return  true;
+			return true;
 		}
-		else {
-			return false;
+		else return false;
 	}
-	}
+	
+		
+	
+//		if (a[0] == b[0] || a[a.length-1] == b[b.length-1]) {
+//		return  true;
+//		}
+//		else {
+//			return false;
+//	}
+//	}
 	
 	/*
 	 5. Given an array of ints length 3, return the sum of all the elements.
@@ -69,17 +95,17 @@ public class Exercises {
 	 */
 	public int sum3(int[] nums) {
 		int sum = 0;
-		sum = nums [0] + nums [1] + nums [2];
-		return sum;
-	}
+		for (int i = 0; i < nums.length; i++) {
+			sum += nums[i];
+		}
+			return sum;
+		}
+		
+//		int sum = 0;
+//		sum = nums [0] + nums [1] + nums [2];
+//		return sum;
+//	}
 	
-//	//public int sum3(int[] nums) {
-//	int sum = 0;
-//	for (int i=0; i<nums.length; i++) {
-//		sum+= nums[i];
-////	}
-//	return sum;
-
 	/*
 	 6. Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2, 3} 
 	 yields {2, 3, 1}.
@@ -114,18 +140,25 @@ public class Exercises {
 	 maxEnd3([2, 11, 3]) → [3, 3, 3]
 	 */
 	public int[] maxEnd3(int[] nums) {
-	if (nums[0] >= nums[nums.length-1]) {
-		nums[0] = nums[0];
-		  nums[1] = nums[0];
-		  nums[2] = nums[0];
-	return new int[] { nums[0], nums[0], nums[0]};
-	}
-	else if (nums[0] <= nums[nums.length-1]) {
-		nums[0] = nums[2];
-		  nums[1] = nums[2];
-		  nums[2] = nums[2];
-	}
-	return new int[] { nums[2], nums[2], nums[2]};
+			if (nums[0] >= nums[nums.length-1]) {
+				return new int [] {nums[0], nums[0], nums[0]};
+			}
+			else 
+				return new int [] {nums[nums.length-1], nums[nums.length-1], nums[nums.length-1]};
+	
+	
+//	if (nums[0] >= nums[nums.length-1]) {
+//		nums[0] = nums[0];
+//		  nums[1] = nums[0];
+//		  nums[2] = nums[0];
+//	return new int[] { nums[0], nums[0], nums[0]};
+//	}
+//	else if (nums[0] <= nums[nums.length-1]) {
+//		nums[0] = nums[2];
+//		  nums[1] = nums[2];
+//		  nums[2] = nums[2];
+//	}
+//	return new int[] { nums[2], nums[2], nums[2]};
 	
 		
 //	This is good code. REMEMBER IT! NEXT TIME READ QUESTION BETTER!!
@@ -156,8 +189,14 @@ public class Exercises {
 	 sum2([1, 1, 1, 1]) → 2
 	 */
 	public int sum2(int[] nums) {
-		
-		if (nums.length != 0);{
+//		int sum = nums[0] + nums[1];
+//		if (nums.length == 0) {
+//			return 0;
+//		}
+//		else
+//		return sum;
+//	}
+		if (nums.length != 0); {
 		return nums[0] + nums[1];
 		}
 	}
@@ -169,13 +208,17 @@ public class Exercises {
 	 middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
 	 */
 	public int[] middleWay(int[] a, int[] b) {
-		
-		
-		int [] results = new int[2];
-		results [0] = a[1];
-		results [1] = b[1];
-		return results;
+		int [] newArray = new int [2];
+		newArray [0] = a[1];
+		newArray [1] = b[1];
+		return newArray;
 	}
+//		
+//		int [] results = new int[2];
+//		results [0] = a[1];
+//		results [1] = b[1];
+//		return results;
+//	}
 
 	/*
 	 11. Return the number of even ints in the given array. Note: the % "mod" operator computes the 
@@ -239,7 +282,7 @@ public class Exercises {
 		}
 		return false;
 	}
-	
+//	
 	/*
 	 14. Given an array of ints, return true if the array contains no 1's and no 3's.
 	 lucky13([0, 2, 4]) → true
