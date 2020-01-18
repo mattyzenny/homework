@@ -88,10 +88,12 @@ public class Exercises {
 	 rotateLeft3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] rotateLeft3(int[] nums) {
-		int[] nums = new int[] {[1],[2],[0]};
+		int [] newArray = new int[] {nums[1], nums[2], nums[0]}; 
 		
-		
-	}
+		return newArray; 
+		}
+
+	
 
 	/*
 	 7. Given an array of ints length 3, return a new array with the elements in reverse order, so 
@@ -101,7 +103,8 @@ public class Exercises {
 	 reverse3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] reverse3(int[] nums) {
-		return new int[] {};
+		int [] ages = new int[] { nums[2], nums[1], nums[0]};
+		return ages;
 	}
 
 	/*
@@ -112,8 +115,39 @@ public class Exercises {
 	 maxEnd3([2, 11, 3]) → [3, 3, 3]
 	 */
 	public int[] maxEnd3(int[] nums) {
-		return new int[] {};
+	if (nums[0] >= nums[nums.length-1]) {
+		nums[0] = nums[0];
+		  nums[1] = nums[0];
+		  nums[2] = nums[0];
+	return new int[] { nums[0], nums[0], nums[0]};
 	}
+	else if (nums[0] <= nums[nums.length-1]) {
+		nums[0] = nums[2];
+		  nums[1] = nums[2];
+		  nums[2] = nums[2];
+	}
+	return new int[] { nums[2], nums[2], nums[2]};
+	
+		
+//	This is good code. REMEMBER IT! NEXT TIME READ QUESTION BETTER!!
+	
+//	if (nums[0] >= nums[1] && nums[0] >= nums[2]) {
+//		  nums[0] = nums[0];
+//		  nums[1] = nums[0];
+//		  nums[2] = nums[0];
+//	return new int[] { nums[0], nums[0], nums[0]};
+//	}
+//	else if (nums[1] >= nums[0] && nums[1] >= nums[2]) {
+//		  nums[0] = nums[1];
+//		  nums[1] = nums[1];
+//		  nums[2] = nums[1];
+//		  return new int[] {nums[1], nums[1], nums[1]};
+//		  }
+//	else 
+//		  return new int[] { nums[2],nums[2],nums[2]};
+		  
+		}
+
 
 	/*
 	 9. Given an array of ints, return the sum of the first 2 elements in the array. If the array length
@@ -123,9 +157,11 @@ public class Exercises {
 	 sum2([1, 1, 1, 1]) → 2
 	 */
 	public int sum2(int[] nums) {
-		return 0;
+		
+		if (nums.length != 0);{
+		return nums[0] + nums[1];
+		}
 	}
-
 	/*
 	 10. Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle 
 	 elements.
