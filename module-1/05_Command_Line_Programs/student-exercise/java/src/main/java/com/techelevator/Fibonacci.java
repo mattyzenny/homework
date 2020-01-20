@@ -11,18 +11,21 @@ public class Fibonacci {
 			 String value = scanner.nextLine();
 			 int newValue = Integer.parseInt(value);
 			 int value0 =0;
-			 int value1 =1;
-			 int finalValue = newValue;   
+			 int value1 =1;   
 			 System.out.print("Your Fibonacci numbers are "+ value0 +" "+ value1);   
 			    
-			 for(int i=2;i <= newValue; ++i)    
+			 for(int i=0;i <= newValue; ++i)    
 			 {    
-			  finalValue = value0 + value1;    
-			  System.out.print(" "+ finalValue);    
-			  value0 = value1;    
-			  value1 = finalValue;    
+			 int finalOutput = value0 + value1; 
+		
+			 if(finalOutput<=newValue) {
+			  System.out.print(" "+ finalOutput);    
+			  value0 = value1;
+				 value1 = finalOutput;
 			 }    
-			  
+			 else { break;
 			}
+	}
+}
 	}
 }
