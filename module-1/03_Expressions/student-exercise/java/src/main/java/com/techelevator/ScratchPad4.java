@@ -1,8 +1,85 @@
 package com.techelevator;
 
-public class ScratchPad4 {
+import java.util.Stack;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+import java.util.Map;
 
-	public static void main(String[] args) {
+public class ScratchPad4 {
+public static void main(String[] args) {
+	
+//	
+//	Map<String, Boolean> people = new HashMap<String, Boolean>();
+//	people.put("Luke", true);
+//	people.put("Han", false);
+//	people.put("Chewbacca", false);
+//	people.put("Yoda", true);
+//	people.put("Leia", false);
+//	boolean isLukeJedi = people.get("Luke");
+//	System.out.println(isLukeJedi);
+//	for(Map.Entry<String, Boolean> person : people.entrySet()) {
+//	    if (person.getValue()) {
+//	        System.out.println(person.getKey() + " is a Jedi.");
+//	    } else {
+//	        System.out.println(person.getKey() + " is not a Jedi.");
+//	    }
+//	}
+//}
+Set<String> characters = new HashSet<String>();  
+characters.add("Luke");
+characters.add("Rey");
+characters.add("Ben");
+for(String character : characters) {
+		System.out.println(character);
+	}
+}
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//	Queue<String> names = new LinkedList<String>();
+//	names.offer("C3PO");  // names now contains C3PO
+//	names.offer("R2-D2"); // names now contains C3PO, R2-D2
+//	names.offer("BB-8");  // names now contains C3PO, R2-D2, BB-8
+//	while(names.size() > 0) {
+//	    String name = names.poll(); // the item is removed from the queue
+//	    System.out.println(name);
+//	}
+//	}
+//	
+//	
+//	public static void main(String[] args) {
+//		Stack<String> names = new Stack<String>();
+//		names.push("Obi-wan");
+//		names.push("R2-D2");
+//		names.push("Han Solo");
+//		names.push("Leia");
+//		//... push names on to the stack
+//
+//		while (names.size() > 0)
+//		{    
+//		    String name = names.pop(); // the next item is removed from the stack
+//		    System.out.println(name);    
+//		}
+		
+//		String setOfNames = "Joe; John; Mike; Mark";
+//		String splitNames[] = setOfNames.split(";");
+//		String resetNames = String.join(",", splitNames);
+//		System.out.println(resetNames);
 		// TODO Auto-generated method stub
 //		int age = 1;
 //		if (age >0) {
@@ -36,11 +113,11 @@ public class ScratchPad4 {
 //			else 
 //				System.out.println("Odd " + i);
 //			
-		int size = 10;
-		int [] ages = new int [size];
-		for (int i = 0; i < ages.length; i++) {
-			System.out.println("Element: " + i + " " + ages[i]);
-		}
+//		int size = 10;
+//		int [] ages = new int [size];
+//		for (int i = 0; i < ages.length; i++) {
+//			System.out.println("Element: " + i + " " + ages[i]);
+//		}
 		
 		//TRY THIS LATER//
 //		int sum = 0;
@@ -55,8 +132,7 @@ public class ScratchPad4 {
 		
 	
 	
-	}
-}
+	
 
 
 
