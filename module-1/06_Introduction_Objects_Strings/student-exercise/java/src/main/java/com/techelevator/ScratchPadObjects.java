@@ -1,5 +1,12 @@
 package com.techelevator;
 
+import java.util.List;
+import java.util.Queue;
+import java.util.ArrayList;
+import java.util.Stack;
+
+
+
 public class ScratchPadObjects {
 
 	public static void main(String[] args) {
@@ -7,13 +14,49 @@ public class ScratchPadObjects {
 		
 
 //		// TODO Auto-generated method stub
-		String name = "Tech Elevator";
-		String name2 = new String ("Irrelevant to use 'new' key word");
+//		String name = "Tech Elevator";
+//		String name2 = new String ("Irrelevant to use 'new' key word");
+//		
+//		
+		//List//
+		List<String> names = new ArrayList<String>();
 		
-		char lastValue = name.charAt(name.length()-1);
-		System.out.println(lastValue);
+		
+		
+		//Add object to list//
+		
+		names.add("Sean");
+		names.add("Joe");
+		
+		System.out.println(names.size());
+		if (names.size() !=0) {
+		System.out.println(names.get(0));
+		
+		}
+		for (int i = 0; i < names.size(); i++) {
+			System.out.println(names.get(i));
+		}
+		
+		names.remove(0);
+		System.out.println(names.get(0));
+
 	}
 }
+//		while(!names.isEmpty()) {
+//			List<String> students = new ArrayList<String> ();
+//			
+//			if (students != null) {
+//				while(!students.isEmpty()) {
+//				
+//			}
+//		}
+//	}
+		
+//		
+//		char lastValue = name.charAt(name.length()-1);
+//		System.out.println(lastValue);
+//	}
+//}
 //		char c = name.charAt(5);
 //		System.out.println(c);
 ////		int nameCompared = name2.compareTo(name);
