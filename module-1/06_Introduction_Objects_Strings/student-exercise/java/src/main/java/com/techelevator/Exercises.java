@@ -322,7 +322,11 @@ public class Exercises {
 	 stringTimes("Hi", 1) → "Hi"
 	 */
 	public String stringTimes(String str, int n) {
-		return null;
+		
+		for (int i = 0; i <= n; i++) {
+			
+		}
+			
 	}
 
 	/*
@@ -333,7 +337,8 @@ public class Exercises {
 	 frontTimes("Abc", 3) → "AbcAbcAbc"
 	 */
 	public String frontTimes(String str, int n) {
-		return null;
+	String newString =	str.substring(0, 2);
+	Int newInteger = str.int;
 	}
 
 	/*
@@ -343,8 +348,7 @@ public class Exercises {
 	 countXX("xxxx") →
 	 */
 	public int countXX(String str) {
-		return 0;
-	}
+		str.inde
 
 	/*
 	 Given a string, return true if the first instance of "x" in the string is immediately followed by another "x".
@@ -353,8 +357,12 @@ public class Exercises {
 	 doubleX("xxxxx") → true
 	 */
 	public boolean doubleX(String str) {
-		return false;
-	}
+		if (str.contains("xx")) {
+			return true;
+		}
+		else
+			return false;
+		}
 
 	/*
 	 Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
