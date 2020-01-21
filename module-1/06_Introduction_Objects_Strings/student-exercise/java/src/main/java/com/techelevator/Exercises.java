@@ -305,16 +305,29 @@ public class Exercises {
 	 hasBad("xxbadxx") → false
 	 */
 	public boolean hasBad(String str) {
-		if(str.length() == 3 && str.substring(0,3).equals("bad") || (str.length() == 3))
-			return true; 
 		
-		if (str.length() >=4 && str.substring(0,3).equals("bad") || str.substring(1,4).equals("bad")) {
-			
-			return true;
-	}
-		else return false;
-	}
-
+//	if (str.contentEquals("bad") && str.equals(str.indexOf("b", 0)) || str.equals(str.indexOf("b", 1))) {
+//			return true;
+//	}
+//		else return false;
+//	}
+	    if(str.length() == 3)
+	        return str.substring(0, 3).equals("bad");
+	          
+	    if(str.length() > 3) {
+	        return str.substring(0, 3).equals("bad") || str.substring(1, 4).equals("bad");
+	    }
+	    else {
+	    return false;
+	    }
+		}
+//		if(str.length() == 3 && str.substring(0,3).equals("bad") || (str.length() == 3))
+//			return true; 
+//		if (str.length() >=4 && str.substring(0,3).equals("bad") || str.substring(1,4).equals("bad")) {
+		
+//if bad starts at index 0,1 return true;
+	
+	//.equals 
 	/*
 	 Given a string and a non-negative int n, return a larger string that is n copies of the original string.
 	 stringTimes("Hi", 2) → "HiHi"
@@ -322,9 +335,10 @@ public class Exercises {
 	 stringTimes("Hi", 1) → "Hi"
 	 */
 	public String stringTimes(String str, int n) {
-		return str;
-		
-		
+		String newString = "";
+		for (int i =0; i <n; i++)
+			newString += str;
+		return newString;
 	}
 
 	/*
@@ -335,8 +349,17 @@ public class Exercises {
 	 frontTimes("Abc", 3) → "AbcAbcAbc"
 	 */
 	public String frontTimes(String str, int n) {
-		return str;
-	
+		String newString = "";
+		if (str.length() <= 3) {
+		for (int i = 0; i < n; i++) {	
+		newString += str;
+		}
+		}
+		else {
+		for (int j=0; j<n; j++) {
+			newString+=str.substring(0,3);
+		}
+		} return newString;
 	}
 
 	/*
@@ -346,8 +369,14 @@ public class Exercises {
 	 countXX("xxxx") →
 	 */
 	public int countXX(String str) {
-		return 0;
-	}
+		int containsX = 0;
+		for(int i = 0; i <str.length()-1; i++) {
+			if (str.substring(i, i+ 2).equals("xx"))
+				containsX++;
+		}
+			return  containsX;
+		}
+			
 
 	/*
 	 Given a string, return true if the first instance of "x" in the string is immediately followed by another "x".
@@ -356,13 +385,15 @@ public class Exercises {
 	 doubleX("xxxxx") → true
 	 */
 	public boolean doubleX(String str) {
-		if (str.contains("xx")) {
-			return true;
+		 for(int i = 0; i < str.length() - 1; i++) {
+		if(str.charAt(i) =='x' && str.charAt(i+1) =='x') 
+			return true; 
 		}
-		else
-			return false;
+			 { 
+				return false;
 		}
-
+	}
+	   
 	/*
 	 Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
 	 stringBits("Hello") → "Hlo"
@@ -370,8 +401,13 @@ public class Exercises {
 	 stringBits("Heeololeo") → "Hello"
 	 */
 	public String stringBits(String str) {
-		return null;
+		String newString = "";
+	  for (int i=0; i<str.length(); i+=2) {
+	    newString = newString + str.substring(i, i+1);
+	  }
+	  return newString;
 	}
+
 
 	/*
 	 Given a non-empty string like "Code" return a string like "CCoCodCode".
@@ -380,8 +416,12 @@ public class Exercises {
 	 stringSplosion("ab") → "aab"
 	 */
 	public String stringSplosion(String str) {
-		return null;
-	}
+		 String newString = "";
+		  for (int i=0; i<str.length(); i++) {
+		    newString = newString + str.substring(0, i+1);
+		  }
+		  return newString;
+		}
 
 	/*
 	 Given a string, return the count of the number of times that a substring length 2 appears in the string and
@@ -391,9 +431,18 @@ public class Exercises {
 	 last2("axxxaaxx") → 2
 	 */
 	public int last2(String str) {
-		
-		
-		return 0;
+	    if(str.length() < 2) {
+	        return 0;
+	    }
+	    String newString = str.substring(str.length() - 2);
+	    int newInt = 0;
+	    
+	    for(int i = 0; i < str.length() - 2; i++) {
+	        if(str.substring(i, i+2).equals(newString))
+	            newInt = newInt + 1;
+	    }
+	                          
+	    return newInt;
 	}
 
 	/*
@@ -404,8 +453,15 @@ public class Exercises {
 	 stringX("xabxxxcdx") → "xabcdx"
 	 */
 	public String stringX(String str) {
-		if (str.startsWith("x")) {
-			return "x" + str.replace("x", "");
+		
+		if (str.length()-1 > 2 && str.startsWith("x") || (str.endsWith("x"))) {
+			return "x" + str.replace("x", "") + "x" ;
+		}
+			if ((str.length() == 0) && (str.startsWith("x"))) {
+				return str;
+			}
+		else if ((str.length()-1 == 1) && (str.endsWith("x"))) {
+			return str.replace("x", "");
 		}
 		else return str.replace("x", "");
 	}
