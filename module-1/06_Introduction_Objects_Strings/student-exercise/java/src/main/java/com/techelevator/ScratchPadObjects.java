@@ -1,9 +1,14 @@
 package com.techelevator;
 
+
+
+
 import java.util.List;
 import java.util.Queue;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Stack;
+import java.util.Scanner;
 
 
 
@@ -11,6 +16,53 @@ public class ScratchPadObjects {
 
 	public static void main(String[] args) {
 		
+		
+		try (Scanner scanner = new Scanner(System.in)) {
+				
+		//QUEUE//
+		Queue<String> priorities = new LinkedList<String>();
+		
+		priorities.offer("Clean the dishes");
+		priorities.offer("Wash the counters");
+		priorities.offer("Sweep the floor");
+		priorities.offer("Scrub the floor");
+		
+		//Processing Items In Queue//
+		while (priorities.size() > 0) {
+			String nextPriority = priorities.poll();
+			System.out.println("NEXT PRIORITY" + nextPriority);
+		}
+
+		Queue<Boolean> myBQueue = new LinkedList<Boolean>();
+		
+		Boolean isThereWork = true;
+		myBQueue.offer(new Boolean(isThereWork));
+		System.out.println("Is there work?" + "" + myBQueue.poll());
+	
+		
+		
+		//STACK//
+		Stack<String> browserStack = new Stack<String>();
+		
+		//Pushing items to the Stack//
+		browserStack.push("http://www.google.com");
+		browserStack.push("http://www.cnn.com");
+		browserStack.push("http://google.com");
+		browserStack.push("http://www.techelevator.com");
+		browserStack.push("http://www.si.com");
+		while (browserStack.size()>0) {
+			String previousPage = browserStack.pop();
+			System.out.println("Previous Page " + previousPage);
+		}
+			
+			String value = scanner.nextLine();
+			String pushedPage = browserStack.push("This is NSFW...are you sure you want to proceed? Press (y) for yes or (n) for no");
+
+			if(value.equalsIgnoreCase("y")) {
+				
+			
+			System.out.println(pushedPage);
+		}
 		
 
 //		// TODO Auto-generated method stub
@@ -24,11 +76,34 @@ public class ScratchPadObjects {
 		
 		
 		//Add object to list//
-		
+		names.add("John");
+		names.add("Brian");
+		names.add("Yoda");
 		names.add("Sean");
 		names.add("Joe");
 		
+		
+		//This is the exact same as for loop///
+		
+		for (String name : names) {
+			String plural = name +"'s";
+		
+		System.out.println(plural);
+		}
+		for (String name : names) {
+			if (name.equalsIgnoreCase("yoda"))
+				System.out.println("in this list Yoda is");
+			
+			if(name.equals("Darth Vader"))
+				System.out.println("Sith Lord there is");
+			else 
+				System.out.println("Sith Lord there is not");
+		}
+		
+		
 		System.out.println(names.size());
+		
+		
 		if (names.size() !=0) {
 		System.out.println(names.get(0));
 		
@@ -40,8 +115,20 @@ public class ScratchPadObjects {
 		names.remove(0);
 		System.out.println(names.get(0));
 
+		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
 //		while(!names.isEmpty()) {
 //			List<String> students = new ArrayList<String> ();
 //			

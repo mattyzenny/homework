@@ -405,9 +405,9 @@ public class Exercises {
 	 */
 	public String stringX(String str) {
 		if (str.startsWith("x")) {
-			return "x" + str.replace("x", null);
+			return "x" + str.replace("x", "");
 		}
-		else return str.replace("x", null);
+		else return str.replace("x", "");
 	}
 	
 
