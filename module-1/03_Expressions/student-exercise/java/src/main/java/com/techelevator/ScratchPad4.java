@@ -13,6 +13,44 @@ import java.util.Map;
 public class ScratchPad4 {
 public static void main(String[] args) {
 	
+	
+	String name = "Tech Elevator";
+	String name2 = new String ("Irrelevant to use 'new' key word");
+	
+	char lastValue = name.charAt(name.length()-1);
+	System.out.println(lastValue);
+	char c = name.charAt(5);
+	System.out.println(c);
+//	int nameCompared = name2.compareTo(name);
+//	System.out.println(nameCompared);
+//	int rs = name.compareTo(name2);
+//	System.out.println(rs);
+	name = name.concat(name2);
+	System.out.println(name);
+	
+	
+	 int index = name2.indexOf('I');
+	 System.out.println(index);
+	
+	if(name.contains("ch")) {
+		System.out.println("yes");
+	}
+	else {
+		System.out.println("Not Found");
+	}
+	if (name.endsWith("E")) {
+		System.out.println("No");
+	}
+	else
+		System.out.println("Yes");
+
+	String finalName = "Hello World";
+	System.out.println(finalName.r)
+}
+}
+	
+	
+	
 //	
 //	Map<String, Boolean> people = new HashMap<String, Boolean>();
 //	people.put("Luke", true);
@@ -29,18 +67,18 @@ public static void main(String[] args) {
 //	        System.out.println(person.getKey() + " is not a Jedi.");
 //	    }
 //	}
+////}
+//Set<String> characters = new HashSet<String>();  
+//characters.add("Luke");
+//characters.add("Rey");
+//characters.add("Ben");
+//for(String character : characters) {
+//		System.out.println(character);
+//	}
 //}
-Set<String> characters = new HashSet<String>();  
-characters.add("Luke");
-characters.add("Rey");
-characters.add("Ben");
-for(String character : characters) {
-		System.out.println(character);
-	}
-}
-}
-
-	
+//}
+//
+//	
 	
 	
 	
