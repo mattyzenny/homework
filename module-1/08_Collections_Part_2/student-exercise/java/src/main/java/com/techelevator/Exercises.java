@@ -124,13 +124,14 @@ public class Exercises {
 		int peterToPaul = peterPaul.get("Peter");
 		int paulFromPeter = peterPaul.get("Paul");
 		
-		while(( peterToPaul != 0) && (paulFromPeter < 1000)) {
-			if(peterToPaul % 2 != 0) {
+		if(( peterToPaul != 0 && peterToPaul % 2 != 0) && (paulFromPeter < 1000)) {
+			
 			peterToPaul = peterToPaul / 2;
 			paulFromPeter += peterToPaul;
 			peterToPaul++;
-			}
-			else if (peterToPaul > 0 && paulFromPeter < 1000) {
+		}
+		else if ((peterToPaul > 0) && (paulFromPeter < 1000)) {
+			
 				peterToPaul = peterToPaul / 2;
 				paulFromPeter += peterToPaul;
 			}
@@ -139,12 +140,13 @@ public class Exercises {
 			
 			peterPaul.put("Peter", peterToPaul);
 			peterPaul.put("Paul", paulFromPeter);
-		}
+		
 //		peterPaul.put("Peter", peterToPaul);
 //		peterPaul.put("Paul", paulFromPeter);
 		
 		return peterPaul;
 	}
+
 
     /*
 	 * Modify and return the given map as follows: if "Peter" has $50 or more, AND "Paul" has $100 or more,
@@ -162,13 +164,13 @@ public class Exercises {
 		int peterMoney = peterPaul.get("Peter");
 		int paulMoney = peterPaul.get("Paul");
 		if ((peterMoney >= 5000) && (paulMoney >= 10000)) {
-			paulMoney = paulMoney/4;
-			peterMoney = peterMoney/4;
-		int PeterPaulPartnerShip = (paulMoney + peterMoney) / 4;
+		int	newPaulMoney = paulMoney - paulMoney/4;
+		int	newPeterMoney = peterMoney-peterMoney/4;
+		int PeterPaulPartnership = (paulMoney /4  + peterMoney /4);
 		
-		peterPaul.put("Peter", peterMoney);
-		peterPaul.put("Paul", paulMoney);
-		peterPaul.put("PeterPaulPartnerShip", PeterPaulPartnerShip);
+		peterPaul.put("Peter", newPeterMoney );
+		peterPaul.put("Paul", newPaulMoney );
+		peterPaul.put("PeterPaulPartnership", PeterPaulPartnership);
 		
 		return peterPaul; 
 		} else {
@@ -213,14 +215,18 @@ public class Exercises {
 	public Map<String, Integer> wordCount(String[] words) {
 		
 		Map<String,Integer> newWordCount = new HashMap<String,Integer>();
+		
 		for (String s: words) {
 			if (s.length() == 0) {
 				return null;
-			}else if (newWordCount.containsKey(s)) {
+			}
+			else if (newWordCount.containsKey(s)) {
+				
 				int value = newWordCount.get(s);
-				value++;
-				newWordCount.put(s, value);
-			}else {
+				value = value + 1;
+				newWordCount.put(s, value);	
+			}
+			else {
 				newWordCount.put(s, 1);
 			}
 		}
@@ -240,15 +246,21 @@ public class Exercises {
 	 *
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
+		
 		Map<Integer,Integer> newIntegerCount = new HashMap<Integer,Integer>();
+		
 		for (Integer i: ints) {
+			
 			if (i == 0) {
 				return null;
-			}else if (newIntegerCount.containsKey(i)) {
+			}
+			else if (newIntegerCount.containsKey(i)) {
 				int value = newIntegerCount.get(i);
-				value++;
+				value = value + 1;
+				
 				newIntegerCount.put(i, value);
-			}else {
+			}
+			else {
 				newIntegerCount.put(i, 1);
 			}
 		}
@@ -268,8 +280,21 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
-		return null;
+		
+		Map<String, Boolean> ifAppearsTwice = new HashMap<String, Boolean> ();
+		
+		for (String s : words) {
+			
+			if (ifAppearsTwice.containsKey(s)) {
+				Boolean has2 = true;
+				ifAppearsTwice.put(s, has2);
+			}
+			return ifAppearsTwice;
+		}
+		return ifAppearsTwice;
 	}
+	
+		
 
 	/*
 	 * Given two maps, Map<String, Integer>, merge the two into a new map, Map<String, Integer> where keys in Map2,
@@ -282,7 +307,23 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse, Map<String, Integer> remoteWarehouse) {
-		return null;
+		
+		Map<String,Integer> mergedMap = new HashMap<String,Integer>();
+		
+		for(String sku : mainWarehouse.keySet()) {
+			if(remoteWarehouse.containsKey(sku)) {
+				mergedMap.put(sku, (mainWarehouse.get(sku) + remoteWarehouse.get(sku)));
+			}
+			else {
+				mergedMap.put(sku, mainWarehouse.get(sku));
+			}
+		}
+			for(String skut : remoteWarehouse.keySet()) {
+				if(!mainWarehouse.containsKey(skut)) {
+					mergedMap.put(skut, remoteWarehouse.get(skut));
+				}
+			}
+		return mergedMap;
 	}
 
 	/*
@@ -301,8 +342,18 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> last2Revisited(String[] words) {
-		return null;
+		
+		Map<String, Integer> hereWeGoAgain = new HashMap<String, Integer> ();
+		
+		for (String s : words) {
+			if(words.length <= 2) {
+			 
+				hereWeGoAgain.put(s, 0);
+				hereWeGoAgain.put(s + 1, 0);
+			}
 	}
+		return hereWeGoAgain;
+}
 
 	/*
 	 Given a list of Strings, return a list that contains the distinct values. In other words, no value is to be
@@ -311,6 +362,9 @@ public class Exercises {
 	 distinctValues( ["jingle", "bells", "jingle", "bells", "jingle", "all", "the", "way"] ) -> ["jingle", "bells", "all", "the", "way"]
 	 */
 	public List<String> distinctValues(List<String> stringList) {
+		
+		
+		
 		return null;
 	}
 
