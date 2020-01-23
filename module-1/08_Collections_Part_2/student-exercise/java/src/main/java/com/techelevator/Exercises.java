@@ -120,10 +120,30 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
+		//if peter > 0.0 && paul < 1000  then peter.money /2 --> paul.
+		int peterToPaul = peterPaul.get("Peter");
+		int paulFromPeter = peterPaul.get("Paul");
 		
+		while(( peterToPaul != 0) && (paulFromPeter < 1000)) {
+			if(peterToPaul % 2 != 0) {
+			peterToPaul = peterToPaul / 2;
+			paulFromPeter += peterToPaul;
+			peterToPaul++;
+			}
+			else if (peterToPaul > 0 && paulFromPeter < 1000) {
+				peterToPaul = peterToPaul / 2;
+				paulFromPeter += peterToPaul;
+			}
+			else { return peterPaul;
+			}
+			
+			peterPaul.put("Peter", peterToPaul);
+			peterPaul.put("Paul", paulFromPeter);
+		}
+//		peterPaul.put("Peter", peterToPaul);
+//		peterPaul.put("Paul", paulFromPeter);
 		
-		
-		return null;
+		return peterPaul;
 	}
 
     /*
@@ -136,9 +156,28 @@ public class Exercises {
 	 * peterPaulPartnership({"Peter": 5000, "Paul": 10000}) → {"Peter": 3750, "Paul": 7500, "PeterPaulPartnership": 3750}
 	 * peterPaulPartnership({"Peter": 3333, "Paul": 1234567890}) → {"Peter": 3333, "Paul": 1234567890}
 	 *
-	 */
+	 *///NOT SURE WHAT IS WRONG WITH THIS ONE1!!!!
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
-		return null;
+		
+		int peterMoney = peterPaul.get("Peter");
+		int paulMoney = peterPaul.get("Paul");
+		if ((peterMoney >= 5000) && (paulMoney >= 10000)) {
+			paulMoney = paulMoney/4;
+			peterMoney = peterMoney/4;
+		int PeterPaulPartnerShip = (paulMoney + peterMoney) / 4;
+		
+		peterPaul.put("Peter", peterMoney);
+		peterPaul.put("Paul", paulMoney);
+		peterPaul.put("PeterPaulPartnerShip", PeterPaulPartnerShip);
+		
+		return peterPaul; 
+		} else {
+			return peterPaul;
+		}
+		
+		
+		
+	
 	}
 
 	/*
@@ -150,7 +189,14 @@ public class Exercises {
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
 	public Map<String, String> beginningAndEnding(String[] words) {
-		return null;
+		
+		Map<String, String> newMap = new HashMap<String,String>();
+		
+//		String [] lastArray = new String [words.length-1];
+		for (String s : words) {
+			newMap.put(s.substring(0,1), s.substring(s.length()-1));
+		}
+		return newMap;
 	}
 
 	/*
@@ -165,7 +211,21 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		return null;
+		
+		Map<String,Integer> newWordCount = new HashMap<String,Integer>();
+		for (String s: words) {
+			if (s.length() == 0) {
+				return null;
+			}else if (newWordCount.containsKey(s)) {
+				int value = newWordCount.get(s);
+				value++;
+				newWordCount.put(s, value);
+			}else {
+				newWordCount.put(s, 1);
+			}
+		}
+		
+		return newWordCount;
 	}
 
 	/*
@@ -180,8 +240,23 @@ public class Exercises {
 	 *
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
-		return null;
+		Map<Integer,Integer> newIntegerCount = new HashMap<Integer,Integer>();
+		for (Integer i: ints) {
+			if (i == 0) {
+				return null;
+			}else if (newIntegerCount.containsKey(i)) {
+				int value = newIntegerCount.get(i);
+				value++;
+				newIntegerCount.put(i, value);
+			}else {
+				newIntegerCount.put(i, 1);
+			}
+		}
+		
+		return newIntegerCount;
 	}
+		
+	
 
 	/*
 	 * Given an array of strings, return a Map<String, Boolean> where each different string is a key and value
