@@ -2,7 +2,7 @@ package com.techelevator;
 
 import java.util.List;
 import java.util.Map;
-
+import java.util.*;
 public class Exercises {
 
 	/*
@@ -35,8 +35,39 @@ public class Exercises {
 	 *
 	 */
 	public String animalGroupName(String animalName) {
-		return null;
+	
+		
+		Map<String,String> animalMap = new HashMap<String,String>();
+		
+		animalName = animalName.toLowerCase();
+		animalMap.put("rhino", "Crash");
+		animalMap.put("giraffe", "Tower");
+		animalMap.put("elephant", "Herd");
+		animalMap.put("lion", "Pride");
+		animalMap.put("crow", "Murder");
+		animalMap.put("pigeon", "Kit");
+		animalMap.put("flamingo", "Pat");
+		animalMap.put("deer", "Herd");
+		animalMap.put("dog", "Pack");
+		animalMap.put("crocodile", "Float");
+		
+		if(animalMap.containsKey(animalName)) {
+			return animalMap.get(animalName);
+		}
+		else {
+			return "unknown";
+		}
 	}
+//		Set<String> key = animalMap.keySet();
+//		for(int i = 0; i <animalName.length(); i++)
+//		for (String name : key)
+//		if(animalMap.Contains()) {
+//			return "unknown";
+//		} else {
+//		return animalMap.get(name); 
+//	}
+//		return "unknown";
+//	}
 
 	/*
 	 * Given an String item number (a.k.a. SKU), return the discount percentage if the item is on sale.
@@ -61,7 +92,21 @@ public class Exercises {
 	 *
 	 */
 	public Double isItOnSale(String itemNumber) {
-		return null;
+		
+		Map<String,Double> valueMap = new HashMap<String,Double>();
+		itemNumber = itemNumber.toUpperCase();
+		
+		valueMap.put("KITCHEN4001", 0.20);
+		valueMap.put("GARAGE1070", 0.15);
+		valueMap.put("LIVINGROOM", 0.10);
+		valueMap.put("KITCHEN6073", 0.40);
+		valueMap.put("BEDROOM3434", 0.60);
+		valueMap.put("BATH0073", 0.15);
+		if (valueMap.containsKey(itemNumber)) {
+			return valueMap.get(itemNumber);
+		}
+		else 
+		return 0.00;
 	}
 
 	/*
@@ -75,6 +120,9 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
+		
+		
+		
 		return null;
 	}
 

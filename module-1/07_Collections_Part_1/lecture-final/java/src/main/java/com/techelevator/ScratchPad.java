@@ -18,31 +18,51 @@ import java.util.LinkedList;
 import java.util.Stack;
 import java.util.Scanner;
 
-
-
-
-
-public class ScratchPad {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		String [] fruits = new String [3];
-		fruits[0] = "Mango";
-		fruits[1] = "Apple";
-		fruits[2] = "Strawberry";
-		System.out.println(fruits[1]);
+//
+//
+//
+//
+	public class ScratchPad {
+//
+//	public static void main(String[] args) {
+	
+		public List<String> no4LetterWords(String[] stringArray) {
+			
+			
+			List<String> no4Letters = new ArrayList<String>();
+			
+			for(String s : stringArray) {
+				if(s.length() !=4) {
+					no4Letters.add(s);
+				}
+					return  no4Letters; 	
+			}
+			System.out.println(no4Letters);
+			return no4Letters;
+		}
 	}
-
-	List<String> fruitsArrayList = new ArrayList<String>();
-		fruitList.add("Mango");
-		fruitList.add("Apple");
-		fruitList.add("Strawberry");
-		System.out.println(fruitList);
-}
+	
+	
 		
 		
-		
+		// TODO Auto-generated method stub
+//		
+//		String [] fruits = new String [3];
+//		fruits[0] = "Mango";
+//		fruits[1] = "Apple";
+//		fruits[2] = "Strawberry";
+//		System.out.println(fruits[1]);
+//	}
+//
+//	List<String> fruitsArrayList = new ArrayList<String>();
+//		fruitList.add("Mango");
+//		fruitList.add("Apple");
+//		fruitList.add("Strawberry");
+//		System.out.println(fruitList);
+//}
+//		
+//		
+//		
 		
 //		
 //		

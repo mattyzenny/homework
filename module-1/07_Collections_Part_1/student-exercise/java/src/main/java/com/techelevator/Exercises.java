@@ -113,6 +113,16 @@ public class Exercises {
 	public List<String> no4LetterWords(String[] stringArray) {
 		
 		List<String> no4Letters = new ArrayList<String>();
+//		
+//		for(String s : stringArray) {
+//			if(s.length() !=4) {
+//				no4Letters.add(s);
+//			}
+//				return  no4Letters; 	
+//		}
+//		System.out.println(no4Letters);
+//		return null;
+//	}
 		for(int i =0; i<stringArray.length; i++) {
 			String item = stringArray[i];
 			if (item.length() != 4) {
@@ -132,8 +142,18 @@ public class Exercises {
 	 */
 	public List<String> reverseList(List<String> stringList) {
 		
+		
 		List<String> originalList = new ArrayList<String>();
 		Stack<String> newStack = new Stack<String>();
+//		for (String s : stringList) { 
+//			newStack.push(stringList.add(s)) {
+//		if (newStack.size()> 0) {
+//			originalList.add(newStack.pop());
+//		}
+//		return originalList;
+//		}
+//	}
+//	}
 		for(int i = 0; i < stringList.size(); i++) {
 			newStack.push(stringList.get(i));
 		}
@@ -143,19 +163,6 @@ public class Exercises {
 		return originalList;
 		}
 
-//		 Stack<String> myFirstStack = new Stack<String>();
-//	        List<String> stackToList = new ArrayList<String>(); 
-//		for(int i = 0; i < stringList.size(); i++)
-//	        {
-//	            myFirstStack.push(stringList.get(i));
-//	        }
-//	        while(myFirstStack.size() > 0) {
-//	           
-//	            stackToList.add(myFirstStack.pop());
-//	               
-//	        }
-//	        return stackToList;
-//	    }
 
 	/*
 	 Given an array of ints, divide each int by 2, and return an ArrayList of Doubles.
@@ -166,7 +173,11 @@ public class Exercises {
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
 		
 		List<Double> doubleArray = new ArrayList<Double>();
+		
+		for (int i : intArray) 
+		doubleArray.add((double) (i/2));
 		for (double i = 0; i < intArray.length; i++) {
+			
 		if(intArray.length > 0) {
 			Double newDigit = (double)(intArray[(int)i] /2);
 			doubleArray.add(newDigit);
@@ -189,6 +200,13 @@ public class Exercises {
 //		List<Integer> myNewList = new ArrayList<Integer>();
 		int min = integerList.get(0);
 		int max = integerList.get(0);
+		
+//		for (int i : integerList)
+//		if (max < integerList.get(i)) {
+//			max = integerList.get(i);
+//		}return max;
+//		}
+		
 		for (int i =0; i < integerList.size(); i++) {
 			if (max < integerList.get(i)) {
 				max = integerList.get(i);
@@ -206,7 +224,16 @@ public class Exercises {
 	 */
 	public List<Integer> oddOnly(Integer[] integerArray) {
 		 List<Integer> intList = new ArrayList<Integer>();
-	       
+//	     for (int i : integerArray) 
+//	    	 if(i % 2 == 1) {
+//	    		 intList.add(i);
+//	    	 }
+//	     return intList;
+//	}
+//	
+	
+
+		 
 	        for(int i = 0; i < integerArray.length; i++) {
 	            if(integerArray[i] % 2 == 1) {
 	                intList.add(integerArray[i]);
@@ -224,24 +251,21 @@ public class Exercises {
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
 
-		 int counter = 0;
+		 int newInt = 0;
 	       
-        for(int i = 0; i < integerList.size(); i++)
-       
-        {
-            if(integerList.get(i) == intToFind)
-           
-            {
-                counter++;
-                if(counter >= 2)
-               
-                {
+        for(int i = 0; i < integerList.size(); i++) {
+        	
+            if(integerList.get(i) == intToFind) {
+                newInt = newInt +1;
+                if(newInt >= 2) {
                     return true;
                 }
             }
         }
+         {
         return false;
-    }
+         }
+	}
    
 
 	/*
@@ -258,21 +282,37 @@ public class Exercises {
 	 equals "1")
 	 */
 	public List<String> fizzBuzzList(Integer[] integerArray) {
-	List<String> newFizz = new ArrayList<String>();
+	List<String> newFizzBuzz = new ArrayList<String>();
     
+//	for(Integer i : integerArray) {
+//	if((i%3 == 0) && (i % 5 == 0)) 
+//		newFizzBuzz.add(i); }
+//	
+//	else if (i % 3 == 0) {
+//		newFizzBuzz.add(i);
+//	}
+//	else if (i % 5 == 0) {
+//		newFizzBuzz.add(i);
+//	}
+//	else {
+//		newFizzBuzz.add(integerArray[i].toString());
+//	}
+//	}
+	
+	
     for(int i = 0; i < integerArray.length; i++) {
         if((integerArray[i] % 3 == 0) && (integerArray[i] % 5 == 0)) {
-            newFizz.add("FizzBuzz");
+            newFizzBuzz.add("FizzBuzz");
         }else if(integerArray[i] % 3 == 0) {
-            newFizz.add("Fizz");
+            newFizzBuzz.add("Fizz");
         }else if(integerArray[i] % 5 == 0) {
-            newFizz.add("Buzz");
+            newFizzBuzz.add("Buzz");
         }else {
-            newFizz.add(integerArray[i].toString());
+            newFizzBuzz.add(integerArray[i].toString());
         }
        
     }
-    return newFizz;
+    return newFizzBuzz;
 }
 	
 
@@ -287,6 +327,9 @@ public class Exercises {
 		 List<Integer> newList = new ArrayList<Integer>();
 		   
 	        while(listOne.size() > 0 || listTwo.size() > 0){
+	        	newList.add(listOne.remove(0));
+	        	newList.add(listTwo.remove(0));
+	        	
 	            if(listOne.size() == 0) {
 	                newList.addAll(listTwo);
 	                return newList;
@@ -294,8 +337,7 @@ public class Exercises {
 	                newList.addAll(listOne);
 	                return newList;
 	            }
-	            newList.add(listOne.remove(0));
-	            newList.add(listTwo.remove(0));
+
 	        }
 	        return newList;
 	    }
@@ -312,26 +354,37 @@ public class Exercises {
 	 */
 	public List<Integer> boardingGate(List<Integer> seatNumberList) {
 
-        Queue<Integer> one10 = new LinkedList<Integer>();
-        Queue<Integer> eleven20 = new LinkedList<Integer>();
-        Queue<Integer> twentyOne30 = new LinkedList<Integer>();
-        List<Integer> boardingGate = new ArrayList<Integer>();
+        Queue<Integer> oneTo10 = new LinkedList<Integer>();
+        Queue<Integer> elevenTo20 = new LinkedList<Integer>();
+        Queue<Integer> twentyOneTo30 = new LinkedList<Integer>();
+        List<Integer> newBoardingGate = new ArrayList<Integer>();
        
-        for(int i = 0; i<seatNumberList.size(); i++)
-        {
-            if(seatNumberList.get(i) >= 1 && seatNumberList.get(i) <= 10) {
-                one10.offer(seatNumberList.get(i));
-            }else if(seatNumberList.get(i) >= 11 && seatNumberList.get(i) <= 20) {
-                eleven20.offer(seatNumberList.get(i));
-            }else if(seatNumberList.get(i) >= 21 && seatNumberList.get(i) <= 30) {
-                twentyOne30.offer(seatNumberList.get(i));
-            }
+        for(int i : seatNumberList) {
+        	if(i >= 1 && i <= 10 ) {
+        		oneTo10.add(i);
+        	}else if (i >= 11 && i <= 20) {
+        		elevenTo20.add(i);
+        	}else if(i >= 21 && i <= 30) {
+        		twentyOneTo30.add(i);
+        	}
         }
-        boardingGate.addAll(one10);
-        boardingGate.addAll(eleven20);
-        boardingGate.addAll(twentyOne30);
+        
+        
+//        for(int i = 0; i<seatNumberList.size(); i++)
+//        {
+//            if(seatNumberList.get(i) >= 1 && seatNumberList.get(i) <= 10) {
+//                oneTo10.offer(seatNumberList.get(i));
+//            }else if(seatNumberList.get(i) >= 11 && seatNumberList.get(i) <= 20) {
+//                elevenTo20.offer(seatNumberList.get(i));
+//            }else if(seatNumberList.get(i) >= 21 && seatNumberList.get(i) <= 30) {
+//                twentyOneTo30.offer(seatNumberList.get(i));
+//            }
+//        }
+        newBoardingGate.addAll(oneTo10);
+        newBoardingGate.addAll(elevenTo20);
+        newBoardingGate.addAll(twentyOneTo30);
    
-        return boardingGate;
+        return newBoardingGate;
     }
  
 }
