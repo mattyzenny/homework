@@ -22,7 +22,7 @@ public class Company {
 	
 	
 	public double getProfit() {
-		return revenue - expenses;
+		return revenue-expenses;
 		
 	}
 	

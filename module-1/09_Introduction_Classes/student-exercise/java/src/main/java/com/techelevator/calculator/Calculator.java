@@ -4,34 +4,34 @@ import java.util.*;
 
 public class Calculator {
 
-	private int currentValue =0;
 	
-
-	public void setCurrentValue(int currentValue) {
-		this.currentValue = currentValue;
-	}
+	private int result =0;
 
 	public int add(int addend) {
-		return currentValue += addend;
+		return result = result + addend;
 	}
 	
 	public int multiply(int multiplier) {
-		return currentValue = currentValue * multiplier;
+		return result = result * multiplier;
 		
 	}
 	public int subtract(int subtrahend) {
-		return currentValue -= subtrahend;
+		return result = result - subtrahend;
 	}
 	
 	public int power(int exponent) {
-		return (currentValue = (int) Math.pow(currentValue, exponent));
+		return result = (int) Math.pow(result, exponent);
 	}
 	public void reset () {
-		currentValue = 0;
+		result = 0;
 	}
 	
-	public int getCurrentValue() {
-		return currentValue;
+	
+	public int getResult() {
+		return result;
+	
+	
+
 	
 }
 }
