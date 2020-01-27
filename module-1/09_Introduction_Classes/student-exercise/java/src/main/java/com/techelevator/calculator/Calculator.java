@@ -17,6 +17,8 @@ public class Calculator {
 	}
 	public int subtract(int subtrahend) {
 		return result = result - subtrahend;
+		
+	
 	}
 	
 	public int power(int exponent) {

@@ -285,7 +285,7 @@ public class Exercises {
 		
 		for (String s : words) {
 			
-			if (ifAppearsTwice.containsKey(s)) {
+			if (ifAppearsTwice.containsKey(s) && ifAppearsTwice.remove(0)) {
 				Boolean has2 = true;
 				ifAppearsTwice.put(s, has2);
 			}

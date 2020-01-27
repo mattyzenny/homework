@@ -47,12 +47,27 @@ public class Exercises {
 //	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"]
 //	 */
 	public List<String> array2List(String[] stringArray) {
-		List<String> fruitArrayList = new ArrayList<String>();
-		for (String fruit : stringArray) {
-			fruitArrayList.add(fruit);
+		
+		
+		List <String> newList = new ArrayList<String> ();
+		for (String s : stringArray) {
+			newList.add(s);
 		}
-		return fruitArrayList;
+		return newList;
 	}
+		
+
+
+	
+	
+	
+		
+//		List<String> fruitArrayList = new ArrayList<String>();
+//		for (String fruit : stringArray) {
+//			fruitArrayList.add(fruit);
+//		}
+//		return fruitArrayList;
+//	}
 //		List<String> resultList = new ArrayList<String>();
 //		for (String temp : stringArray) {
 //			resultList.add(temp);
@@ -87,6 +102,8 @@ public class Exercises {
 	
 	public String[] list2Array(List<String> stringList) {
 
+		
+		
 		String [] sameOrderArray = new String[stringList.size()];
 		sameOrderArray = stringList.toArray(sameOrderArray);
 		for(int i = 0; i< stringList.size(); i++) {
@@ -113,16 +130,8 @@ public class Exercises {
 	public List<String> no4LetterWords(String[] stringArray) {
 		
 		List<String> no4Letters = new ArrayList<String>();
-//		
-//		for(String s : stringArray) {
-//			if(s.length() !=4) {
-//				no4Letters.add(s);
-//			}
-//				return  no4Letters; 	
-//		}
-//		System.out.println(no4Letters);
-//		return null;
-//	}
+		
+	
 		for(int i =0; i<stringArray.length; i++) {
 			String item = stringArray[i];
 			if (item.length() != 4) {
@@ -174,19 +183,15 @@ public class Exercises {
 		
 		List<Double> doubleArray = new ArrayList<Double>();
 		
-		for (int i : intArray) 
-		doubleArray.add((double) (i/2));
-		for (double i = 0; i < intArray.length; i++) {
-			
-		if(intArray.length > 0) {
-			Double newDigit = (double)(intArray[(int)i] /2);
-			doubleArray.add(newDigit);
-		}
-		return doubleArray;
-		}
-		return doubleArray;
+		for (int i : intArray) {
+			if ( i > 0 ) {
+				doubleArray.add((double) (i/2));
+			}
+		}return doubleArray;
 	}
 		
+		
+
 
 	/*
 	 Given a List of Integers, return the largest value.
@@ -200,7 +205,7 @@ public class Exercises {
 //		List<Integer> myNewList = new ArrayList<Integer>();
 		int min = integerList.get(0);
 		int max = integerList.get(0);
-		
+//		
 //		for (int i : integerList)
 //		if (max < integerList.get(i)) {
 //			max = integerList.get(i);
@@ -224,23 +229,23 @@ public class Exercises {
 	 */
 	public List<Integer> oddOnly(Integer[] integerArray) {
 		 List<Integer> intList = new ArrayList<Integer>();
-//	     for (int i : integerArray) 
-//	    	 if(i % 2 == 1) {
-//	    		 intList.add(i);
-//	    	 }
-//	     return intList;
-//	}
-//	
+	     for (int i : integerArray) 
+	    	 if(i % 2 == 1) {
+	    		 intList.add(i);
+	    	 }
+	     return intList;
+	}
+	
 	
 
 		 
-	        for(int i = 0; i < integerArray.length; i++) {
-	            if(integerArray[i] % 2 == 1) {
-	                intList.add(integerArray[i]);
-	            }
-	        }
-	        return intList;
-	    }
+//	        for(int i = 0; i < integerArray.length; i++) {
+//	            if(integerArray[i] % 2 == 1) {
+//	                intList.add(integerArray[i]);
+//	            }
+//	        }
+//	        return intList;
+//	    }
 
 	/*
 	 Given a List of Integers, and an int value, return true if the int value appears two or more times in
@@ -250,7 +255,8 @@ public class Exercises {
 	 foundIntTwice( [9, 23, 44, 2, 88, 44], 44) -> true
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
-
+		
+		
 		 int newInt = 0;
 	       
         for(int i = 0; i < integerList.size(); i++) {
@@ -286,17 +292,17 @@ public class Exercises {
     
 //	for(Integer i : integerArray) {
 //	if((i%3 == 0) && (i % 5 == 0)) 
-//		newFizzBuzz.add(i); }
-//	
+//		newFizzBuzz.add("FizzBuzz"); 
 //	else if (i % 3 == 0) {
-//		newFizzBuzz.add(i);
+//		newFizzBuzz.add("Fizz");
 //	}
 //	else if (i % 5 == 0) {
-//		newFizzBuzz.add(i);
+//		newFizzBuzz.add("Fizz");
 //	}
 //	else {
 //		newFizzBuzz.add(integerArray[i].toString());
 //	}
+//	}return newFizzBuzz;
 //	}
 	
 	
