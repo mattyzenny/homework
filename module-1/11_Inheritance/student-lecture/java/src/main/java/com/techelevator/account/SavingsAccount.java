@@ -11,7 +11,7 @@ public class SavingsAccount extends Account {
 		this.interestRate = openingInterestRate;
 		
 	}
-
+//OVERRIDE METHOD//
 	public BigDecimal getInterestRate() {
 		return interestRate;
 	}

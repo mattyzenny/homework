@@ -21,18 +21,22 @@ public class Airplane {
 	
 	//METHOD//
 	
-	public boolean reservedSeats(boolean forFirstClass, int totalNumberOfSeats) {
-		if (forFirstClass == true) {
+	public boolean reserveSeats(boolean forFirstClass, int totalNumberOfSeats) {
+		while(forFirstClass == true) {
 				if (totalFirstClassSeats - bookedFirstClassSeats >= totalNumberOfSeats) {
-					bookedFirstClassSeats += totalNumberOfSeats;
+					bookedFirstClassSeats = totalNumberOfSeats + bookedFirstClassSeats;
+					return true;
 				}
 				else {
 					return false;
 				}
+		
 		}
-		if (forFirstClass == false) {
+	
+		if(forFirstClass == false) {
 			if (totalCoachSeats - bookedCoachSeats >= totalNumberOfSeats) {
-			bookedCoachSeats += totalNumberOfSeats;
+			bookedCoachSeats = totalNumberOfSeats + bookedCoachSeats;
+			return true;
 			}
 		}
 		return false;

@@ -32,21 +32,22 @@ public class Elevator {
 		doorOpen = false;
 	}
 	public void goUp(int desiredFloor) {
-		if(doorOpen != true) {
+		while(doorOpen != true) {
 			if((desiredFloor <= numberOfFloors) && (desiredFloor > currentFloor)) {
 				currentFloor = desiredFloor;
-			
 			}
+		break;
 		}
 		}
-		
+
 	
 	public void goDown(int desiredFloor) {
-		if(doorOpen != true) {
+		while(doorOpen != true) {
 			if((desiredFloor >= 1) && (desiredFloor < currentFloor)) {
 				currentFloor = desiredFloor;
 			}
-			}
+		break;
+		}
 		
 	}
 	

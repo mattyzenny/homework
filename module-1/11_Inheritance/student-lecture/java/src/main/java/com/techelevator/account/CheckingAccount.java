@@ -11,7 +11,7 @@ public class CheckingAccount extends Account {
 		this.writeChecks = canWriteChecks;
 		
 	}
-
+//OVERRIDE METHOD//
 	public boolean isWriteChecks() {
 		return writeChecks;
 	}
