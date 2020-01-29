@@ -5,13 +5,23 @@ public class Truck implements IVehicleInterFace {
 	private String type;
 	private double calculateToll;
 	private int numberOfAxles;
+	private int distance;
 	
+	
+
+
+
 	//CONSTRUCTOR//
-	public Truck(int numberOfAxles) {
+	public Truck(int distance, int numberOfAxles) {
 		this.numberOfAxles = numberOfAxles;
+		this.distance = distance;
 	}
 
-
+	public String toString() {
+		String formattedToll = String.format("$%.2f", calculateToll(distance));
+		
+		return String.format("%1$-16s %2$-22s %3$s", "Truck", distance, formattedToll);
+	}
 
 	@Override
 	public String type() {
@@ -46,6 +56,15 @@ public class Truck implements IVehicleInterFace {
 		this.type = type;
 	}
 
+	public int getDistance() {
+		return distance;
+	}
+
+
+
+	public void setDistance(int distance) {
+		this.distance = distance;
+	}
 
 
 	public double getCalculateToll() {

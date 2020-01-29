@@ -7,16 +7,23 @@ public class Car implements IVehicleInterFace {
 	private String type;
 	private double calculateToll;
 	private int distance;
+	private int totalMiles;
+
 
 
 
 	//CONSTRUCTOR//
-	Car(boolean hasTrailer) {
+	Car(boolean hasTrailer, int distance) {
 		
 		this.hasTrailer = hasTrailer;
+		this.distance = distance;
 	}
 
-	
+	public String toString() {
+		String formattedToll = String.format("$%.2f", calculateToll(distance));
+		
+		return String.format("%1$-16s %2$-22s %3$s", "Car", distance, formattedToll);
+	}
 	@Override
 	public String type() {
 
@@ -43,7 +50,16 @@ public class Car implements IVehicleInterFace {
 			
 		}
 	
+	
 
+	public int getTotalMiles() {
+		return totalMiles;
+	}
+
+	public void setTotalMiles(int totalMiles) {
+		this.totalMiles = totalMiles;
+	}
+	
 	public void setType(String type) {
 		this.type = type;
 	}

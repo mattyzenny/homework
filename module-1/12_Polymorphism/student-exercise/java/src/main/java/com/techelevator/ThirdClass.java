@@ -4,7 +4,9 @@ public class ThirdClass implements IDeliveryDriverInterface {
 
 	//ATTRIBUTE VARIABLES//
 	private String name;
-
+	private double weightInOunces;
+	private double rate;
+	private double weightInPounds;
 	
 	
 	
@@ -58,6 +60,30 @@ public class ThirdClass implements IDeliveryDriverInterface {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public double getWeightInOunces() {
+		return weightInOunces;
+	}
+
+	public void setWeightInOunces(double weightInOunces) {
+		this.weightInOunces = weightInOunces;
+	}
+
+	public double getWeightInPounds() {
+		return weightInPounds;
+	}
+
+	public void setWeightInPounds(double weightInPounds) {
+		this.weightInPounds = weightInPounds;
+	}
+
+	public double getRate() {
+		return rate;
+	}
+
+	public void setRate(double rate) {
+		this.rate = rate;
 	}
 
 
