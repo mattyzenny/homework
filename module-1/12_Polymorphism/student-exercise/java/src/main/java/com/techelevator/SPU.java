@@ -8,10 +8,12 @@ public class SPU  implements IDeliveryDriverInterface {
 	private int distanceInMiles;
 	private double weightInOunces;
 	private double rate;
-
+	private int mailClass;
 	private double weightInPounds;
-	//CONSTRUCTOR//
 	
+
+	//CONSTRUCTOR//
+
 	
 	//METHODS///
 	
@@ -26,7 +28,7 @@ public class SPU  implements IDeliveryDriverInterface {
 	public double calculateRate(int distance, double weight) {
 		double rate = 0.0;
 		double weightInPounds = (double) weightInOunces / 16;
-		if(mailDelivery == 1) {
+		if(mailClass == 1) {
 			rate = .075;
 		}
 		else if (mailDelivery == 2) {
@@ -83,7 +85,13 @@ public class SPU  implements IDeliveryDriverInterface {
 	
 	
 	
-	
+	public int getMailClass() {
+		return mailClass;
+	}
+
+	public void setMailClass(int mailClass) {
+		this.mailClass = mailClass;
+	}
 	
 	
 

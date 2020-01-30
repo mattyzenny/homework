@@ -5,21 +5,28 @@ public class Main {
 
 	public static void main(String[] args) {
 	
-		SPU spu = new SPU();
-		FirstClass firstClass = new FirstClass();
-		SecondClass secondClass = new SecondClass();
-		ThirdClass thirdClass = new ThirdClass();
-		FedEx fedEx = new FedEx();
+
 		
-		
-		Scanner input = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Please enter the weight of the package:");
-		double weight = Double.parseDouble(input.nextLine());
+		double weight = Double.parseDouble(scanner.nextLine());
 		System.out.println("What is the distance it will be travelling in miles?");
-		int distance = Integer.parseInt(input.nextLine());
+		int distance = Integer.parseInt(scanner.nextLine());
 		
 		System.out.println("(P)ounds or (O)ounces?");
-		String poundsOrOunces = input.nextLine();
+		String poundsOrOunces = scanner.nextLine();
+		
+		SPU spu = new SPU();
+		FirstClass firstClass = new FirstClass(weight,	distance);
+		SecondClass secondClass = new SecondClass(weight, distance);
+		ThirdClass thirdClass = new ThirdClass(weight, distance);
+		FedEx fedEx = new FedEx(weight, distance);
+		List<IDeliveryDriverInterface> myList = new ArrayList<>();
+		myList.add(fedEx);
+		myList.add(secondClass);
+		myList.add(thirdClass);
+		myList.add(firstClass);
+		myList.add(spu);
 		
 		if(poundsOrOunces.equalsIgnoreCase("p")) {
 			weight = weight * 16;

@@ -7,8 +7,13 @@ public class SecondClass implements IDeliveryDriverInterface {
 	private double weightInOunces;
 	private double rate;
 	private double weightInPounds;
+	private int distance;
 	
-	
+	public SecondClass(double weight, int distance) {
+		this.distance = distance;
+		this.weightInPounds = weightInPounds;
+		this.weightInOunces = weightInOunces;
+	}
 	
 
 
@@ -20,7 +25,7 @@ public class SecondClass implements IDeliveryDriverInterface {
 
 	@Override
 	public double calculateRate(int distance, double weight) {
-		double perMileRate = 0;
+		double perMileRate = 1;
 		double rate = distance * perMileRate;
 		if(weight == 2) {
 			perMileRate = .035;
@@ -74,6 +79,18 @@ public double getRate() {
 
 public void setRate(double rate) {
 	this.rate = rate;
+}
+
+
+
+public int getDistance() {
+	return distance;
+}
+
+
+
+public void setDistance(int distance) {
+	this.distance = distance;
 }
 	
 	

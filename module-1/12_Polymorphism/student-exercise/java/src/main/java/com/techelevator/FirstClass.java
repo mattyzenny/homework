@@ -8,7 +8,12 @@ public class FirstClass implements IDeliveryDriverInterface {
 	private double weightInOunces;
 	private double rate;
 	private double weightInPounds;
+	private int distance;
 	
+	public FirstClass (double weight, int distance) {
+		this.weightInPounds = weightInPounds;
+		this.distance = distance;
+	}
 	
 	@Override
 	public String name() {
@@ -73,6 +78,14 @@ public class FirstClass implements IDeliveryDriverInterface {
 
 	public void setWeightInPounds(double weightInPounds) {
 		this.weightInPounds = weightInPounds;
+	}
+
+	public int getDistance() {
+		return distance;
+	}
+
+	public void setDistance(int distance) {
+		this.distance = distance;
 	}
 
 	

@@ -8,8 +8,15 @@ public class FedEx implements IDeliveryDriverInterface {
 	private double weightInOunces;
 	private double rate;
 	private double weightInPounds;
+	private int distance;
 	
 	
+	
+	public FedEx(double weight, int distance) {
+		this.distance = distance;
+		this.weightInPounds = weightInPounds;
+		this.weightInOunces = weightInOunces;
+	}
 	
 	
 	//METHODS//
@@ -74,6 +81,16 @@ public double getRate() {
 public void setRate(double rate) {
 	this.rate = rate;
 }
+
+public int getDistance() {
+	return distance;
+}
+
+
+public void setDistance(int distance) {
+	this.distance = distance;
+}
+
 
 public void setName(String name) {
 	this.name = name;

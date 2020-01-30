@@ -7,8 +7,13 @@ public class ThirdClass implements IDeliveryDriverInterface {
 	private double weightInOunces;
 	private double rate;
 	private double weightInPounds;
+	private int distance;
 	
-	
+	public ThirdClass(double weight, int distance) {
+		this.weightInOunces = weightInOunces;
+		this.weightInPounds = weightInPounds;
+		this.distance = distance;
+	}
 	
 	
 	
@@ -84,6 +89,14 @@ public class ThirdClass implements IDeliveryDriverInterface {
 
 	public void setRate(double rate) {
 		this.rate = rate;
+	}
+
+	public int getDistance() {
+		return distance;
+	}
+
+	public void setDistance(int distance) {
+		this.distance = distance;
 	}
 
 
