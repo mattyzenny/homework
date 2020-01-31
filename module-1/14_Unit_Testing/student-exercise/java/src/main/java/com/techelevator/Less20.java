@@ -10,10 +10,19 @@ public class Less20 {
          less20(20) → false
      */
     public boolean isLessThanMultipleOf20(int n) {
-        boolean oneLessThanMultipleOf20 = n % 20 == 19;
-        boolean twoLessThanMultipleOf20 = n % 20 == 18;
-
-        return oneLessThanMultipleOf20 || twoLessThanMultipleOf20;
+       if (n != 0 && n % 20 == 0 || (n - 1) % 20 == 0 || (n - 2) % 20 == 0 || (n + 1) % 20 == 0 || (n + 2) % 20 == 0) {
+    	   return true;
+       }
+       else return false;
     }
-
 }
+//    	boolean oneLessThanMultipleOf20 = (n +1) % 20 <= 1 || (n - 1) % 20 <= 1;
+//        boolean twoLessThanMultipleOf20 = (n +2) %20  <= 2 || (n - 2) % 20 <= 2;
+//        boolean exactMultipleOf20 = (n % 20 == 0);
+//        boolean twoLessThan20 = (n == 18);
+//        if (n = twoLessThan20) {
+//        	return true;
+//        }
+//        return exactMultipleOf20 || oneLessThanMultipleOf20 || twoLessThanMultipleOf20 || twoLessThan20;
+//}
+//}

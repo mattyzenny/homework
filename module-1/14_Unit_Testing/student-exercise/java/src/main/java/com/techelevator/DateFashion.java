@@ -17,7 +17,7 @@ public class DateFashion {
 
         if (you <= 2 || date <= 2) {
             getTable = 0;
-        } else if (you >= 8 || date >= 8) {
+        } else if ((you >= 8 & date >= 3) || (you > 2 && date >= 8)) {
             getTable = 2;
         }
 

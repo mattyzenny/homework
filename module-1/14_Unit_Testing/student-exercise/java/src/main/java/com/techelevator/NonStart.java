@@ -10,12 +10,13 @@ public class NonStart {
      GetPartialString("shotl", "java") → "hotlava"
      */
     public String getPartialString(String a, String b) {
-        if (a.length() == 0) {
+        String newSubString = a.substring(1).concat(b.substring(1));
+    	if (a.length() == 1) {
             return b.substring(1);
-        } else if (b.length() == 0) {
+        } else if (b.length() == 1) {
             return a.substring(1);
         } else {
-            return a.substring(1) + b.substring(1);
+            return newSubString;
         }
     }
 }

@@ -18,18 +18,39 @@ public class WordCount {
 	 *
 	 */
 	public Map<String, Integer> getCount(String[] words) {
-		Map<String, Integer> output = new HashMap<>();
-
-		if (words != null) {
-			for (String word : words) {
-				if (!output.containsKey(word)) {
-					output.put(word, 1);
-				} else {
-					output.put(word, output.get(word) + 1);
-				}
+		
+		Map<String,Integer> newWordCount = new HashMap<String,Integer>();
+		
+		for (String s: words) {
+			if (s.length() == 0) {
+				return null;
+			}
+			else if (newWordCount.containsKey(s)) {
+				
+				int value = newWordCount.get(s);
+				value = value + 1;
+				newWordCount.put(s, value);	
+			}
+			else {
+				newWordCount.put(s, 1);
 			}
 		}
-
-		return output;
+		
+		return newWordCount;
 	}
-}
+	}
+//		Map<String, Integer> output = new HashMap<>();
+//
+//		if (words != null) {
+//			for (String word : words) {
+//				if (!output.containsKey(word)) {
+//					output.put(word, 1);
+//				} else {
+//					output.put(word, output.get(word) + 1);
+//				}
+//			}
+//		}
+//
+//		return output;
+//	}
+//}

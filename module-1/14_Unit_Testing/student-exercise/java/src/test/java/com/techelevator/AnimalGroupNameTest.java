@@ -1,38 +1,29 @@
 package com.techelevator;
+import org.junit.*;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.junit.Assert;   //Use this one...
+
 
 public class AnimalGroupNameTest {
+
+	AnimalGroupName animal = new AnimalGroupName();
 	
-	AnimalGroupName animalMap;
-	
-	@Before
-	public void setup() {
-	
-		animalMap = new AnimalGroupName();
-	}
 	
 	
 	@Test
-	public void testForAnimalGroups() {
-		
-		Assert.assertEquals("Crash", animalMap.getHerd("Rhino"));
-		Assert.assertEquals("Pack", animalMap.getHerd("Dog"));
-		Assert.assertEquals("unknown", animalMap.getHerd("Muppet"));
-
+	public void testAnimalName() {
+		Assert.assertEquals("Crash", animal.getHerd("Rhino"));
+		Assert.assertEquals("Kit", animal.getHerd("pigEON"));
+		Assert.assertEquals("Pack", animal.getHerd("DOG"));
+		Assert.assertEquals("Float", animal.getHerd("crocodilE"));
+	
+	
 	}
 	
 	@Test
-	public void testForNullOrEmptyGroups() {
-		
-		Assert.assertEquals("unknown", animalMap.getHerd(""));
-		Assert.assertEquals("unknown", animalMap.getHerd(null));
-
-	}	
-
+	public void testAnimalNullNotFoundEmpty() {
+		Assert.assertEquals("unknown", animal.getHerd("Donkey"));
+		Assert.assertEquals("unknown", animal.getHerd(null));
+		Assert.assertEquals("this should be unknown", "unknown", animal.getHerd(""));
+	
+}
 }
