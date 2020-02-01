@@ -16,7 +16,7 @@ public class KataFizzBuzzTest {
 	
 	@Test
 	public void testDivisibleBy3() {
-	Assert.assertEquals("Should test 'Fizz'", "Fizz", fizzybuzzy.Fizzbuzz((3)));
+	Assert.assertEquals("Should test null", null, fizzybuzzy.Fizzbuzz(3));
 
 }
 }
