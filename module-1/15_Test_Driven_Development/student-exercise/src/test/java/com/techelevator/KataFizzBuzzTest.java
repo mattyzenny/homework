@@ -49,7 +49,10 @@ public class KataFizzBuzzTest {
 		Assert.assertEquals("Should test blank 1000", "", fizzybuzzy.Fizzbuzz(1000));
 
 }
-}
+	@After
+	public void testEnd() {
+	}
+	}
 
 //Add test method, result should be X when X"
 //"add passing code for test method" result_should_be_fizz_when_number_3
