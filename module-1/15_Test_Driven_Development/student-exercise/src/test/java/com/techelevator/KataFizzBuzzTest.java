@@ -19,8 +19,15 @@ public class KataFizzBuzzTest {
 	Assert.assertEquals("Should test null", null, fizzybuzzy.Fizzbuzz(0));
 	Assert.assertEquals("should test Fizz", "Fizz", fizzybuzzy.Fizzbuzz(3));
 }
+	@Test
+	public void testDivisibleBy5() {
+		Assert.assertEquals("Should test null", null, fizzybuzzy.Fizzbuzz(0));
+		Assert.assertEquals("Should test null", "Buzz", fizzybuzzy.Fizzbuzz(5));
+
+	}
+
 }
 
 
-
-//once test is passing add and commit the code with the message "add passing code for test method" result_should_be_fizz_when_number_3
+//Add test method, result should be X when X"
+//"add passing code for test method" result_should_be_fizz_when_number_3
