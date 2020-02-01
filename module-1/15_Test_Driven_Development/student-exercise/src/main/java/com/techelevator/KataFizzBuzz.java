@@ -4,18 +4,21 @@ public class KataFizzBuzz {
 
 	public String Fizzbuzz (int n) {
 		String a = String.valueOf(n);
-		if (n == 0 || n%5 != 0 && n%3 != 0) {
+		if (n < 1 || n > 100) {
+			return "";
+		}
+		if (n%5 != 0 && n%3 != 0) {
+		a = String.valueOf(n);
 		return a;
 		}
-		else if(n!=0 && n%5==0 && n%3 ==0) {
+		if(n%5==0 && n%3 ==0) {
 			return "FizzBuzz";
 		}
-		else if(n!=0 && n%3==0) {
+		else if(n%3==0) {
 			return "Fizz";
 		}
-		else if(n!=0 && n%5==0) {	
+		else 
 			return "Buzz";
-		}
-		return null;
-}
+	
+	}
 }

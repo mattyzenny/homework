@@ -17,12 +17,15 @@ public class KataFizzBuzzTest {
 	@Test
 	public void testDivisibleBy3() {
 	Assert.assertEquals("should test Fizz", "Fizz", fizzybuzzy.Fizzbuzz(33));
+	Assert.assertEquals("should test Fizz", "Fizz", fizzybuzzy.Fizzbuzz(9));
 	Assert.assertEquals("should test Fizz", "Fizz", fizzybuzzy.Fizzbuzz(3));
 }
 	@Test
 	public void testDivisibleBy5() {
 		Assert.assertEquals("Should test buzz", "Buzz", fizzybuzzy.Fizzbuzz(5));
 		Assert.assertEquals("Should test buzz", "Buzz", fizzybuzzy.Fizzbuzz(100));
+		Assert.assertEquals("Should test buzz", "Buzz", fizzybuzzy.Fizzbuzz(35));
+
 
 	}
 	@Test
@@ -39,10 +42,11 @@ public class KataFizzBuzzTest {
 		Assert.assertEquals("Should test convert", "98", fizzybuzzy.Fizzbuzz(98));
 
 }
+	@Test
 	public void testNotBetween1and100() {
-		Assert.assertEquals("Should test convert", "", fizzybuzzy.Fizzbuzz(0));
-		Assert.assertEquals("Should test convert", "", fizzybuzzy.Fizzbuzz(101));
-		Assert.assertEquals("Should test convert", "", fizzybuzzy.Fizzbuzz(1000));
+		Assert.assertEquals("Should test blank 0", "", fizzybuzzy.Fizzbuzz(0));
+		Assert.assertEquals("Should test blank 101", "", fizzybuzzy.Fizzbuzz(101));
+		Assert.assertEquals("Should test blank 1000", "", fizzybuzzy.Fizzbuzz(1000));
 
 }
 }
