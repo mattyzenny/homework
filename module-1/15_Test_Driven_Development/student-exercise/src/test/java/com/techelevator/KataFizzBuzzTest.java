@@ -39,6 +39,12 @@ public class KataFizzBuzzTest {
 		Assert.assertEquals("Should test convert", "98", fizzybuzzy.Fizzbuzz(98));
 
 }
+	public void testNotBetween1and100() {
+		Assert.assertEquals("Should test convert", "", fizzybuzzy.Fizzbuzz(0));
+		Assert.assertEquals("Should test convert", "", fizzybuzzy.Fizzbuzz(101));
+		Assert.assertEquals("Should test convert", "", fizzybuzzy.Fizzbuzz(1000));
+
+}
 }
 
 //Add test method, result should be X when X"
