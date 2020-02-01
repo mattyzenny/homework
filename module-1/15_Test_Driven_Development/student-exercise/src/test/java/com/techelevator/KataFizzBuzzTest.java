@@ -22,18 +22,23 @@ public class KataFizzBuzzTest {
 }
 	@Test
 	public void testDivisibleBy5() {
-		Assert.assertEquals("Should test null", null, fizzybuzzy.Fizzbuzz(0));
-		Assert.assertEquals("Should test null", "Buzz", fizzybuzzy.Fizzbuzz(5));
-		Assert.assertEquals("Should test null", "Buzz", fizzybuzzy.Fizzbuzz(100));
+		Assert.assertEquals("Should test buzz", null, fizzybuzzy.Fizzbuzz(0));
+		Assert.assertEquals("Should test buzz", "Buzz", fizzybuzzy.Fizzbuzz(5));
+		Assert.assertEquals("Should test buzz", "Buzz", fizzybuzzy.Fizzbuzz(100));
 
 	}
 	@Test
 	public void testDivisibleBy5And3() {
-		Assert.assertEquals("Should test null", "FizzBuzz", fizzybuzzy.Fizzbuzz(15));
-		Assert.assertEquals("Should test null", "FizzBuzz", fizzybuzzy.Fizzbuzz(30));
-		Assert.assertEquals("Should test null", "FizzBuzz", fizzybuzzy.Fizzbuzz(45));
+		Assert.assertEquals("Should test fizzbuzz", "FizzBuzz", fizzybuzzy.Fizzbuzz(15));
+		Assert.assertEquals("Should test fizzbuzz", "FizzBuzz", fizzybuzzy.Fizzbuzz(30));
+		Assert.assertEquals("Should test fizzbuzz", "FizzBuzz", fizzybuzzy.Fizzbuzz(45));
 
 	}
+	public void testNotDivisibleBy5or3() {
+		Assert.assertEquals("Should test convert", "11", fizzybuzzy.Fizzbuzz(11));
+		Assert.assertEquals("Should test convert", "1", fizzybuzzy.Fizzbuzz(1));
+		Assert.assertEquals("Should test convert", "99", fizzybuzzy.Fizzbuzz(99));
+
 }
 
 
