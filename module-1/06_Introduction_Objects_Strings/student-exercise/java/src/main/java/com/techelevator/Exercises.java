@@ -335,6 +335,10 @@ public class Exercises {
 	 stringTimes("Hi", 1) → "Hi"
 	 */
 	public String stringTimes(String str, int n) {
+		
+
+		
+		
 		String newString = "";
 		for (int i =0; i <n; i++)
 			newString += str;
@@ -369,6 +373,9 @@ public class Exercises {
 	 countXX("xxxx") →
 	 */
 	public int countXX(String str) {
+		
+		
+		
 		int containsX = 0;
 		for(int i = 0; i <str.length()-1; i++) {
 			if (str.substring(i, i+ 2).equals("xx"))
@@ -453,18 +460,17 @@ public class Exercises {
 	 stringX("xabxxxcdx") → "xabcdx"
 	 */
 	public String stringX(String str) {
+		String newString = str.replace("x", "");
+		if (str.startsWith("x")) {
+		newString = "x" + newString;
+		}
+		if (str.endsWith("x")) {
+			newString = newString + "x";
+		}
 		
-		if (str.length()-1 > 2 && str.startsWith("x") || (str.endsWith("x"))) {
-			return "x" + str.replace("x", "") + "x" ;
-		}
-			if ((str.length() == 0) && (str.startsWith("x"))) {
-				return str;
-			}
-		else if ((str.length()-1 == 1) && (str.endsWith("x"))) {
-			return str.replace("x", "");
-		}
-		else return str.replace("x", "");
+		return newString;
 	}
+
 	
 
 	/*
@@ -474,15 +480,9 @@ public class Exercises {
 	 altPairs("CodingHorror") → "Congrr"
 	 */
 	public String altPairs(String str) {
-		char newCharIndex0 = str.charAt(0);
-		char newCharIndex1 = str.charAt(1);
-		char newCharIndex4 = str.charAt(4); 
-		char newCharIndex5 = str.charAt(5);
-		char newCharIndex8 = str.charAt(8);
-		char newCharIndex9 = str.charAt(9);
-		String newString = Character.toString(newCharIndex0) + Character.toString(newCharIndex1) +Character.toString(newCharIndex4)+ Character.toString(newCharIndex5) +Character.toString(newCharIndex5) +Character.toString(newCharIndex8) + Character.toString(newCharIndex9);
-		return newString;
+	return null;
 	}
+		
 	
 
 	/*
@@ -493,6 +493,7 @@ public class Exercises {
 	 stringYak("yak123ya") → "123ya"
 	 */
 	public String stringYak(String str) {
+	
 		return str.replace("yak", "");
-	} 
+	}
 }

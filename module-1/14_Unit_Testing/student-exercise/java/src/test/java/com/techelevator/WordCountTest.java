@@ -12,21 +12,17 @@ import org.junit.Test;
 
 public class WordCountTest {
 
-	
-
-
-	WordCount numberOfStringInKey = new WordCount();
+WordCount numberOfStringInKey = new WordCount();
 		
 		
 		@Test
 		public void testStringCount() {
 			
-//			
-//			Assert.assertEquals(null, numberOfStringInKey.getCount(new String[] {}));
-//			Assert.assertEquals("ba: 2", numberOfStringInKey.getCount(new String[] {"ba", "ba", "black", "sheep"}));
-//			Assert.assertEquals(new String[] {"ba: 2"}, numberOfStringInKey.getCount(new String[] {"ba", "ba", "black", "sheep"}));
+			
+			Assert.assertEquals(null, numberOfStringInKey.getCount(new String[] {} ));
+			Assert.assertEquals(new String[] {"ba: 2"}, numberOfStringInKey.getCount(new String[] {"ba", "ba", "black", "sheep"}));
 		Assert.assertEquals("ba: 2", numberOfStringInKey.getCount(new String[] {"ba", "ba", "black", "sheep"}));
-		
+		Assert.assertNotEquals("ba :2", numberOfStringInKey.getCount(new String[] {"ba", "ba"}).containsKey(numberOfStringInKey));
 		}
 }
 

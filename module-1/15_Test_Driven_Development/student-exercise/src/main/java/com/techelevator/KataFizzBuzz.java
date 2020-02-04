@@ -2,6 +2,7 @@ package com.techelevator;
 
 public class KataFizzBuzz {
 
+	
 	public String Fizzbuzz (int n) {
 		String a = String.valueOf(n);
 		if (n < 1 || n > 100) {

@@ -14,7 +14,6 @@ public class Car implements IVehicleInterFace {
 
 	//CONSTRUCTOR//
 	Car(boolean hasTrailer, int distance) {
-		
 		this.hasTrailer = hasTrailer;
 		this.distance = distance;
 	}
@@ -26,9 +25,12 @@ public class Car implements IVehicleInterFace {
 	}
 	@Override
 	public String type() {
-
-		return type;
-	}
+		if (hasTrailer) {
+			return "car with trailer";
+		}
+		else return "car";
+		}
+	
 
 	@Override
 	public double calculateToll(int distance) {
@@ -43,7 +45,7 @@ public class Car implements IVehicleInterFace {
 	
 	
 	public String getType() {
-		if(hasTrailer) {
+		if(hasTrailer==true) {
 			return "Car (with trailer)";
 		}
 			else return "Car";
@@ -60,9 +62,6 @@ public class Car implements IVehicleInterFace {
 		this.totalMiles = totalMiles;
 	}
 	
-	public void setType(String type) {
-		this.type = type;
-	}
 
 	public double getCalculateToll() {
 		return calculateToll;

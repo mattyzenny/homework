@@ -106,8 +106,8 @@ public class Exercises {
 		
 		String [] sameOrderArray = new String[stringList.size()];
 		sameOrderArray = stringList.toArray(sameOrderArray);
-		for(int i = 0; i< stringList.size(); i++) {
-		}
+//		for(int i = 0; i< stringList.size(); i++) {
+//		}
 		return sameOrderArray;
 		
 		
@@ -130,6 +130,15 @@ public class Exercises {
 	public List<String> no4LetterWords(String[] stringArray) {
 		
 		List<String> no4Letters = new ArrayList<String>();
+		
+//		for (String s : stringArray) {
+//			if (s.length() != 4) {
+//				no4Letters.add(s);
+//			}
+//			}
+//		return no4Letters;
+//		}
+		
 		
 	
 		for(int i =0; i<stringArray.length; i++) {
@@ -184,10 +193,10 @@ public class Exercises {
 		List<Double> doubleArray = new ArrayList<Double>();
 		
 		for (int i : intArray) {
-			if ( i > 0 ) {
+//			if ( i > 0 ) {
 				doubleArray.add((double) (i/2));
 			}
-		}return doubleArray;
+		return doubleArray;
 	}
 		
 		
@@ -205,7 +214,7 @@ public class Exercises {
 //		List<Integer> myNewList = new ArrayList<Integer>();
 		int min = integerList.get(0);
 		int max = integerList.get(0);
-//		
+
 //		for (int i : integerList)
 //		if (max < integerList.get(i)) {
 //			max = integerList.get(i);

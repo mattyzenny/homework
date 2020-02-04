@@ -95,11 +95,20 @@ public class Exercises {
 	 */
 	public int sum3(int[] nums) {
 		int sum = 0;
-		for (int i = 0; i < nums.length; i++) {
-			sum += nums[i];
+		for (int i : nums) {
+		sum += i++;
 		}
-			return sum;
-		}
+		return sum;
+	}
+	
+		
+		
+//		int sum = 0;
+//		for (int i = 0; i < nums.length; i++) {
+//			sum += nums[i];
+//		}
+//			return sum;
+//		}
 		
 //		int sum = 0;
 //		sum = nums [0] + nums [1] + nums [2];
@@ -114,6 +123,15 @@ public class Exercises {
 	 rotateLeft3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] rotateLeft3(int[] nums) {
+	
+		
+		
+		
+		
+		
+		
+		
+		
 		int [] newArray = new int[] {nums[1], nums[2], nums[0]}; 
 		
 		return newArray; 
@@ -189,6 +207,13 @@ public class Exercises {
 	 sum2([1, 1, 1, 1]) → 2
 	 */
 	public int sum2(int[] nums) {
+			int sum = nums[0] + nums[1];
+		if (nums.length != 0) {
+			return sum;
+		}
+		else return 0;
+	}
+		
 //		int sum = nums[0] + nums[1];
 //		if (nums.length == 0) {
 //			return 0;
@@ -196,10 +221,10 @@ public class Exercises {
 //		else
 //		return sum;
 //	}
-		if (nums.length != 0); {
-		return nums[0] + nums[1];
-		}
-	}
+//		if (nums.length != 0); {
+//		return nums[0] + nums[1];
+//		}
+//	}
 	/*
 	 10. Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle 
 	 elements.
@@ -208,10 +233,14 @@ public class Exercises {
 	 middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
 	 */
 	public int[] middleWay(int[] a, int[] b) {
-		int [] newArray = new int [2];
-		newArray [0] = a[1];
-		newArray [1] = b[1];
+		
+		int [] newArray = new int[] {a[1], b[1]};
 		return newArray;
+		
+//		int [] newArray = new int [2];
+//		newArray [0] = a[1];
+//		newArray [1] = b[1];
+//		return newArray;
 	}
 //		
 //		int [] results = new int[2];
@@ -228,6 +257,11 @@ public class Exercises {
 	 countEvens([1, 3, 5]) → 0
 	 */
 	public int countEvens(int[] nums) {
+		
+
+		
+		
+		
 		int evenSum = 0;
 		for(int i = 0; i < nums.length; i++) {
 			
@@ -252,6 +286,15 @@ public class Exercises {
 	 sum13([1, 2, 2, 1, 13]) → 6
 	 */
 	public int sum13(int[] nums) {
+		
+		
+
+		
+		
+		
+		
+		
+		
 		int sum = 0;
 		for (int i = 0; i<nums.length; i++)
 		{
@@ -276,13 +319,31 @@ public class Exercises {
 	//loop through all arrays, and if [x] is next to [y], if [x] is by [y] return true; else//
 	
 	public boolean has22(int[] nums) {
+		
+		
+//		for (int i : nums) {
+//			if (nums[i+1] == 2 && nums[i] == 2) { 
+//				return true;
+//			}
+//			else return false;
+//		}
+//		
+//	}
+//		
+//		
+		
+		
+		
+		
+		
+		
 		for (int i = 0; i < nums.length-1; i++) {
 			if(nums[i] == 2 && nums[i+1] == 2)
 				return true;
 		}
 		return false;
 	}
-//	
+	
 	/*
 	 14. Given an array of ints, return true if the array contains no 1's and no 3's.
 	 lucky13([0, 2, 4]) → true
@@ -290,6 +351,8 @@ public class Exercises {
 	 lucky13([1, 2, 4]) → false
 	 */
 	public boolean lucky13(int[] nums) {
+		
+		
 		for (int i = 0; i < nums.length; i++) {
 			
 			if(nums[i] == 1 || nums[i] == 3) 
@@ -305,6 +368,18 @@ public class Exercises {
 	 sum28([1, 2, 3, 4]) → false
 	 */
 	public boolean sum28(int[] nums) {
+//		int sum = 0;
+//		for(int i : nums) {
+//			if (nums[i] ==2) 
+//				sum =+ nums[i];
+//				if (sum == 8) {
+//					return true;
+//				}
+//				else return false;
+//		}
+//	}
+	
+		
 		int sum = 0;
 		//if sum 2's == 8 return true;//
 		for (int i = 0; i < nums.length; i++)
