@@ -42,7 +42,7 @@ public class WordSearch {
 //				try(Scanner fileScanner = new Scanner(text)) {
 					
 					
-				myfilePath = "alice.txt";
+//				myfilePath = "alice.txt";
 				File searchFile = new File(myfilePath);
 				try(Scanner fileScanner = new Scanner(searchFile)) {
 					
