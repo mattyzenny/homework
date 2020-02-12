@@ -95,9 +95,10 @@ WHERE countrycode = 'USA';
 -- 12. The average population of cities in China.
 -- (average city population in China: 484720.6997 approx.)
 
-SELECT AVG(population)
+SELECT AVG(population), countrycode
 FROM city
-WHERE countrycode = 'CHN';
+WHERE countrycode = 'CHN'
+GROUP BY countrycode;
 
 -- 13. The surface area of each continent ordered from highest to lowest.
 -- (largest continental surface area: 31881000, "Asia")
@@ -111,10 +112,10 @@ ORDER BY SUM(surfacearea)DESC;
 -- countries in the world. 
 -- (highest population density in world: 26277.7777)
 
-SELECT (population/surfacearea), country AS PopulationDensity
+SELECT (population/surfacearea) AS populationDensity, name
 FROM country
 WHERE population > 0 AND surfacearea > 0
-GROUP BY (population/surfacearea), country
+GROUP BY (population/surfacearea), name
 ORDER BY (population/surfacearea) DESC;
 
 -- 15. The population density and life expectancy of the top ten countries with the 
@@ -133,11 +134,11 @@ LIMIT 10;
 -- difference and absolute difference.
 -- (smallest difference: 1.00, 1.00, "Ecuador")
 
-SELECT ABS(gnp-gnpold) AS newDifference, name
+SELECT ABS(gnp-gnpold) AS GDPDIFFERENCE, ABS(gnpold-gnp), name
 FROM country
 WHERE gnp > 0 AND  gnpold > 0
-GROUP BY gnp-gnpold, name
-ORDER BY newDifference ASC;
+GROUP BY gnp-gnpold, gnpold-gnp, name
+ORDER BY GDPDIFFERENCE ASC;
 
 -- 17. The average population of cities in each country (hint: use city.countrycode)
 -- ordered from highest to lowest.
