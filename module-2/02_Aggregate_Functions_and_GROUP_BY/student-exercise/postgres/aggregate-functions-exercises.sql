@@ -170,10 +170,10 @@ ORDER BY continent ASC;
 -- 20. The count of cities in each country ordered from highest to lowest.
 -- (largest number of  cities ib a country: 363, "CHN")
 
-SELECT COUNT(name) countrycode
+SELECT COUNT(name), countrycode
 FROM city
 GROUP BY countrycode
-ORDER BY countrycode DESC;
+ORDER BY COUNT DESC;
 	
 -- 21. The population of the largest city in each country ordered from highest to 
 -- lowest.
