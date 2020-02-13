@@ -2,24 +2,52 @@
 
 -- 1. All of the films that Nick Stallone has appeared in
 -- (30 rows)
+SELECT film.*, actor.first_name, actor.last_name
+FROM film
+JOIN film_actor ON film.film_id = film_actor.film_id
+JOIN actor ON actor.actor_id = film_actor.actor_id
+WHERE first_name = 'NICK' AND last_name = 'STALLONE'
 
 -- 2. All of the films that Rita Reynolds has appeared in
 -- (20 rows)
 
+SELECT film.*, actor.first_name, actor.last_name
+FROM film
+JOIN film_actor ON film.film_id = film_actor.film_id
+JOIN actor ON actor.actor_id = film_actor.actor_id
+WHERE first_name = 'RITA' AND last_name = 'REYNOLDS'
+
 -- 3. All of the films that Judy Dean or River Dean have appeared in
 -- (46 rows)
+
+SELECT film.*, actor.first_name, actor.last_name
+FROM film
+JOIN film_actor ON film.film_id = film_actor.film_id
+JOIN actor ON actor.actor_id = film_actor.actor_id
+WHERE first_name = 'JUDY' OR first_name = 'RIVER' AND last_name = 'DEAN'
 
 -- 4. All of the the ‘Documentary’ films
 -- (68 rows)
 
+SELECT film.*
+FROM film
+JOIN film_category ON film_category.film_id = film.film_id
+WHERE category_id = 6
+
 -- 5. All of the ‘Comedy’ films
 -- (58 rows)
+
+
 
 -- 6. All of the ‘Children’ films that are rated ‘G’
 -- (10 rows)
 
+
+
 -- 7. All of the ‘Family’ films that are rated ‘G’ and are less than 2 hours in length
 -- (3 rows)
+
+
 
 -- 8. All of the films featuring actor Matthew Leigh that are rated ‘G’
 -- (9 rows)
