@@ -202,7 +202,7 @@ JOIN inventory ON inventory.film_id = film.film_id
 JOIN rental ON rental.inventory_id = inventory.inventory_id
 GROUP BY SexiestActors
 ORDER BY COUNT(rental.inventory_id) DESC
-LIMIT 11;
+LIMIT 10;
 
 
 -- 20. The top 5 “Comedy” actors ranked by number of rentals of films in the “Comedy” category starring that actor 
