@@ -13,5 +13,109 @@
     box-sizing: border-box;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
   }
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-areas: "header header header header"
+                          "content content content content"
+                          "footer . . .";
+                   
   
-  
+  }
+
+main {
+  content: main;
+  margin-left: 25px;
+}
+main img {
+  margin-top: 25px;
+}
+  header img{
+    block-size: 150px;
+    margin-top: 5px;
+    margin-top: 5px;
+    margin-left: 50px;
+  }
+  aside img {
+    block-size: 150px;
+  }
+
+  aside {
+    border-right: 1px ridge;
+    border-color:   #00adee;
+    grid-area: sidebar left;
+    text-align: center;
+    height: 100%;
+    width: 200px;
+    left: 30px;
+    margin-top: 5px;
+    margin-left: 40px;
+    height: 100%;
+  }
+
+nav > ul {
+  display: block;
+  margin-top: 5px;
+  padding: 30px;
+  font-size: 23px;
+}
+a {
+  color:  #00adee;
+  text-decoration: none;
+
+}
+
+li {
+  display:block;
+  padding: 10px;
+}
+ section {
+   margin-left: 20px;
+ }
+  div {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  #what-we-do {
+    border-right: 1px ridge;
+    border-right-color: #8cc36f;
+    display: inline-block;
+    width:450px;
+    height: 100px;
+  }
+  #our-work {
+    border-right: 1px ridge;
+    border-right-color: #8cc36f;
+    display: inline-block;
+    width:400px;
+    height: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+  }
+#contact-us {
+  display: inline-block;
+  width: 400px;
+  height: 100px;
+}
+
+div h2 {
+  color: rgb(157, 226, 53);
+
+}
+div p {
+  font-size: 20px;
+} 
+
+footer {
+  margin-left: 40px;
+}
+
+  .subheading {
+    display: none;
+  }
+  footer img {
+    display: none;
+  }
+  #social {
+    display: none;
+  } 
