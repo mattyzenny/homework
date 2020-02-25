@@ -13,7 +13,10 @@
     box-sizing: border-box;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
   }
+ 
+
   body {
+    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-template-areas: "header header header header"
@@ -25,11 +28,15 @@
 
 main {
   content: main;
-  margin-left: 25px;
+  size: 100%;
+  
 }
 main img {
-  margin-top: 25px;
+  margin-top: 40px;
+  height: 100%;
+  size: 100%;
 }
+
   header img{
     block-size: 150px;
     margin-top: 5px;
@@ -54,6 +61,7 @@ main img {
   }
 
 nav > ul {
+  border-bottom: 1px blue;
   display: block;
   margin-top: 5px;
   padding: 30px;
@@ -61,6 +69,7 @@ nav > ul {
 }
 a {
   color:  #00adee;
+  border-bottom: 1px  #00adee;
   text-decoration: none;
 
 }
