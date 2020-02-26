@@ -14,18 +14,18 @@ html {
 
 
 body {
-    display: grid flex;
+    display: grid;
     margin-left: 8%;
     margin-right: 8%;
     grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
     grid-template-areas:
-      ". header     .   .       ."
+      ". header     .        .             ."
       ". student-quote   student-quote    main  ."
       ". student-quote   student-quote    main ."
-      ". main   main    main    ."
+      ". main   main        main             ."
       ". fas fa-code   fas fa-database   fas fa-info    ."
-      ".    .   fas fa-palette    .   ."
-      ". footer .   .   .";
+      ".    .   fas fa-palette          .               ."
+      ". footer               .          .             .";
   
   }
   header {
@@ -101,8 +101,10 @@ main h1 {
 
 
 footer {
-    display: flex;
-    justify-self: bottom;
+    display: block;
+    justify-items: stretch;
+    align-items: flex-end;
+   
 }
   /* * The page uses a grid layout.
   * The columns in the grid are evenly sized.

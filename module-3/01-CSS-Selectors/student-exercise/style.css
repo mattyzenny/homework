@@ -1,3 +1,4 @@
+
 :root {
     --top-row-height: 120px;
     --gutter: 20px;
@@ -8,117 +9,127 @@
     --bg-color: rgba(192, 192, 192, 0.1);
     --subheading: rgba(0, 0, 0, 0.6);
   }
-  
   * {
     box-sizing: border-box;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
   }
- 
-
+  
+  
   body {
-    
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-   grid-template-areas: "header header header header"
-                          "content content content content"
-                          "footer . . .";
-                   
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-areas: 
+        "asideimg headerimg"
+        "nav section"
+        ". ."
+        ". copyright";
+    grid-gap: 20px;
+  }
   
+  section {
+    grid-area: section;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "What-we-do our-work contact-us";
   }
-
-main {
-  content: main;
-  size: 100%;
+  }
   
-}
-main img {
-  margin-top: 40px;
-  height: 100%;
-  size: 100%;
-}
-
-  header img{
-    block-size: 150px;
-    margin-top: 5px;
-    margin-top: 5px;
-    margin-left: 50px;
-  }
-  aside img {
-    block-size: 150px;
-  }
-
-  aside {
-    border-right: 1px ridge;
-    border-color:   #00adee;
-    grid-area: sidebar left;
-    text-align: center;
-    height: 100%;
-    width: 200px;
-    left: 30px;
-    margin-top: 5px;
-    margin-left: 40px;
-    height: 100%;
-  }
-
-nav > ul {
-  border-bottom: 1px blue;
-  display: block;
-  margin-top: 5px;
-  padding: 30px;
-  font-size: 23px;
-}
-a {
-  color:  #00adee;
-  border-bottom: 1px  #00adee;
-  text-decoration: none;
-
-}
-
-li {
-  display:block;
-  padding: 10px;
-}
- section {
-   margin-left: 20px;
- }
-  div {
+  
+  #what-we-do { 
+    grid-area: what-we-do;
+    padding: 10px;
+    border-right: 1px ridge  rgba(170, 239, 135, 0.8);
+    padding-right: 20px;
     display: inline-block;
-    margin-left: 20px;
-  }
-  #what-we-do {
-    border-right: 1px ridge;
-    border-right-color: #8cc36f;
-    display: inline-block;
-    width:450px;
-    height: 100px;
-  }
+  
+    }
+  
+   
   #our-work {
-    border-right: 1px ridge;
-    border-right-color: #8cc36f;
+    grid-area: our-work;
+    padding: 10px;
+    border-right: 1px ridge rgba(170, 239, 135, 0.8);
+    padding-right: 20px;
+    padding-left: 20px;
     display: inline-block;
-    width:400px;
-    height: 100px;
-    margin-left: 500px;
-    margin-right: 500px;
+  
   }
-#contact-us {
-  display: inline-block;
-  width: 400px;
-  height: 100px;
-}
-
-div h2 {
-  color: rgb(157, 226, 53);
-
-}
-div p {
-  font-size: 20px;
-} 
-
-footer {
-  margin-left: 40px;
-}
-
+  
+  
+  
+  #contact-us {
+    grid-area: contact-us;
+    border-right: 1px ridge rgba(170, 239, 135, 0.8);
+    padding-right: 20px;
+    padding-left: 20px;
+    display: inline-block;
+  
+  }
+  header {
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  
+  div h2 {
+    color: rgb(157, 226, 53);
+  }
+  
+  aside img {
+    grid-area: logo1;
+    height: 150px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; 
+  }
+  
+  aside {
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid rgba(0, 173, 238, 0.4);
+  }
+  
+  header img {
+    grid-area: logo2;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  
+  main > img {
+    grid-area: 2400;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  nav a {
+   display: block;
+   color: #00adee;
+   text-decoration: none;
+   font-weight: bold;
+   text-align: center;
+   width: 120px;
+   padding-top: 15px;
+   padding-bottom: 15px;
+   border-bottom: 1px solid;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    border-bottom: 1px blue;
+    display: block;
+    margin-top: 5px;
+    padding: 30px;
+    font-size: 23px;
+  }
+  div p {
+    font-size: 20px;
+  } 
+  footer {
+    margin-left: 40px;
+  }
+  
+  
   .subheading {
     display: none;
   }
@@ -128,3 +139,10 @@ footer {
   #social {
     display: none;
   } 
+  
+  
+  
+
+
+ 
+
