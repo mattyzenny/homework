@@ -66,8 +66,8 @@ body {
  #student-profile {
     grid-area: student-profile;
     font-family: arial;
-    width: 600px;
-    margin-top: 40%;
+    width: 700px;
+    margin-top: 25%;
     size: 40%;
     color: black;
 
@@ -75,8 +75,8 @@ body {
 
 #student-contact {
     grid-area: student-contact;
-    margin-top: 43%;
-    margin-left: 75%;
+    margin-top: 30%;
+    margin-left: 70%;
     font-family: arial;
     width: 30%;
     size: 1em;
@@ -87,11 +87,13 @@ body {
 #experience {
     grid-area: experience;
     align-content: flex-start;
-    margin-top: 90%;
+    align-items: left;
+    margin-top: 55%;
+    margin-right: 25%;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    size: 3px;
 }
 
  #experience div{
