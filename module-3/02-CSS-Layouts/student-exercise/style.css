@@ -1,0 +1,115 @@
+:root {
+    --blue: #00adee;
+    --grey: #505355;
+}
+  
+* {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+
+body {
+    display: grid flex;
+    margin-left: 8%;
+    margin-right: 8%;
+    grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+    grid-template-areas:
+      ". header     .   .       ."
+      ". student-quote   student-quote    main  ."
+      ". student-quote   student-quote    main ."
+      ". main   main    main    ."
+      ". fas fa-code   fas fa-database   fas fa-info    ."
+      ".    .   fas fa-palette    .   ."
+      ". footer .   .   .";
+  
+  }
+  header {
+    grid-area: header;
+  }
+  main {
+    grid-area: main;  
+  }
+  #student-quote {
+      grid-area: student-quote;
+  }
+  .fas fa-code {
+      grid-area: fas fa-code;
+  }
+  .fas fa-database{
+      grid-area: fas fa-database;
+  }
+  .fas fa-info {
+      grid-area: fas fa-info;
+  }
+  .fas fa-palatte {
+      grid-area: fas fa-palatte;
+  }
+  footer {
+    grid-area: footer;
+  }
+
+
+  h3 {
+    color: #00ADEE;
+  }
+
+#te-logo {
+      display: flex;
+    width: 250px;
+  }
+main h1 {
+    display: flex;
+    margin-top: 1%;
+    font-size: 40px;
+    color: #505355;
+    /* object-fit: properly; */
+    word-spacing: .25em;
+}
+#student-picture img {
+    border-radius: 50%;
+    margin-left: 70%;
+}
+#student-quote h2 {
+    width: 70%;
+    margin-bottom: 10%;
+}
+
+#student-contact p {
+  
+    display: flex;
+    margin-left: 80%;
+    text-align: center;
+    
+}
+
+#experience p {
+
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: flex-end;
+    width: 300px;
+}
+
+
+
+
+
+footer {
+    display: flex;
+    justify-self: bottom;
+}
+  /* * The page uses a grid layout.
+  * The columns in the grid are evenly sized.
+  * The margins on the side are: 8%
+  * The gaps between the grid cells are 20px vertically and 50px horizontally.
+  * The experience section should use a flexbox layout.
+  * Here are the following color styles:
+      - Blue: #00ADEE;
+      - Grey: #505355
+      - Background Color: rgba(192, 192, 192, 0.1); */
