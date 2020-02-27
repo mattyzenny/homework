@@ -37,8 +37,28 @@
 	</ul>
 </nav>
 
-<%--
-	REPLACE THIS COMMENT WITH YOUR UNORDERED LIST...
- --%>
+<%-- 
+		<c:forEach begin="0" end="${count}">
+			<li style="font-size:${count}px"><c:out value="${param.word}"/></li>
+			<c:set var="count" value="${count - 1}"/>
+		</c:forEach> --%>
+			 <c:set var="word" value="Hello!"/>
+		<c:set var="count" value="20"/>
+		<c:forEach begin="10" end="${count}">
+			<li style="font-size:${count}px"><c:out value="${param.word}"/></li>
+			<c:set var="count" value="${count - 1}"/>
+		</c:forEach>
 
-<c:import url="common/footer.jsp"></c:import>
+
+		<c:forEach begin="20" end="${count}">
+			<li style="font-size:${count}px"><c:out value="${param.word}"/></li>
+			<c:set var="count" value="${count - 1}"/>
+		</c:forEach>
+ 
+ <%-- <c:forEach begin="0" end= "${param.count }" var="numb" >
+<ul>
+			<li style="font-size:${count}px"><c:out value="${param.word}"/></li>
+			<c:set var="count" value="${count - 1}"/>
+
+</ul>
+</c:forEach> --%>
