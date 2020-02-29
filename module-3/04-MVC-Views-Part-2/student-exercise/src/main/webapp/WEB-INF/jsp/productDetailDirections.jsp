@@ -5,31 +5,7 @@
 	<c:param name="pageTitle" value="Product Details" />
 </c:import>
 
-
-<div class="productDetails">
-	<img
-		src="<c:url value= "images/product-images/${product.imageName}" />" />
-</div>
-<div class="details">
-	<c:out value="${product.name }" />
-	<span class="red"><c:out
-			value="${product.topSeller? 'Best Seller!': '' }" /> </span> <br>
-	<fmt:formatNumber value="${product.averageRating} }" maxFraction="0"
-		var="starsImage" />
-	<img id="star" class="ratingTilesList"
-		src="image/${starsImage}-star.png" /> <br> <span>
-		class="price">$ <c:out value="${product.price }" />
-	</span> <br>Weight
-	<c:out value="${product.weightInLbs} }" />
-	lbs<br>
-	<c:out value="${product.description }" />
-</div>
-
-
-
-</div>
-
-<%-- <!-- Container for the Product -->
+<!-- Container for the Product -->
 <!-- The current product is available using the `product` variable -->
 <div id="product-detail">
 	<img src="<c:url value="/images/product-images/grey-sofa.jpg" />" />
@@ -55,6 +31,6 @@
 		<!-- OR if item is out of stock -->
 		<!--<button disabled>Sold Out</button>-->
 	</div>
-</div> --%>
+</div>
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />

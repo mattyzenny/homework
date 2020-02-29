@@ -8,75 +8,21 @@
 <div id="masonry-page">
 	<c:import url="/WEB-INF/jsp/common/filters.jsp">
 		<%-- Modify the baseRoute to apply filters to the current route. --%>
-		<%--<c:param name="baseRoute" value="#" /> --%>
-		
-		<c:param name="baseRoute" value="/products/tiles" />
+		<c:param name="baseRoute" value="#" />
 	</c:import>
 
 	<!-- Container for all of the Products -->
 	<!-- The list of products is available using the `products` variable -->
+	<div id="grid" class="main-content">
 
-	<!--**** 	<div id="grid" class="main-content"> -->
-
-
-
-
-	<!-- The following HTML shows different examples of what HTML
+		<!-- The following HTML shows different examples of what HTML
 		 could be rendered based on different rules. For purposes
 		 of demonstration we've written it out so you can see it
 		 when you load the page up. -->
 
-	<!-- Standard Product -->
-	<div class="flexContainer">
-		<!-- *****		<div class="tile  ">
- -->
-		<c:forEach var="product" items="${products}">
-			<div class="flexContainerTile">
-				<c:url var="productDetailURL" value="/productDetail">
-					<c:param name="categoryId" value="${product.categoryId }" />
-				</c:url>
-
-				<a href="${productDetailURL }">
-					<img class ="productImage" src="<c:url value= "/images/product-images/${product.imageName }" />"/>
-				</a>
-				<div class="flexContainerTextTiles">
-					<h4 class="link">
-						<a href="${productDetailURL }"><c:out value="${product.name}" />
-						</a>
-					</h4>
-				</div>
-				<div class="price">
-					<c:choose>
-						<c:when test="${product.topSeller }">
-							<p>BEST SELLER!</p>
-						</c:when>
-					</c:choose>
-				</div>
-				<div class="blue">
-					<c:choose>
-						<c:when test="${product.remainingStock < 5 }">
- 	 	Only <c:out value="${product.remainingStock }" /> left!
- 	</c:when>
-					</c:choose>
-				</div>
-
-				<div class="priceformat">
-					<fmt:formatNumber value="${product.price }" type="currency" />
-				</div>
-				<div>
-					weight
-					<c:out value="${product.weightInLbs }" />
-					lbs
-				</div>
-				<fmt:formatNumber type="number" maxFractionDigits="0"
-					value="${product.averageRating }" var="starsImage" />
-				<img class="ratingTiles" src="images/${starsImage }-star." />
-			</div>
-		</c:forEach>
-	</div>
-
-
-	<%-- <!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
+		<!-- Standard Product -->
+		<div class="tile  ">
+			<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
 			<a class="product-image" href="#"> 
 				<img src="<c:url value="/images/product-images/grey-sofa.jpg" />" />
 			</a>
@@ -154,6 +100,6 @@
 			</div>
 		</div>
 	</div>
-</div> --%>
+</div>
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />

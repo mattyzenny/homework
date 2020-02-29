@@ -60,7 +60,7 @@ public class ProductController {
 		if (request.getParameter("minRating") != null) {
 			filter.setMinRating(Double.parseDouble(request.getParameter("minRating")));
 		}
-
+			//*****prameter (minRating)//
 		if (request.getParameter("minPrice") != null) {
 			Double minPrice = Double.valueOf(request.getParameter("minPrice"));
 			filter.setMinPrice(minPrice);
