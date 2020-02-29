@@ -7,16 +7,16 @@
 
 <div id="card-page">
 	<c:import url="/WEB-INF/jsp/common/filters.jsp">
-		
+
 		<%-- Modify the baseRoute to apply filters to the current route. --%>
 		<%-- <c:param name="baseRoute" value="#" />--%>
-		
-		<c:param name="baseRoute" value="/products"/>
+
+		<c:param name="baseRoute" value="/products" />
 	</c:import>
 
-<!-- 	<div class="main-content">
+	<!-- 	<div class="main-content">
 		Container for Sorting Choices
-         
+      
          Each link should take the user to this current page and use any combination of the following
          querystring parameters to sort the page:
             - sortOrder (string) - PriceLowToHigh,PriceHighToLow,RatingHighToLow
@@ -35,72 +35,122 @@
 			</ul>
 		</div> -->
 
-		<!-- Container for all of the Products -->
+	<!-- Container for all of the Products -->
 
 
-				
-	 	 <div class="main-content">
-			<c:forEach var="product" items="${products }">
- 				<div class="tile">
-					<c:url var="productDetailURL" value="/products/detail/">
-						<c:param name="product" value="${product.id }" />
-					</c:url>
-					<a class="product-imageLink" href="${productDetailURL }"> 
-					
-					<img  class ="productImage" src="<c:url value= "/images/product-images/${product.imageName }" />"/>
-					</a>
-					<div class="details">
+
+	<div class="main-content">
+		<c:forEach var="product" items="${products }">
+			<div class="tile">
+
+				<c:url var="productDetailsPageHref" value="/products/detail">
+					<c:param name="id">${product.id}</c:param>
+
+				</c:url>
+				<a class="product-image" href="${productDetailURL }"> <img
+					src="<c:url value= "/images/product-images/${product.imageName }" />" />
+				</a>
+
+				<div class="details">
 					<p class="names">
-					<c:out value="${product.name }"/>
+						<c:out value="${product.name }" />
 					</p>
-						<c:url var="productDetailURL" value="/products/detail">
-							<c:param name="productId" value="${product.categoryId }" />
-						</c:url>
- 						<c:choose>
- 							<c:when test="${product.topSeller }">
-								<div class="rating">
+
+					<c:choose>
+						<c:when test="${product.topSeller }">
+							<div class="rating">
 								<span class="banner top-seller">Top Seller!</span>
-								</div>
-							</c:when> 
-							</c:choose> 
- 							<c:choose>
-							<c:when test="${product.remainingStock >0 && product.remainingStock <=5 }">
+							</div>
+						</c:when>
+					</c:choose>
+					<c:choose>
+						<c:when
+							test="${product.remainingStock >0 && product.remainingStock <=5 }">
 							<div class="remaining">
-						<span class="product-alert">Only 4 left!</span>
+								<span class="product-alert">Only 4 left!</span>
 							</div>
-							</c:when> 
-							</c:choose>
-							<c:choose>
-							<c:when test="${product.remainingStock ==0 }">
-							<div class="tile sold-out"> 
-							<span class="banner">Sold Out!</span>
+						</c:when>
+					</c:choose>
+					<c:choose>
+						<c:when test="${product.remainingStock ==0 }">
+							<div class="tile sold-out">
+								<span class="banner">Sold Out!</span>
 							</div>
-							</c:when>	
-						</c:choose>
-						<div class="price">
-							<fmt:formatNumber value="${product.price }" type="currency" />
-						</div>
+						</c:when>
+					</c:choose>
+					<div class="price">
+						<fmt:formatNumber value="${product.price }" type="currency" />
+					</div>
 
-				
+
 					<div class="rating">
-						<span class="filled"></span> 
-					
-					
-</div>
-				
-		
+						<c:choose>
+							<c:when test="${product.averageRating > 4 }">
+								<span class="filled">&#9734;</span>
+								<span class="filled">&#9734;</span>
+								<span class="filled">&#9734;</span>
+								<span class="filled">&#9734;</span>
+								<span class="filled">&#9734;</span>
+							</c:when>
+							<c:when test="${product.averageRating > 3}">
+								<span class="filled">&#9734;</span>
+								<span class="filled">&#9734;</span>
+								<span class="filled">&#9734;</span>
+								<span class="filled">&#9734;</span>
+								<span>&#9734;</span>
 
-		</div>
-		</div>
-		<hr>
+
+							</c:when>
+							<c:when test="${product.averageRating > 2}">
+								<span class="filled">&#9734;</span>
+								<span class="filled">&#9734;</span>
+								<span class="filled">&#9734;</span>
+								<span>&#9734;</span>
+								<span>&#9734;</span>
+
+
+							</c:when>
+							<c:when test="${product.averageRating >1}">
+								<span class="filled">&#9734;</span>
+								<span class="filled">&#9734;</span>
+								<span>&#9734;</span>
+								<span>&#9734;</span>
+								<span>&#9734;</span>
+
+							</c:when>
+							<c:when test="${product.averageRating == 1}">
+								<span class="filled">&#9734;</span>
+								<span>&#9734;</span>
+								<span>&#9734;</span>
+								<span>&#9734;</span>
+								<span>&#9734;</span>
+							</c:when>
+							<c:otherwise>
+								<span>&#9734;</span>
+								<span>&#9734;</span>
+								<span>&#9734;</span>
+								<span>&#9734;</span>
+								<span>&#9734;</span>
+							</c:otherwise>
+						</c:choose>
+
+
+
+					</div>
+
+
+
+				</div>
+			</div>
+			<hr>
 		</c:forEach>
-		</div> 
-		</div>
-		 
-		
-		
-		
-	
+	</div>
+</div>
+
+
+
+
+
 <%-- 		<!-- The list of products is available using the `products` variable -->
 		<div id="grid">
 
@@ -189,7 +239,7 @@
 	</div>
 </div> --%>
 
-	<%--  	 <div class="main-content">
+<%--  	 <div class="main-content">
 	 	 <div id="grid">
 	 
 	 
@@ -202,8 +252,8 @@
 				<div class="details">
 					<p class="name">Grey Sofa</p> 
 --%>
-	 
-	<%-- 		<c:forEach var="product" items="${products }">
+
+<%-- 		<c:forEach var="product" items="${products }">
  				<div class="tile">
 					<c:url var="productDetailURL" value="/products/detail/">
 						<c:param name="categoryId" value="${product.categoryId }" />
@@ -230,7 +280,7 @@
 					<p class="price">$939.00</p>
 				</div>
 			</div> --%>
-						
+
 
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />

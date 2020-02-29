@@ -9,7 +9,7 @@
 	<c:import url="/WEB-INF/jsp/common/filters.jsp">
 		<%-- Modify the baseRoute to apply filters to the current route. --%>
 		<%--<c:param name="baseRoute" value="#" /> --%>
-		
+
 		<c:param name="baseRoute" value="/products/tiles" />
 	</c:import>
 
@@ -27,56 +27,115 @@
 		 when you load the page up. -->
 
 	<!-- Standard Product -->
-	<div class="flexContainer">
-		<!-- *****		<div class="tile  ">
- -->
-		<c:forEach var="product" items="${products}">
-			<div class="flexContainerTile">
-				<c:url var="productDetailURL" value="/productDetail">
-					<c:param name="categoryId" value="${product.categoryId }" />
-				</c:url>
+	<div class="tile">
 
-				<a href="${productDetailURL }">
-					<img class ="productImage" src="<c:url value= "/images/product-images/${product.imageName }" />"/>
-				</a>
-				<div class="flexContainerTextTiles">
-					<h4 class="link">
-						<a href="${productDetailURL }"><c:out value="${product.name}" />
-						</a>
-					</h4>
-				</div>
+		<c:forEach var="product" items="${products }">
+
+			<c:url var="productDetailsPageHref" value="/products/detail">
+				<c:param name="id">${product.id}</c:param>
+
+			</c:url>
+			<a class="product-image" href="${productDetailURL }"> <img
+				src="<c:url value= "/images/product-images/${product.imageName }" />" />
+			</a>
+
+			<div class="details">
+				<p class="names">
+					<c:out value="${product.name }" />
+				</p>
+
+				<c:choose>
+					<c:when test="${product.topSeller }">
+						<div class="rating">
+							<span class="banner top-seller">Top Seller!</span>
+						</div>
+					</c:when>
+				</c:choose>
+				<c:choose>
+					<c:when
+						test="${product.remainingStock >0 && product.remainingStock <=5 }">
+						<div class="remaining">
+							<span class="product-alert">Only 4 left!</span>
+						</div>
+					</c:when>
+				</c:choose>
+				<c:choose>
+					<c:when test="${product.remainingStock ==0 }">
+						<div class="tile sold-out">
+							<span class="banner">Sold Out!</span>
+						</div>
+					</c:when>
+				</c:choose>
 				<div class="price">
-					<c:choose>
-						<c:when test="${product.topSeller }">
-							<p>BEST SELLER!</p>
-						</c:when>
-					</c:choose>
-				</div>
-				<div class="blue">
-					<c:choose>
-						<c:when test="${product.remainingStock < 5 }">
- 	 	Only <c:out value="${product.remainingStock }" /> left!
- 	</c:when>
-					</c:choose>
-				</div>
-
-				<div class="priceformat">
 					<fmt:formatNumber value="${product.price }" type="currency" />
 				</div>
-				<div>
-					weight
-					<c:out value="${product.weightInLbs }" />
-					lbs
+
+
+				<div class="rating">
+					<c:choose>
+						<c:when test="${product.averageRating > 4 }">
+							<span class="filled">&#9734;</span>
+							<span class="filled">&#9734;</span>
+							<span class="filled">&#9734;</span>
+							<span class="filled">&#9734;</span>
+							<span class="filled">&#9734;</span>
+						</c:when>
+						<c:when test="${product.averageRating > 3}">
+							<span class="filled">&#9734;</span>
+							<span class="filled">&#9734;</span>
+							<span class="filled">&#9734;</span>
+							<span class="filled">&#9734;</span>
+							<span>&#9734;</span>
+
+
+						</c:when>
+						<c:when test="${product.averageRating > 2}">
+							<span class="filled">&#9734;</span>
+							<span class="filled">&#9734;</span>
+							<span class="filled">&#9734;</span>
+							<span>&#9734;</span>
+							<span>&#9734;</span>
+
+
+						</c:when>
+						<c:when test="${product.averageRating >1}">
+							<span class="filled">&#9734;</span>
+							<span class="filled">&#9734;</span>
+							<span>&#9734;</span>
+							<span>&#9734;</span>
+							<span>&#9734;</span>
+
+						</c:when>
+						<c:when test="${product.averageRating == 1}">
+							<span class="filled">&#9734;</span>
+							<span>&#9734;</span>
+							<span>&#9734;</span>
+							<span>&#9734;</span>
+							<span>&#9734;</span>
+						</c:when>
+						<c:otherwise>
+							<span>&#9734;</span>
+							<span>&#9734;</span>
+							<span>&#9734;</span>
+							<span>&#9734;</span>
+							<span>&#9734;</span>
+						</c:otherwise>
+					</c:choose>
+
+
+
 				</div>
-				<fmt:formatNumber type="number" maxFractionDigits="0"
-					value="${product.averageRating }" var="starsImage" />
-				<img class="ratingTiles" src="images/${starsImage }-star." />
+
+
+
 			</div>
+			<hr>
+
 		</c:forEach>
 	</div>
+</div>
 
-
-	<%-- <!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
+<%-- <!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
 			<a class="product-image" href="#"> 
 				<img src="<c:url value="/images/product-images/grey-sofa.jpg" />" />
 			</a>
