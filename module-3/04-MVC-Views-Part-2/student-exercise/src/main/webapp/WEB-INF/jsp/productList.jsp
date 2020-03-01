@@ -37,7 +37,16 @@
 
 	<!-- Container for all of the Products -->
 
-
+<%-- <c:forEach var="recipe" items="${recipes}">
+				<img class="recipeimage"
+					src="<c:url value="img/recipe${recipe.recipeId}.jpg" />" />
+				<br>
+				<c:url var="recipeDetailsPageHref" value="/recipeDetails">
+				<c:param name="recipeId">${recipe.recipeId}</c:param>
+				
+				</c:url>
+				<h4><a href="${recipeDetailsPageHref}">${recipe.name}</a></h4>
+				<br> --%>
 
 	<div class="main-content">
 		<c:forEach var="product" items="${products }">
@@ -47,8 +56,13 @@
 					<c:param name="id">${product.id}</c:param>
 
 				</c:url>
-				<a class="product-image" href="${productDetailURL }"> <img
+				<a class="product-image" href="${productDetailsPageHref }"> <img
 					src="<c:url value= "/images/product-images/${product.imageName }" />" />
+				
+								<c:url var="productDetailsPageHref" value="/products/detail">
+					<c:param name="id">${product.id}</c:param>
+
+				</c:url>
 				</a>
 
 				<div class="details">
@@ -63,13 +77,37 @@
 							</div>
 						</c:when>
 					</c:choose>
-					<c:choose>
-						<c:when
-							test="${product.remainingStock >0 && product.remainingStock <=5 }">
-							<div class="remaining">
-								<span class="product-alert">Only 4 left!</span>
-							</div>
+							<c:choose>
+				<c:when
+						test="${product.remainingStock >0 && product.remainingStock == 5 }">
+						<div class="remaining">
+							<span class="product-alert">Only 5 left!</span>
+						</div>
 						</c:when>
+					<c:when
+						test="${product.remainingStock >0 && product.remainingStock ==4 }">
+						<div class="remaining">
+							<span class="product-alert">Only 4 left!</span>
+						</div>
+						</c:when>
+						<c:when
+						test="${product.remainingStock >0 && product.remainingStock ==3 }">
+						<div class="remaining">
+							<span class="product-alert">Only 3 left!</span>
+						</div>
+						</c:when>
+						<c:when
+						test="${product.remainingStock >0 && product.remainingStock ==2 }">
+						<div class="remaining">
+							<span class="product-alert">Only 2 left!</span>
+						</div>
+						</c:when>
+						<c:when
+						test="${product.remainingStock >0 && product.remainingStock ==1 }">
+						<div class="remaining">
+							<span class="product-alert">Only 1 left!</span>
+						</div>
+					</c:when>
 					</c:choose>
 					<c:choose>
 						<c:when test="${product.remainingStock ==0 }">

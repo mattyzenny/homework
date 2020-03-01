@@ -27,6 +27,7 @@
 		 when you load the page up. -->
 
 	<!-- Standard Product -->
+	<div id="grid" class="main-content">
 	<div class="tile">
 
 		<c:forEach var="product" items="${products }">
@@ -35,27 +36,52 @@
 				<c:param name="id">${product.id}</c:param>
 
 			</c:url>
-			<a class="product-image" href="${productDetailURL }"> <img
+			<a class="product-image" href="${productDetailsPageHref }"> <img
 				src="<c:url value= "/images/product-images/${product.imageName }" />" />
 			</a>
 
 			<div class="details">
 				<p class="names">
 					<c:out value="${product.name }" />
+					
 				</p>
 
 				<c:choose>
 					<c:when test="${product.topSeller }">
-						<div class="rating">
-							<span class="banner top-seller">Top Seller!</span>
+								<div class="tile top-seller ">						
+							<p class="product-alert">Top Seller</p>
 						</div>
 					</c:when>
 				</c:choose>
 				<c:choose>
-					<c:when
-						test="${product.remainingStock >0 && product.remainingStock <=5 }">
+				<c:when
+						test="${product.remainingStock >0 && product.remainingStock == 5 }">
 						<div class="remaining">
-							<span class="product-alert">Only 4 left!</span>
+							<span class="product-alert">5 REMAINING!</span>
+						</div>
+						</c:when>
+					<c:when
+						test="${product.remainingStock >0 && product.remainingStock ==4 }">
+						<div class="remaining">
+							<span class="product-alert">4 REMAINING!</span>
+						</div>
+						</c:when>
+						<c:when
+						test="${product.remainingStock >0 && product.remainingStock ==3 }">
+						<div class="remaining">
+							<span class="product-alert">3 REMAINING!</span>
+						</div>
+						</c:when>
+						<c:when
+						test="${product.remainingStock >0 && product.remainingStock ==2 }">
+						<div class="remaining">
+							<span class="product-alert">2 REMAINING!</span>
+						</div>
+						</c:when>
+						<c:when
+						test="${product.remainingStock >0 && product.remainingStock ==1 }">
+						<div class="remaining">
+							<span class="product-alert">1 REMAINING!</span>
 						</div>
 					</c:when>
 				</c:choose>
@@ -134,6 +160,8 @@
 		</c:forEach>
 	</div>
 </div>
+</div>
+
 
 <%-- <!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
 			<a class="product-image" href="#"> 

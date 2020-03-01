@@ -6,32 +6,90 @@
 </c:import>
 
 
-<div class="productDetails">
+<div id="product-detail">
 	<img
-		src="<c:url value= "images/product-images/${product.imageName}" />" />
-</div>
-<div class="details">
-	<c:out value="${product.name }" />
-	<span class="red"><c:out
-			value="${product.topSeller? 'Best Seller!': '' }" /> </span> <br>
-	<fmt:formatNumber value="${product.averageRating} }" maxFraction="0"
-		var="starsImage" />
-	<img id="star" class="ratingTilesList"
-		src="image/${starsImage}-star.png" /> <br> <span>
-		class="price">$ <c:out value="${product.price }" />
-	</span> <br>Weight
-	<c:out value="${product.weightInLbs} }" />
-	lbs<br>
-	<c:out value="${product.description }" />
-</div>
+		src="<c:url value= "/images/product-images/${product.imageName}" />" />
+	<div class="product-description">
+		${product.name }
+		<div class="rating">
+			<c:choose>
+				<c:when test="${product.averageRating > 4 }">
+					<span class="filled">&#9734;</span>
+					<span class="filled">&#9734;</span>
+					<span class="filled">&#9734;</span>
+					<span class="filled">&#9734;</span>
+					<span class="filled">&#9734;</span>
+				</c:when>
+				<c:when test="${product.averageRating > 3}">
+					<span class="filled">&#9734;</span>
+					<span class="filled">&#9734;</span>
+					<span class="filled">&#9734;</span>
+					<span class="filled">&#9734;</span>
+					<span>&#9734;</span>
 
 
+				</c:when>
+				<c:when test="${product.averageRating > 2}">
+					<span class="filled">&#9734;</span>
+					<span class="filled">&#9734;</span>
+					<span class="filled">&#9734;</span>
+					<span>&#9734;</span>
+					<span>&#9734;</span>
 
+
+				</c:when>
+				<c:when test="${product.averageRating >1}">
+					<span class="filled">&#9734;</span>
+					<span class="filled">&#9734;</span>
+					<span>&#9734;</span>
+					<span>&#9734;</span>
+					<span>&#9734;</span>
+
+				</c:when>
+				<c:when test="${product.averageRating == 1}">
+					<span class="filled">&#9734;</span>
+					<span>&#9734;</span>
+					<span>&#9734;</span>
+					<span>&#9734;</span>
+					<span>&#9734;</span>
+				</c:when>
+				<c:otherwise>
+					<span>&#9734;</span>
+					<span>&#9734;</span>
+					<span>&#9734;</span>
+					<span>&#9734;</span>
+					<span>&#9734;</span>
+				</c:otherwise>
+			</c:choose>
+		</div>
+		<c:choose>
+			<c:when
+				test="${product.remainingStock <=5 && product.remainingStock > 0 }">
+				<p class="alert-remaining">BUY NOW! Only
+					${product.remainingStock } left!</p>
+			</c:when>
+			<c:otherwise>
+			</c:otherwise>
+		</c:choose>
+		<p class="description">${ product.description}</p>
+		<div class="price">
+			<fmt:formatNumber value="${product.price }" type="currency" />
+		</div>
+		<c:choose>
+			<c:when test="${product.remainingStock >0 }">
+				<button class="action">Add to Cart</button>
+			</c:when>
+			<c:otherwise>
+				<button disabled>Sold Out</button>
+			</c:otherwise>
+		</c:choose>
+	</div>
 </div>
 
 <%-- <!-- Container for the Product -->
 <!-- The current product is available using the `product` variable -->
 <div id="product-detail">
+
 	<img src="<c:url value="/images/product-images/grey-sofa.jpg" />" />
 	<div class="product-description">
 		<h3>Grey Sofa</h3>
@@ -56,5 +114,7 @@
 		<!--<button disabled>Sold Out</button>-->
 	</div>
 </div> --%>
+
+
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />
