@@ -72,6 +72,7 @@
 
 						<c:choose>
 							<c:when test="${product.topSeller }">
+							<br>
 								<span class="banner top-seller">Top Seller!</span>
 							</c:when>
 						</c:choose>
