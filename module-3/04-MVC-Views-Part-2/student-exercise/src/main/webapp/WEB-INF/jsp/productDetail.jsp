@@ -72,9 +72,9 @@
 			</c:otherwise>
 		</c:choose>
 		<p class="description">${ product.description}</p>
-		<div class="price">
+		<p class="price">
 			<fmt:formatNumber value="${product.price }" type="currency" />
-		</div>
+		</p>
 		<c:choose>
 			<c:when test="${product.remainingStock >0 }">
 				<button class="action">Add to Cart</button>

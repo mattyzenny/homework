@@ -253,9 +253,6 @@ h2 {
 
 .tile .banner.top-seller {
   background-color: #8cc63f;
-overflow: auto;
-float:right;
-margin-left: 35%;
 }
 
 .tile .alert-remaining {
