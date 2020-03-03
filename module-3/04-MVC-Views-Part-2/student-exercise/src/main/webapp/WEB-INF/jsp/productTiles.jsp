@@ -33,7 +33,7 @@
 			<div class="tile">
 
 
-				<c:url var="productDetailsPageHref" value="/products/detail">
+				<c:url var="productDetailsPageHref" value="/products/tiles">
 					<c:param name="id">${product.id}</c:param>
 
 				</c:url>
