@@ -16,58 +16,63 @@
 					<option value="4">Four</option>
 					<option value="5">Five</option>
 				</select> <label for="subject">Title:</label> <input type="text" name="title" /><br />
-				<label for="text">Message:</label> <input type="text" name="text" /><br />
-				<!-- 				<textarea  rows="10" name="text">
-				 </textarea>  -->
+				<textarea rows="10" name="text">
+				 </textarea>
 				<input type="submit" value="Submit" />
 			</form>
 
 		</div>
 		<c:forEach var="review" items="${reviews}">
 			<hr>
+			${review.username }
 			<br>
 			<p class="value">ReviewTitle: ${review.title}</p>
 			<hr>
 			<c:choose>
 				<c:when test="${review.rating == 1 }">
+											ReviewRating: 
 					<img src="/etc/forDummies.png>" />
-						ReviewRating: 
-			</c:when>
+				</c:when>
 			</c:choose>
 			<c:choose>
 				<c:when test="${review.rating == 2 }">
-					<img src="<c:url value= "/etc/star.png" />">
-								<img src="<c:url value= "/etc/star.png" />">
+															ReviewRating: 
 				
-			ReviewRating: 
-			</c:when>
+					<img src="<c:url value= "/etc/star.png" />">
+					<img src="<c:url value= "/etc/star.png" />">
+
+				</c:when>
 			</c:choose>
 			<c:choose>
 				<c:when test="${review.rating == 3 }">
+															ReviewRating: 
+				
 					<img src="<c:url value= "/etc/star.png" />">
-							<img src="<c:url value= "/etc/star.png" />">
-				<img src="<c:url value= "/etc/star.png" />">
-			ReviewRating: 
-			</c:when>
+					<img src="<c:url value= "/etc/star.png" />">
+					<img src="<c:url value= "/etc/star.png" />">
+				</c:when>
 			</c:choose>
 			<c:choose>
 				<c:when test="${review.rating == 4 }">
+															ReviewRating: 
+				
 					<img src="<c:url value= "/etc/star.png" />">
-							<img src="<c:url value= "/etc/star.png" />">
-							<img src="<c:url value= "/etc/star.png" />">
+					<img src="<c:url value= "/etc/star.png" />">
+					<img src="<c:url value= "/etc/star.png" />">
 					<img src="<c:url value= "/etc/star.png" />">
 			ReviewRating: 
 			</c:when>
 			</c:choose>
 			<c:choose>
 				<c:when test="${review.rating == 5 }">
+															ReviewRating: 
+				
 					<img src="<c:url value= "/etc/star.png" />">
-							<img src="<c:url value= "/etc/star.png" />">
-							<img src="<c:url value= "/etc/star.png" />">
-							<img src="<c:url value= "/etc/star.png" />">
-				<img src="<c:url value= "/etc/star.png" />">
-			ReviewRating: 
-			</c:when>
+					<img src="<c:url value= "/etc/star.png" />">
+					<img src="<c:url value= "/etc/star.png" />">
+					<img src="<c:url value= "/etc/star.png" />">
+					<img src="<c:url value= "/etc/star.png" />">
+				</c:when>
 			</c:choose>
 			<br>
 			<p>${review.text }</p>

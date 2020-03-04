@@ -8,7 +8,7 @@
 	<section class="main">
 		<br>
 		DUMMIES!
-		<img  src="/etc/forDummies.png">
+		<img  src="src/main/webapp/etc/forDummies.png"/>
 	</section>
 	<br>
 	<br>
