@@ -7,8 +7,10 @@
 <body>
 	<section class="main">
 		<br>
-		DUMMIES!
-		<img  src="src/main/webapp/etc/forDummies.png"/>
+		<div>
+		<img  src="etc/forDummies.png"/> 
+		</div>
+
 	</section>
 	<br>
 	<br>

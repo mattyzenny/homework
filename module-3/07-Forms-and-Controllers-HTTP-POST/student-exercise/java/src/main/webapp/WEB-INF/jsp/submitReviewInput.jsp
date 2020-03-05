@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <body>
 	<h1>write review</h1>
@@ -27,7 +27,7 @@
 			${review.username }
 			<br>
 			<p class="value">ReviewTitle: ${review.title}</p>
-			<hr>
+			
 			<c:choose>
 				<c:when test="${review.rating == 1 }">
 											ReviewRating: 

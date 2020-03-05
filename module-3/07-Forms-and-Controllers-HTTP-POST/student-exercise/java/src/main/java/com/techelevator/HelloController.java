@@ -36,6 +36,7 @@ public class HelloController {
 	@RequestMapping(path="/addPostReview", method=RequestMethod.POST)
 	public String submitReview(Review review, HttpServletRequest request) {
 		review.setDateSubmitted(LocalDateTime.now());
+		review.getRating();
 		reviewDao.save(review);
 		return "redirect:/submitReviewInput";
 	}
