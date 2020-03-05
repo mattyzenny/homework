@@ -5,11 +5,11 @@
 <c:import url="/WEB-INF/jsp/common/header.jsp">
 	<c:param name="title" value="Favorite Color" />
 </c:import>
-
-<form method="POST">
+<%-- <c:url var="page2href" value="/page2"> </c:url>
+ --%><form method="POST" action="${favoriteColor }">
 	<label>What is your favorite color?</label>
-	<input type="text" name="favoriteColor">
-	<button type="submit">Next >>></button>
+	<input type="text" name="color">
+	<button type="submit">Submit</button>
 </form>
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />
