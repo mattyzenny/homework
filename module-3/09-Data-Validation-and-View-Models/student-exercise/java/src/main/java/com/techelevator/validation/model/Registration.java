@@ -45,7 +45,7 @@ public class Registration {
 	@Pattern(regexp="^\\d{4}-\\d{2}-\\d{2}$", message="please follow the format YYY-DD-MM")
 	private String birthday;
 	
-	@NotNull(message="Enter a valid number 1-10")
+	@NotBlank(message="Enter a valid number")
 	@Pattern(regexp="^\\+d$", message= "please enter a valid Integer 1-10")
 //	@Min(value=1, message="You must enter a valid 1-10")
 //	@Max(value=10, message="You must enter a valid 1-10")
