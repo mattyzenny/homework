@@ -8,7 +8,7 @@
 <%@include file="common/header.jspf"%>
 
 </head>
-<c:url value="/register" var="signupURL" />
+<c:url value="/submit" var="signupURL" />
 
 <body>
 	<form:form action="${signupURL}" method="POST" modelAttribute="signup">
@@ -17,13 +17,13 @@
 			<form:errors path="*" cssClass="error" />
 		</div>
 		<div>
-			<label for="firstName">FirstName:</label>
+			<label for="firstName">First Name</label>
 			<form:input path="firstName" />
 			<form:errors path="firstName" cssClass="error" />
 		</div>
 
 		<div>
-			<label for="lastName">LastName:</label>
+			<label for="lastName">Last Name</label>
 			<form:input path="lastName" />
 			<form:errors path="lastName" cssClass="error" />
 
@@ -37,7 +37,7 @@
 			<form:errors path="emailMatching" cssClass="error" />
 		</div>
 		<div>
-			<label for="verifyEmail">Verify Email</label>
+			<label for="verifyEmail">Confirm Email</label>
 			<form:input path="verifyEmail" />
 			<form:errors path="verifyEmail" cssClass="error" />
 

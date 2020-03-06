@@ -1,16 +1,21 @@
 package com.techelevator.validation.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.techelevator.validation.model.Registration;
 import com.techelevator.validation.model.User;
 @Controller
-@SessionAttributes("user")
+@SessionAttributes({"firstName", "lastName", "email"})
 public class UserController {
 	// GET: /
 	@RequestMapping(path = "/", method = RequestMethod.GET)
@@ -34,14 +39,29 @@ public class UserController {
 		return "loginConfirm";
 	}
 	
-	@RequestMapping(path="/register")
+	@RequestMapping(path="/signup")
 	public String showSignUp(ModelMap map) {
 		if(! map.containsAttribute("signup")) {
 			map.addAttribute("signup", new Registration());
 		}
 		return "signup";
 	}
+	@RequestMapping(path="/submit", method=RequestMethod.POST)
+	public String handleRegisterForm(@Valid @ModelAttribute("signup")Registration register, BindingResult result, RedirectAttributes attributes) {
+		if(result.hasErrors()) {
+			return "/signup";
+		}
+		attributes.addFlashAttribute("signup", register);
+		return "redirect:/signupConfirm";
+	}
 	
+	@RequestMapping(path="/signupConfirm", method=RequestMethod.GET)
+	public String showConfirmation(ModelMap map) {
+		if(!map.containsAttribute("signup")) {
+			map.addAttribute("signup", new Registration());
+		}
+		return "signupConfirm";
+	}
 	// Add the following Controller Actions
 
 	// GET: /register
