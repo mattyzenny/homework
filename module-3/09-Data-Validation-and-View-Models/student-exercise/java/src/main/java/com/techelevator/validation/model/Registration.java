@@ -42,6 +42,7 @@ public class Registration {
 	private String verifyPassword;
 	
 	@NotBlank(message="Provide a date")
+	@Pattern(regexp="^\\d{4}-\\d{2}-\\d{2}$", message="please follow the format YYY-DD-MM")
 	private String birthday;
 	
 	@NotNull(message="Enter a valid number 1-10")

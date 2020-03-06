@@ -45,14 +45,14 @@
 
 		<div>
 			<label for="password">Password</label>
-			<form:input path="password" />
+			<form:input type="password" path="password" />
 			<form:errors path="password" cssClass="error" />
 			<form:errors path="passwordMatching" cssClass="error" />
 
 		</div>
 		<div>
 			<label for="verifyPassword">Confirm Password</label>
-			<form:input path="verifyPassword" />
+			<form:input type="password" path="verifyPassword" />
 			<form:errors path="verifyPassword" cssClass="error" />
 
 		</div>
