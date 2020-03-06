@@ -1,5 +1,6 @@
 package com.techelevator.validation.model;
 
+import java.lang.annotation.Target;
 import java.time.LocalDate;
 
 import javax.validation.constraints.AssertTrue;
@@ -23,7 +24,7 @@ public class Registration {
 	@NotBlank(message="Please give us your name, you moron")
 	private String firstName;
 	
-
+	
 	@NotBlank(message="Please give us your last name too, stupid")
 	private String lastName;
 	
@@ -43,10 +44,11 @@ public class Registration {
 	@NotBlank(message="Provide a date")
 	private String birthday;
 	
-	@NotNull(message="Enter a valid number")
-	@Min(value=1, message="You must enter a valid 1-10")
-	@Max(value=10, message="You must enter a valid 1-10")
-	private Integer numberOfTickets;
+	@NotNull(message="Enter a valid number 1-10")
+	@Pattern(regexp="^\\+d$", message= "please enter a valid Integer 1-10")
+//	@Min(value=1, message="You must enter a valid 1-10")
+//	@Max(value=10, message="You must enter a valid 1-10")
+	private String numberOfTickets;
 	
 	
 
@@ -155,12 +157,12 @@ public void setBirthday(String birthday) {
 }
 
 
-public Integer getNumberOfTickets() {
+public String getNumberOfTickets() {
 	return numberOfTickets;
 }
 
 
-public void setNumberOfTickets(Integer numberOfTickets) {
+public void setNumberOfTickets(String numberOfTickets) {
 	this.numberOfTickets = numberOfTickets;
 }
 
