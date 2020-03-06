@@ -13,9 +13,9 @@
 <body>
 	<form:form action="${signupURL}" method="POST" modelAttribute="signup">
 
-		<div>
+<%-- 		<div>
 			<form:errors path="*" cssClass="error" />
-		</div>
+		</div> --%>
 		<div>
 			<label for="firstName">First Name</label>
 			<form:input path="firstName" />

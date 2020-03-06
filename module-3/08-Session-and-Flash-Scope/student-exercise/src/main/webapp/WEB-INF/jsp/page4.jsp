@@ -10,15 +10,15 @@
 	<table id= "table">
 	<tr>
 		<th>Favorite color: </th>
-		<td><c:out value="${color}" /></td>
+		<td><c:out value="${favcolor}" /></td>
 	</tr>
 	<tr>
 		<th>Favorite food: </th>
-		<td><c:out value="${food}" /></td>
+		<td><c:out value="${favfood}" /></td>
 	</tr>
 	<tr>
 		<th>Favorite season: </th>
-		<td><c:out value="${season}" /></td>
+		<td><c:out value="${favseason}" /></td>
 	</tr>
 	
 </table>
