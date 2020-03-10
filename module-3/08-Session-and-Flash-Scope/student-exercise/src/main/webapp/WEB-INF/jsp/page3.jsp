@@ -6,6 +6,9 @@
 
  <%-- <c:url var="page3" value="/page4" />
  --%> <form method="POST" action="${favoriteSeason }">
+ 
+ 
+ 
 	<label> What is your favorite season?</label> 
 	<ul>
 		<li class="radio"><input name="season" value="Spring"

@@ -4,8 +4,10 @@
 	<c:param name="title" value="Favorite Color" />
 </c:import>
 
-<%-- <c:url var="page2" value="/FavoriteThings/page2" />
- --%><form method="POST" action="${favoriteFood }">
+<%-- <c:url var="page2" value="/page2" />
+ --%>
+ 
+ <form method="POST" action="${favoriteFood }">
 <label> What is your favorite food?</label>
 <input type="text" name="food">
 <button type="submit"> Submit</button>

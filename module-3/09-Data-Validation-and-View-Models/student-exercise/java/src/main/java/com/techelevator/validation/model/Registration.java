@@ -46,9 +46,9 @@ public class Registration {
 	private String birthday;
 	
 	@NotBlank(message="Enter a valid number")
-	@Pattern(regexp="^\\+d$", message= "please enter a valid Integer 1-10")
-//	@Min(value=1, message="You must enter a valid 1-10")
-//	@Max(value=10, message="You must enter a valid 1-10")
+	@Pattern(regexp="^\\d$", message= "please enter a valid Integer 1-10")
+	@Min(value=1, message="You must enter a valid 1-10")
+	@Max(value=10, message="You must enter a valid 1-10")
 	private String numberOfTickets;
 	
 	
