@@ -7,7 +7,7 @@
 <%-- <c:url var="page2" value="/page2" />
  --%>
  
- <form method="POST" action="${favoriteFood }">
+ <form method="POST" action="${favoriteFoodjfldskafjsdfjal }">
 <label> What is your favorite food?</label>
 <input type="text" name="food">
 <button type="submit"> Submit</button>
