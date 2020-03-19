@@ -10,6 +10,12 @@ If you take a look at the `index.html` template you will notice that there isn't
 <html>
 <body>
     <div id="todos" class="todo-list">
+    <h1> 
+    <ul>
+    <li>
+    </li>
+    </ul> 
+    </h1>
         <!-- YOUR CONTENT GOES HERE -->
     </div>
     <script src="js/app.js"></script>

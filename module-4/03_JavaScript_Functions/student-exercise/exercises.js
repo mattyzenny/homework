@@ -62,10 +62,7 @@ return false;
  */
 let unfilteredArray = [1, 2, 3, 4, 5, 6];
 function useParameterToFilterArray(filterFunction){
-  return unfilteredArray.filter(
-    (number) => {
-        return number % 2 === 0  || unfilteredArray;;
-      });
+  return unfilteredArray.filter(filterFunction);
     
 }
 
