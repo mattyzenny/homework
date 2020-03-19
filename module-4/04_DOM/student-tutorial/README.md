@@ -97,6 +97,7 @@ function addTodos() {
   const ul = document.createElement('ul');
 =  todoList.appendChild(ul);
 }
+
 ```
 
 Each list item that you add to the DOM is going to look like this: 
