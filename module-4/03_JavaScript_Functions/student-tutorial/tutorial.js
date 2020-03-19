@@ -2,9 +2,25 @@
  * Create a function called turnOn.
  *
  * This function should return the boolean true.
- *
+ * 
+ * if you type in function function myfunction(first, second) {
+ * return first + second;
+ * }
+ * move above...and type /**and it gives params annotation for you
+ *  
+ * 
+ * 
  * @returns {number} 1
  */
+/**
+ * 
+ * @param {string} first 
+ * @param {string} second 
+ */
+function myFunction(first, second) {
+  return first + second;
+}
+
 function turnOn() {
   return true;
 }
