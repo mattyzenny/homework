@@ -13,7 +13,7 @@
             class="form-control" 
             id="shippingAddress" 
             placeholder="1234 Main St" 
-            v-model='shipping.address'>
+            v-model='shipping.address'/>
           </div>
           <div class="form-group">
             <label for="shippingAddress2">Address 2</label>
