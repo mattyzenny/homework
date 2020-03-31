@@ -13,7 +13,7 @@
             class="form-control" 
             id="shippingAddress" 
             placeholder="1234 Main St" 
-            v-model='shipping.address'/>
+            v-model.trim='shipping.address'/>
           </div>
           <div class="form-group">
             <label for="shippingAddress2">Address 2</label>
@@ -22,7 +22,7 @@
               class="form-control"
               id="shippingAddress2"
               placeholder="Apartment, studio, or floor"
-              v-model='shipping.address2'
+              v-model.trim='shipping.address2'
             />
           </div>
           <div class="form-row">
@@ -32,7 +32,7 @@
               type="text" 
               class="form-control" 
               id="shippingCity"
-              v-model='shipping.city' />
+              v-model.trim='shipping.city' />
             </div>
             <div class="form-group col-md-4">
               <label for="shippingState">State</label>
@@ -48,7 +48,7 @@
               <input type="text" 
               class="form-control" 
               id="shippingZip" 
-              v-model='shipping.zip'/>
+              v-model.trim='shipping.zip'/>
             </div>
           </div>
           <div class="form-row">
@@ -102,7 +102,7 @@
                 class="form-control"
                 id="billingAddress"
                 placeholder="1234 Main St"
-                v-model='billing.address'
+                v-model.trim='billing.address'
               />
             </div>
             <div class="form-group">
@@ -112,7 +112,7 @@
                 class="form-control"
                 id="billingAddress2"
                 placeholder="Apartment, studio, or floor"
-                v-model='billing.address2'
+                v-model.trim='billing.address2'
               />
             </div>
             <div class="form-row">
@@ -122,7 +122,7 @@
                 type="text" 
                 class="form-control" 
                 id="billingCity" 
-                v-model='billing.city'/>
+                v-model.trim='billing.city'/>
               </div>
               <div class="form-group col-md-4">
                 <label for="billingState">State</label>
@@ -139,7 +139,7 @@
                 type="text" 
                 class="form-control" 
                 id="billingZip" 
-                v-model='billing.zip'/>
+                v-model.trim='billing.zip'/>
               </div>
             </div>
           </div>
@@ -208,19 +208,19 @@ export default {
   data() {
     return {
      shipping: {
-       address: "",
-       address2: "",
-       city: "",
-       state: "", 
-       zip: "",
-       deliveryTo: ""
+      //  address: "",
+      //  address2: "",
+      //  city: "",
+      //  state: "", 
+      //  zip: "",
+      //  deliveryTo: ""
      },
      billing: {
-       address: "",
-       address2: "",
-       city: "",
-       state: "",
-       zip: ""
+      //  address: "",
+      //  address2: "",
+      //  city: "",
+      //  state: "",
+      //  zip: ""
      }
    
   };
