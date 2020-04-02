@@ -2,7 +2,7 @@
     <div class="shopping-list">
         <h2>{{title}}</h2>
         <ul>
-            <li v-for="item in data" 
+            <li v-for="item in filteredList" 
                 v-bind:key="item.id" 
                 v-bind:class="{ completed: item.completed }" 
                 v-on:click="changeStatus(item.id,$event)">
@@ -18,6 +18,9 @@
 export default {
     name: 'shopping-list',
     props: {
+        title: String,
+        data: Array,
+        searchText: String
 
     },
     data() {
@@ -38,7 +41,9 @@ export default {
         }
     },
     computed: {
-
+        filteredList() {
+            return this.data.filter(entry=>entry.name.toLowerCase().includes(this.searchText.toLowerCase()));
+        }
     }
 }
 </script>
