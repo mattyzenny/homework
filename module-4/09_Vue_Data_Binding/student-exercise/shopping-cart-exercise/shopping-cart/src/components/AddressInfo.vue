@@ -61,9 +61,7 @@
                   name="deliverto"
                   id="delivertoFrontDoor"
                   value="Front Door"
-                  v-model='shipping.deliverTo'
-                  checked
-                />
+                  v-model='shipping.deliverTo'/>
                 <label class="form-check-label" for="delivertoFrontDoor">Front Door</label>
               </div>
               <div class="form-check">
